@@ -179,10 +179,10 @@ public class NativememTests {
         Assert.isEqual(sizeCounts.getOrDefault((long) MALLOC_DYN_SIZE, 0L), 1);
     }
 
-    @Test(os = Os.LINUX, sh = "%testbin/profile_with_dlopen dlopen_first %f.jfr", output = true, env = {"LD_LIBRARY_PATH=build/test/lib:build/lib"}, nameSuffix = "dlopen_first")
-    @Test(os = Os.LINUX, sh = "%testbin/profile_with_dlopen profile_first %f.jfr", output = true, env = {"LD_LIBRARY_PATH=build/test/lib:build/lib"}, nameSuffix = "profile_first")
-    @Test(os = Os.LINUX, sh = "LD_PRELOAD=%lib %testbin/profile_with_dlopen dlopen_first %f.jfr", output = true, env = {"LD_LIBRARY_PATH=build/test/lib:build/lib"}, nameSuffix = "dlopen_first+LD_PRELOAD")
-    @Test(os = Os.LINUX, sh = "LD_PRELOAD=%lib %testbin/profile_with_dlopen profile_first %f.jfr", output = true, env = {"LD_LIBRARY_PATH=build/test/lib:build/lib"}, nameSuffix = "profile_first+LD_PRELOAD")
+    @Test(os = Os.LINUX, sh = "%testbin/profile_with_dlopen dlopen_first %f.jfr", env = {"LD_LIBRARY_PATH=build/test/lib:build/lib"}, nameSuffix = "dlopen_first")
+    @Test(os = Os.LINUX, sh = "%testbin/profile_with_dlopen profile_first %f.jfr", env = {"LD_LIBRARY_PATH=build/test/lib:build/lib"}, nameSuffix = "profile_first")
+    @Test(os = Os.LINUX, sh = "LD_PRELOAD=%lib %testbin/profile_with_dlopen dlopen_first %f.jfr", env = {"LD_LIBRARY_PATH=build/test/lib:build/lib"}, nameSuffix = "dlopen_first+LD_PRELOAD")
+    @Test(os = Os.LINUX, sh = "LD_PRELOAD=%lib %testbin/profile_with_dlopen profile_first %f.jfr", env = {"LD_LIBRARY_PATH=build/test/lib:build/lib"}, nameSuffix = "profile_first+LD_PRELOAD")
     public void dlopenCustomLib(TestProcess p) throws Exception {
         Map<Long, Long> sizeCounts = assertNoLeaks(p);
 
@@ -200,7 +200,7 @@ public class NativememTests {
         Assert.isEqual(sizeCounts.getOrDefault((long) MALLOC_SIZE, 0L), 1);
     }
 
-    @Test(os = Os.LINUX, sh = "%testbin/nativemem_known_lib_crash %f.jfr", output = true, env = {"LD_LIBRARY_PATH=build/test/lib:build/lib"})
+    @Test(os = Os.LINUX, sh = "%testbin/nativemem_known_lib_crash %f.jfr", env = {"LD_LIBRARY_PATH=build/test/lib:build/lib"})
     public void nativememKnownLibCrash(TestProcess p) throws Exception {
         p.waitForExit();
         Assert.isEqual(p.exitCode(), 0);

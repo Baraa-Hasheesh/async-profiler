@@ -160,7 +160,8 @@ void executeJvmTask() {
             std::cerr << "Exception in cpuHeavyTask" << std::endl;
             exit(1);
         }
-        std::cout << "Result: " << result << std::endl;
+        (void)result;
+        //std::cout << "Result: " << result << std::endl;
     }
     _env->DeleteLocalRef(customClass);
 }
@@ -334,8 +335,53 @@ void testFlow4(int argc, char** argv) {
     stopProfiler(argv[2]);
 }
 
+#include <execinfo.h>
+#include <signal.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+
+void printStackTrace(void) {
+    void *array[50];
+    size_t size;
+    char **strings;
+
+    size = backtrace(array, 50);
+    strings = backtrace_symbols(array, size);
+
+    // Print the stack trace
+    fprintf(stderr, "Stack trace:\n");
+    for (size_t i = 0; i < size; i++) {
+        fprintf(stderr, "#%zu %s\n", i, strings[i]);
+    }
+
+    free(strings);
+}
+
+void segfaultHandler(int sig) {
+    fprintf(stderr, "Error: Signal %d:\n", sig);
+    printStackTrace();
+    exit(1);
+}
+
+void setupSignalHandler() {
+    struct sigaction sa;
+    memset(&sa, 0, sizeof(struct sigaction));
+    sa.sa_handler = segfaultHandler;
+    sigemptyset(&sa.sa_mask);
+
+    // Register signal handlers
+    sigaction(SIGSEGV, &sa, NULL);  // Segmentation fault
+    sigaction(SIGABRT, &sa, NULL);  // Abort
+    sigaction(SIGFPE, &sa, NULL);   // Floating point exception
+    sigaction(SIGILL, &sa, NULL);   // Illegal instruction
+    sigaction(SIGBUS, &sa, NULL);   // Bus error
+}
+
 int main(int argc, char** argv) {
     validateArgsCount(argc, 3);
+    setupSignalHandler();
 
     // Check which test to run
     char* flow = argv[1];

@@ -12,7 +12,7 @@ import one.profiler.test.TestProcess;
 public class NonjavaTests {
 
     // jvm is loaded before the profiling session is started
-    @Test(sh = "%testbin/non_java_app 1 %s.html", output = true)
+    @Test(sh = "%testbin/non_java_app 1 %s.html")
     public void jvmFirst(TestProcess p) throws Exception {
         p.waitForExit();
         assert p.exitCode() == 0;
@@ -22,7 +22,7 @@ public class NonjavaTests {
     }
 
     // jvm is loaded after the profiling session is started
-    @Test(sh = "%testbin/non_java_app 2 %s.html", output = true)
+    @Test(sh = "%testbin/non_java_app 2 %s.html")
     public void profilerFirst(TestProcess p) throws Exception {
         p.waitForExit();
         assert p.exitCode() == 0;
@@ -32,7 +32,7 @@ public class NonjavaTests {
     }
 
     // jvm is loaded between two profiling sessions
-    @Test(sh = "%testbin/non_java_app 3 %f.html %s.html", output = true)
+    @Test(sh = "%testbin/non_java_app 3 %f.html %s.html")
     public void jvmInBetween(TestProcess p) throws Exception {
         p.waitForExit();
         assert p.exitCode() == 0;
@@ -45,7 +45,7 @@ public class NonjavaTests {
     }
 
     // jvm is loaded before the profiling session is started on a different thread
-    @Test(sh = "%testbin/non_java_app 4 %s.html", output = true)
+    @Test(sh = "%testbin/non_java_app 4 %s.html")
     public void differentThread(TestProcess p) throws Exception {
         p.waitForExit();
         assert p.exitCode() == 0;

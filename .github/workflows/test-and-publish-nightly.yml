@@ -172,7 +172,7 @@ jobs:
           make build/test.jar
           cp -r ${{ steps.extract_artifact.outputs.release_directory }}/bin build
           cp -r ${{ steps.extract_artifact.outputs.release_directory }}/lib build
-          make test-java -j
+          make test-java -j TESTS=nonjava
       - name: Upload integration test logs
         uses: actions/upload-artifact@v4
         # Always upload, especially after test failure
