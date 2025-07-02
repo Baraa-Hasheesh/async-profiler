@@ -239,6 +239,14 @@ JfrMetadata::JfrMetadata() : Element("root") {
                 << field("address", T_LONG, "Address", F_ADDRESS)
                 << field("size", T_LONG, "Size", F_BYTES))
 
+            << (type("profiler.NativeLock", T_NATIVE_LOCK_EVENT, "Native Lock Blocked")
+                << category("Java Virtual Machine", "Native Locks")
+                << field("startTime", T_LONG, "Start Time", F_TIME_TICKS)
+                << field("duration", T_LONG, "Duration", F_DURATION_TICKS)
+                << field("eventThread", T_THREAD, "Event Thread", F_CPOOL)
+                << field("stackTrace", T_STACK_TRACE, "Stack Trace", F_CPOOL)
+                << field("address", T_LONG, "Address", F_ADDRESS))
+
             << (type("profiler.Free", T_FREE, "free")
                 << category("Java Virtual Machine", "Native Memory")
                 << field("startTime", T_LONG, "Start Time", F_TIME_TICKS)

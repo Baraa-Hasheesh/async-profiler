@@ -28,8 +28,8 @@ public class NativememTests {
     private static final int POSIX_MEMALIGN_SIZE = 30000193;
     private static final int ALIGNED_ALLOC_SIZE = 30002016;
 
-    @Test(mainClass = CallsMallocCalloc.class, agentArgs = "start,nativemem,total,collapsed,file=%f", args = "once")
-    @Test(mainClass = CallsMallocCalloc.class, agentArgs = "start,nativemem,total,cstack=vm,collapsed,file=%f", args = "once", nameSuffix = "VM")
+    @Test(mainClass = CallsMallocCalloc.class, agentArgs = "start,nativemem,total,file=%f.jfr", args = "once")
+    @Test(mainClass = CallsMallocCalloc.class, agentArgs = "start,nativemem,total,cstack=vm,file=%f.jfr", args = "once", nameSuffix = "VM")
     public void canAgentTraceMallocCalloc(TestProcess p) throws Exception {
         Output out = p.waitForExit("%f");
 

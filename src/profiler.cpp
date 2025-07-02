@@ -29,6 +29,7 @@
 #include "flightRecorder.h"
 #include "fdtransferClient.h"
 #include "frameName.h"
+#include "nativeLockTracer.h"
 #include "os.h"
 #include "otlp.h"
 #include "safeAccess.h"
@@ -50,6 +51,7 @@ static Engine noop_engine;
 static PerfEvents perf_events;
 static AllocTracer alloc_tracer;
 static MallocTracer malloc_tracer;
+static NativeLockTracer native_lock_tracer;
 static LockTracer lock_tracer;
 static ObjectSampler object_sampler;
 static J9ObjectSampler j9_object_sampler;
@@ -94,6 +96,7 @@ static inline int hasNativeStack(EventType event_type) {
         (1 << PERF_SAMPLE)       |
         (1 << EXECUTION_SAMPLE)  |
         (1 << WALL_CLOCK_SAMPLE) |
+        (1 << NATIVE_LOCK_SAMPLE)|
         (1 << MALLOC_SAMPLE)     |
         (1 << ALLOC_SAMPLE)      |
         (1 << ALLOC_OUTSIDE_TLAB);
@@ -345,7 +348,7 @@ int Profiler::convertNativeTrace(int native_frames, const void** callchain, ASGC
                 // Skip all internal frames above VM runtime entry for allocation samples
                 depth = 0;
                 continue;
-            } else if (mark == MARK_ASYNC_PROFILER && event_type == MALLOC_SAMPLE) {
+            } else if (mark == MARK_ASYNC_PROFILER && (event_type == MALLOC_SAMPLE || event_type == NATIVE_LOCK_SAMPLE)) {
                 // Skip all internal frames above the *_hook functions. Include the hook function itself.
                 depth = 0;
             } else if (mark == MARK_INTERPRETER) {
@@ -784,6 +787,7 @@ void* Profiler::dlopen_hook(const char* filename, int flags) {
     if (result != NULL) {
         instance()->updateSymbols(false);
         MallocTracer::installHooks();
+        NativeLockTracer::installHooks();
     }
     return result;
 }
@@ -1225,6 +1229,7 @@ Error Profiler::start(Arguments& args, bool reset) {
         }
     }
 
+    native_lock_tracer.start(args);
     switchThreadEvents(JVMTI_ENABLE);
 
     _state = RUNNING;

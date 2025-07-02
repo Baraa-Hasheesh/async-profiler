@@ -16,6 +16,7 @@ enum EventType {
     PERF_SAMPLE,
     EXECUTION_SAMPLE,
     WALL_CLOCK_SAMPLE,
+    NATIVE_LOCK_SAMPLE,
     MALLOC_SAMPLE,
     INSTRUMENTED_METHOD,
     ALLOC_SAMPLE,
@@ -91,6 +92,13 @@ class UserEvent : public Event {
     asprof_jfr_event_key _type;
     const uint8_t* _data;
     size_t _len;
+};
+
+class NativeLockEvent : public EventWithClassId {
+  public:
+    u64 _start_time;
+    u64 _end_time;
+    uintptr_t _address;
 };
 
 #endif // _EVENT_H

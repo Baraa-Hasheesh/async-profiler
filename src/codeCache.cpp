@@ -225,6 +225,8 @@ void CodeCache::addImport(void** entry, const char* name) {
                 saveImport(im_poll, entry);
             } else if (strcmp(name, "posix_memalign") == 0) {
                 saveImport(im_posix_memalign, entry);
+            } else if (strcmp(name, "pthread_mutex_lock") == 0) {
+                saveImport(im_pthread_mutex_lock, entry);
             }
             break;
         case 'r':

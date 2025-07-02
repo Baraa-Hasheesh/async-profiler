@@ -1277,6 +1277,18 @@ class Recording {
         buf->put8(start, buf->offset() - start);
     }
 
+    void recordNativeLockSample(Buffer* buf, int tid, u32 call_trace_id, NativeLockEvent* event) {
+        fprintf(stderr, "Record LOCK %llu %llu\n", event->_start_time, event->_end_time);
+        int start = buf->skip(1);
+        buf->put8(T_NATIVE_LOCK_EVENT);
+        buf->putVar64(event->_start_time);
+        buf->putVar32(tid);
+        buf->putVar32(call_trace_id);
+        buf->putVar64(event->_address);
+        buf->putVar64(event->_end_time - event->_start_time);
+        buf->put8(start, buf->offset() - start);
+    }
+
     void recordUserEvent(Buffer* buf, int tid, UserEvent* event) {
         // estimate of size of non-string fields of this event
         const size_t event_non_string_size_limit = 64;
@@ -1554,6 +1566,9 @@ void FlightRecorder::recordEvent(int lock_index, int tid, u32 call_trace_id,
                 break;
             case MALLOC_SAMPLE:
                 _rec->recordMallocSample(buf, tid, call_trace_id, (MallocEvent*)event);
+                break;
+            case NATIVE_LOCK_SAMPLE:
+                _rec->recordNativeLockSample(buf, tid, call_trace_id, (NativeLockEvent*)event);
                 break;
             case ALLOC_SAMPLE:
                 _rec->recordAllocationInNewTLAB(buf, tid, call_trace_id, (AllocEvent*)event);

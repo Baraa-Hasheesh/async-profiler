@@ -28,7 +28,9 @@ public class JfrToPprof extends JfrConverter {
         super(jfr, args);
 
         Proto sampleType;
-        if (args.nativemem) {
+        if (args.nativelock) {
+            sampleType = valueType("nativelock", args.total ? "nanoseconds" : "count");
+        } else if (args.nativemem) {
             sampleType = valueType("malloc", args.total ? "bytes" : "count");
         } else if (args.alloc || args.live) {
             sampleType = valueType("allocations", args.total ? "bytes" : "count");
