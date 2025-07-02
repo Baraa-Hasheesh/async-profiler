@@ -44,6 +44,12 @@ void NativeLockTracer::initialize() {
     CodeCache* lib = Profiler::instance()->findLibraryByAddress((void*)NativeLockTracer::initialize);
 
     SAVE_IMPORT(pthread_mutex_lock);
+
+    lib->mark(
+            [](const char* s) -> bool {
+                return strcmp(s, "pthread_mutex_lock_hook") == 0;
+            },
+            MARK_ASYNC_PROFILER);
 }
 
 void NativeLockTracer::patchLibraries() {

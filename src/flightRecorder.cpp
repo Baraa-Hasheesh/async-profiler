@@ -1278,7 +1278,6 @@ class Recording {
     }
 
     void recordNativeLockSample(Buffer* buf, int tid, u32 call_trace_id, NativeLockEvent* event) {
-        fprintf(stderr, "Record LOCK %llu %llu\n", event->_start_time, event->_end_time);
         int start = buf->skip(1);
         buf->put8(T_NATIVE_LOCK_EVENT);
         buf->putVar64(event->_start_time);

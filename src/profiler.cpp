@@ -71,6 +71,7 @@ enum EventMask {
     EM_LOCK  = 4,
     EM_WALL  = 8,
     EM_NATIVEMEM = 16,
+    EM_NATIVELOCK = 32,
 };
 
 
@@ -1034,6 +1035,8 @@ Engine* Profiler::activeEngine() {
             return &wall_clock;
         case EM_NATIVEMEM:
             return &malloc_tracer;
+        case EM_NATIVELOCK:
+            return &native_lock_tracer;
         default:
             return _engine;
     }
@@ -1084,7 +1087,8 @@ Error Profiler::start(Arguments& args, bool reset) {
                   (args._alloc >= 0 ? EM_ALLOC : 0) |
                   (args._lock >= 0 ? EM_LOCK : 0) |
                   (args._wall >= 0 ? EM_WALL : 0) |
-                  (args._nativemem >= 0 ? EM_NATIVEMEM : 0);
+                  (args._nativemem >= 0 ? EM_NATIVEMEM : 0) |
+                  (args._nativelock >= 0 ? EM_NATIVELOCK : 0);
 
     if (_event_mask == 0) {
         return Error("No profiling events specified");
@@ -1228,8 +1232,13 @@ Error Profiler::start(Arguments& args, bool reset) {
             goto error5;
         }
     }
+    if (_event_mask & EM_NATIVELOCK) {
+        error = native_lock_tracer.start(args);
+        if (error) {
+            goto error6;
+        }
+    }
 
-    native_lock_tracer.start(args);
     switchThreadEvents(JVMTI_ENABLE);
 
     _state = RUNNING;
@@ -1242,6 +1251,9 @@ Error Profiler::start(Arguments& args, bool reset) {
     }
 
     return Error::OK;
+
+error6:
+    if (_event_mask & EM_NATIVELOCK) native_lock_tracer.stop();
 
 error5:
     if (_event_mask & EM_NATIVEMEM) malloc_tracer.stop();
@@ -1279,6 +1291,7 @@ Error Profiler::stop(bool restart) {
     if (_event_mask & EM_LOCK) lock_tracer.stop();
     if (_event_mask & EM_ALLOC) _alloc_engine->stop();
     if (_event_mask & EM_NATIVEMEM) malloc_tracer.stop();
+    if (_event_mask & EM_NATIVELOCK) native_lock_tracer.stop();
 
     _engine->stop();
 
@@ -1324,6 +1337,9 @@ Error Profiler::check(Arguments& args) {
     }
     if (!error && args._nativemem >= 0) {
         error = malloc_tracer.check(args);
+    }
+    if (!error && args._nativelock >= 0) {
+        error = native_lock_tracer.check(args);
     }
     if (!error && args._lock >= 0) {
         error = lock_tracer.check(args);

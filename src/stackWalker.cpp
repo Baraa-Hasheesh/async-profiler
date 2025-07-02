@@ -382,7 +382,13 @@ int StackWalker::walkVM(void* ucontext, ASGCT_CallFrame* frames, int max_depth,
                 }
             }
         } else {
-            fillFrame(frames[depth++], BCI_NATIVE_FRAME, profiler->findNativeMethod(pc));
+            const char* method_name = profiler->findNativeMethod(pc);
+            char mark;
+            if (method_name != NULL && (mark = NativeFunc::mark(method_name)) != 0 && mark == MARK_ASYNC_PROFILER) {
+                // Skip any frames above profiler hook methods
+                depth = 0;
+            }
+            fillFrame(frames[depth++], BCI_NATIVE_FRAME, method_name);
         }
 
         uintptr_t prev_sp = sp;
