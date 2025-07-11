@@ -235,7 +235,7 @@ class BytecodeRewriter {
         _src_limit(class_data + class_data_len),
         _dst(NULL),
         _dst_len(0),
-        _dst_capacity(class_data_len + 400),
+        _dst_capacity(class_data_len + (1024 * 1024)),
         _cpool(NULL) {
 
         _target_class = target_class;
