@@ -610,6 +610,13 @@ void JNICALL Instrument::ClassFileLoadHook(jvmtiEnv* jvmti, JNIEnv* jni,
     if (!_running) return;
 
     if (name == NULL || strcmp(name, _target_class) == 0) {
+        for (int i = 0; i < class_data_len; i++) {
+            fprintf(stderr, "0x%x ", class_data[i]);
+            if (i > 0 && i % 20 == 0) {
+                fprintf(stderr, "\n");
+            }
+        }
+        fprintf(stderr, "\n\n\n\n");
         BytecodeRewriter rewriter(class_data, class_data_len, _target_class);
         rewriter.rewrite(new_class_data, new_class_data_len);
     }
