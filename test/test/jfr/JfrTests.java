@@ -122,7 +122,7 @@ public class JfrTests {
      * @param p The test process to profile with.
      * @throws Exception Any exception thrown during profiling JFR output parsing.
      */
-    @Test(mainClass = JfrMultiModeProfiling.class, agentArgs = "start,all,event=java.util.Properties.getProperty,alloc=100,file=%f.jfr")
+    @Test(mainClass = JfrMultiModeProfiling.class, agentArgs = "start,all,event=java.util.Properties.getProperty,alloc=100,file=%f.jfr", output = true, error=true)
     public void allModeEventOverride(TestProcess p) throws Exception {
         p.waitForExit();
         assert p.exitCode() == 0;
