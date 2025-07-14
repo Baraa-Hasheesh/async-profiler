@@ -302,14 +302,19 @@ void BytecodeRewriter::rewriteCode() {
 
     for (int i = 0; i < exception_table_length; i++) {
         u16 start_pc = get16();
-        u16 end_pc = get16();
-        u16 handler_pc = get16();
-        u16 catch_type = get16();
         put16(EXTRA_BYTECODES + start_pc);
+
+        u16 end_pc = get16();
         put16(EXTRA_BYTECODES + end_pc);
+
+        u16 handler_pc = get16();
         put16(EXTRA_BYTECODES + handler_pc);
+
+        u16 catch_type = get16();
         put16(catch_type);
     }
+
+    fprintf(stderr, "===============================\n");
 
     rewriteAttributes(SCOPE_REWRITE_CODE);
 
