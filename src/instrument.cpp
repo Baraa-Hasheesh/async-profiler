@@ -459,6 +459,8 @@ bool BytecodeRewriter::rewriteClass() {
     _cpool_len = get16();
     put16(_cpool_len + EXTRA_CONSTANTS);
 
+    fprintf(stderr, "POOL-LEN = %u", _cpool_len);
+
     const u8* cpool_start = _src;
 
     _cpool = new Constant*[_cpool_len];
