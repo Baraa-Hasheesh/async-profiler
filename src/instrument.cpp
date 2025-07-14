@@ -5,6 +5,7 @@
 
 #include <arpa/inet.h>
 #include <stdlib.h>
+#include <stdio.h>
 #include <string.h>
 #include "arch.h"
 #include "incbin.h"
@@ -133,6 +134,7 @@ class BytecodeRewriter {
     // Reader
 
     const u8* get(int bytes) {
+        fprintf(stderr, "SRC => %p, bytes = %d\n", _src, bytes);
         const u8* result = _src;
         _src += bytes;
         return _src <= _src_limit ? result : NULL;
@@ -163,6 +165,7 @@ class BytecodeRewriter {
     // Writer
 
     u8* alloc(int bytes) {
+        fprintf(stderr, "DST => %p, bytes = %d\n", _dst, bytes);
         if (_dst_len + bytes > _dst_capacity) {
             grow(_dst_len + bytes + 2000);
         }
