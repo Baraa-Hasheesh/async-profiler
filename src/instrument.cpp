@@ -404,18 +404,25 @@ void BytecodeRewriter::rewriteAttributes(Scope scope) {
         put16(attribute_name_index);
 
         Constant* attribute_name = _cpool[attribute_name_index];
+
+        fprintf(stderr, "$1 => %d\n", attribute_name_index);
+
         if (scope == SCOPE_REWRITE_METHOD && attribute_name->equals("Code", 4)) {
+            fprintf(stderr, "$2 => %d\n", attribute_name_index);
             rewriteCode();
             continue;
         } else if (scope == SCOPE_REWRITE_CODE) {
             if (attribute_name->equals("LineNumberTable", 15)) {
+                fprintf(stderr, "$3 => %d\n", attribute_name_index);
                 rewriteBytecodeTable(2);
                 continue;
             } else if (attribute_name->equals("LocalVariableTable", 18) ||
                        attribute_name->equals("LocalVariableTypeTable", 22)) {
+                fprintf(stderr, "$4 => %d\n", attribute_name_index);
                 rewriteBytecodeTable(8);
                 continue;
             } else if (attribute_name->equals("StackMapTable", 13)) {
+                fprintf(stderr, "$5 => %d\n", attribute_name_index);
                 rewriteStackMapTable();
                 continue;
             }
