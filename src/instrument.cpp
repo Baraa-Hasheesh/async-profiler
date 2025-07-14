@@ -137,7 +137,9 @@ class BytecodeRewriter {
         fprintf(stderr, "SRC => %p, bytes = %d\n", _src, bytes);
         const u8* result = _src;
         _src += bytes;
-        return _src <= _src_limit ? result : NULL;
+        result = _src <= _src_limit ? result : NULL;
+        fprintf(stderr, "SRC => RESULT=%p\n", result);
+        return result;
     }
 
     u8 get8() {
@@ -165,7 +167,7 @@ class BytecodeRewriter {
     // Writer
 
     u8* alloc(int bytes) {
-        fprintf(stderr, "DST => %p, bytes = %d\n", _dst, bytes);
+        fprintf(stderr, "DST => %p, bytes = %d, length=%d, capacity=%d\n", _dst, bytes, _dst_len, _dst_capacity);
         if (_dst_len + bytes > _dst_capacity) {
             grow(_dst_len + bytes + 2000);
         }
