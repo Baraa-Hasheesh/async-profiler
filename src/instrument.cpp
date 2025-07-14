@@ -348,7 +348,7 @@ void BytecodeRewriter::rewriteStackMapTable() {
     put8(EXTRA_BYTECODES - 1);
 
     for (int i = 0; i < number_of_entries; i++) {
-        u32 frame_type = (u32)get8();
+        u8 frame_type = get8();
         put8(frame_type);
 
         fprintf(stderr, "BytecodeRewriter::rewriteStackMapTable = %d, TYPE=%d, number_of_entries=%d\n", i, frame_type, number_of_entries);
@@ -368,7 +368,7 @@ void BytecodeRewriter::rewriteStackMapTable() {
         } else if (frame_type <= 254) {
             // append_frame
             put16(get16());
-            for (int j = 0; j < frame_type - 251; j++) {
+            for (u8 j = 0; j < frame_type - (u8)251; j++) {
                 fprintf(stderr, "PROBLEM => %d\n", j);
                 rewriteVerificationTypeInfo();
             }
