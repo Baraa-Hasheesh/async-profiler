@@ -351,6 +351,8 @@ void BytecodeRewriter::rewriteStackMapTable() {
         u8 frame_type = get8();
         put8(frame_type);
 
+        fprintf(stderr, "BytecodeRewriter::rewriteStackMapTable = %d, TYPE=%d\n", i, frame_type);
+
         if (frame_type <= 63) {
             // same_frame
         } else if (frame_type <= 127) {
