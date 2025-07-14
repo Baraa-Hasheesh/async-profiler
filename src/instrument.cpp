@@ -348,7 +348,7 @@ void BytecodeRewriter::rewriteStackMapTable() {
     put8(EXTRA_BYTECODES - 1);
 
     for (int i = 0; i < number_of_entries; i++) {
-        u8 frame_type = get8();
+        u32 frame_type = (u32)get8();
         put8(frame_type);
 
         fprintf(stderr, "BytecodeRewriter::rewriteStackMapTable = %d, TYPE=%d, number_of_entries=%d\n", i, frame_type, number_of_entries);
