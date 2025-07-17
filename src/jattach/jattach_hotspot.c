@@ -18,6 +18,13 @@
 
 extern int mnt_changed;
 
+static void reportTime(char* msg) {
+    struct timespec time;
+    clock_gettime(CLOCK_REALTIME, &time);
+    long long milliseconds = (long long)(time.tv_sec) * 1000 + time.tv_nsec / 1000000;
+    fprintf(stderr, "%s: %lld\n", msg, milliseconds);
+}
+
 // Check if remote JVM has already opened socket for Dynamic Attach
 static int check_socket(int pid) {
     char path[MAX_PATH];
@@ -57,6 +64,8 @@ static int start_attach_mechanism(int pid, int nspid) {
     // We have to still use the host namespace pid here for the kill() call
     kill(pid, SIGQUIT);
 
+    reportTime("Before Socket");
+
     // Start with 20 ms sleep and increment delay each iteration. Total timeout is 6000 ms
     struct timespec ts = {0, 20000000};
     int result;
@@ -64,6 +73,8 @@ static int start_attach_mechanism(int pid, int nspid) {
         nanosleep(&ts, NULL);
         result = check_socket(nspid);
     } while (result != 0 && (ts.tv_nsec += 20000000) < 500000000);
+
+    reportTime("After Socket");
 
     unlink(path);
     return result;
@@ -192,7 +203,9 @@ int jattach_hotspot(int pid, int nspid, int argc, char** argv, int print_output)
         return 1;
     }
 
+    reportTime("Before connect Socket");
     int fd = connect_socket(nspid);
+    reportTime("After connect Socket");
     if (fd == -1) {
         perror("Could not connect to socket");
         return 1;
@@ -202,13 +215,18 @@ int jattach_hotspot(int pid, int nspid, int argc, char** argv, int print_output)
         printf("Connected to remote JVM\n");
     }
 
+    reportTime("Before Write Command");
     if (write_command(fd, argc, argv) != 0) {
         perror("Error writing to socket");
         close(fd);
         return 1;
     }
+    reportTime("After Write Command");
+
 
     int result = read_response(fd, argc, argv, print_output);
+    reportTime("After Read Response");
+
     close(fd);
 
     return result;

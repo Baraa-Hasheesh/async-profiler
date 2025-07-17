@@ -40,6 +40,8 @@ public class TestProcess implements Closeable {
 
     private static final MethodHandle pid = getPidHandle();
 
+    private static int counter = 0;
+
     private static MethodHandle getPidHandle() {
         // JDK 9+
         try {
@@ -311,6 +313,8 @@ public class TestProcess implements Closeable {
     }
 
     public Output profile(String args, boolean sudo) throws IOException, TimeoutException, InterruptedException {
+        int id = counter++;
+
         List<String> cmd = new ArrayList<>();
         if (sudo && (new File("/usr/bin/sudo").exists() || !isRoot())) {
             cmd.add("/usr/bin/sudo");
@@ -321,17 +325,17 @@ public class TestProcess implements Closeable {
         log.log(Level.FINE, "Profiling " + cmd);
 
         Process p = new ProcessBuilder(cmd)
-                .redirectOutput(createTempFile(PROFOUT))
-                .redirectError(createTempFile(PROFERR))
+                .redirectOutput(createTempFile(PROFOUT + id))
+                .redirectError(createTempFile(PROFERR + id))
                 .start();
 
         waitForExit(p, 10);
         int exitCode = p.waitFor();
         if (exitCode != 0) {
-            throw new IOException("Profiling call failed: " + readFile(PROFERR));
+            throw new IOException("Profiling call failed: " + readFile(PROFERR + id));
         }
 
-        return readFile(PROFOUT);
+        return readFile(PROFOUT + id);
     }
 
     public File getFile(String fileId) {
