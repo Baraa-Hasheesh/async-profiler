@@ -15,6 +15,7 @@
 class LateInitializer {
   public:
     LateInitializer() {
+        u64 start = OS::nanotime();
         Dl_info dl_info;
         if (!OS::isMusl() && dladdr((const void*)Hooks::init, &dl_info) && dl_info.dli_fname != NULL) {
             // Make sure async-profiler DSO cannot be unloaded, since it contains JVM callbacks.
@@ -29,6 +30,8 @@ class LateInitializer {
                 startProfiler(command);
             }
         }
+
+        fprintf(stderr, "ZINIT TIME = %llu\n", (OS::nanotime() - start) / 1000000);
     }
 
   private:
