@@ -149,6 +149,7 @@ void Symbols::parseLibraries(CodeCacheArray* array, bool kernel_symbols) {
     uint32_t images = _dyld_image_count();
 
     for (uint32_t i = 0; i < images; i++) {
+        u64 start = OS::nanotime();
         const mach_header* image_base = _dyld_get_image_header(i);
         if (image_base == NULL || !_parsed_libraries.insert(image_base).second) {
             continue;  // the library was already parsed
@@ -180,6 +181,8 @@ void Symbols::parseLibraries(CodeCacheArray* array, bool kernel_symbols) {
         } else {
             delete cc;
         }
+
+        fprintf(stderr, "PARSE TIME = %llu - %s\n", (OS::nanotime() - start) / 1000000, path);
     }
 }
 
