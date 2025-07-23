@@ -311,6 +311,7 @@ ElfProgramHeader* ElfParser::findProgramHeader(uint32_t type) {
 }
 
 bool ElfParser::parseFile(CodeCache* cc, const char* base, const char* file_name, bool use_debug) {
+    u64 start = OS::nanotime();
     int fd = open(file_name, O_RDONLY);
     if (fd == -1) {
         return false;
@@ -330,10 +331,15 @@ bool ElfParser::parseFile(CodeCache* cc, const char* base, const char* file_name
         }
         munmap(addr, length);
     }
+
+    fprintf(stderr, "ElfParser::parseFile (%s) total = %llu\n", cc->name(), OS::nanotime() - start);
+
     return true;
 }
 
 void ElfParser::parseProgramHeaders(CodeCache* cc, const char* base, const char* end, bool relocate_dyn) {
+    u64 start = OS::nanotime();
+
     ElfParser elf(cc, base, base, NULL, relocate_dyn);
     if (elf.validHeader() && base + elf._header->e_phoff < end) {
         cc->setTextBase(base);
@@ -341,9 +347,13 @@ void ElfParser::parseProgramHeaders(CodeCache* cc, const char* base, const char*
         elf.parseDynamicSection();
         elf.parseDwarfInfo();
     }
+
+    fprintf(stderr, "ElfParser::parseProgramHeaders (%s) total = %llu\n", cc->name(), OS::nanotime() - start);
 }
 
 void ElfParser::calcVirtualLoadAddress() {
+    u64 start = OS::nanotime();
+
     // Find a difference between the virtual load address (often zero) and the actual DSO base
     const char* pheaders = (const char*)_header + _header->e_phoff;
     for (int i = 0; i < _header->e_phnum; i++) {
@@ -354,9 +364,13 @@ void ElfParser::calcVirtualLoadAddress() {
         }
     }
     _vaddr_diff = _base;
+
+    fprintf(stderr, "ElfParser::calcVirtualLoadAddress (%s) total = %llu\n", _cc->name(), OS::nanotime() - start);
 }
 
 void ElfParser::parseDynamicSection() {
+    u64 start = OS::nanotime();
+
     ElfProgramHeader* dynamic = findProgramHeader(PT_DYNAMIC);
     if (dynamic != NULL) {
         const char* symtab = NULL;
@@ -451,10 +465,13 @@ void ElfParser::parseDynamicSection() {
             }
         }
     }
+    fprintf(stderr, "ElfParser::parseDynamicSection (%s) total = %llu\n", _cc->name(), OS::nanotime() - start);
 }
 
 void ElfParser::parseDwarfInfo() {
     if (!DWARF_SUPPORTED) return;
+
+    u64 start = OS::nanotime();
 
     ElfProgramHeader* eh_frame_hdr = findProgramHeader(PT_GNU_EH_FRAME);
     if (eh_frame_hdr != NULL) {
@@ -467,6 +484,7 @@ void ElfParser::parseDwarfInfo() {
             _cc->setDwarfTable(table, 1);
         }
     }
+    fprintf(stderr, "ElfParser::parseDwarfInfo (%s) total = %llu\n", _cc->name(), OS::nanotime() - start);
 }
 
 uint32_t ElfParser::getSymbolCount(uint32_t* gnu_hash) {
@@ -486,6 +504,8 @@ uint32_t ElfParser::getSymbolCount(uint32_t* gnu_hash) {
 }
 
 void ElfParser::loadSymbols(bool use_debug) {
+    u64 start = OS::nanotime();
+
     ElfSection* symtab = findSection(SHT_SYMTAB, ".symtab");
     if (symtab != NULL) {
         // Parse debug symbols from the original .so
@@ -508,6 +528,8 @@ void ElfParser::loadSymbols(bool use_debug) {
             }
         }
     }
+
+    fprintf(stderr, "ElfParser::loadSymbols (%s) total = %llu\n", _cc->name(), OS::nanotime() - start);
 }
 
 const char* ElfParser::getDebuginfodCache() {
@@ -592,6 +614,7 @@ bool ElfParser::loadSymbolsUsingBuildId() {
 
 // Look for debuginfo file specified in .gnu_debuglink section
 bool ElfParser::loadSymbolsUsingDebugLink() {
+    u64 start = OS::nanotime();
     ElfSection* section = findSection(SHT_PROGBITS, ".gnu_debuglink");
     if (section == NULL || section->sh_size <= 4) {
         return false;
@@ -628,6 +651,8 @@ bool ElfParser::loadSymbolsUsingDebugLink() {
     }
 
     free(dirname);
+    fprintf(stderr, "ElfParser::loadSymbolsUsingDebugLink (%s) total = %llu\n", _cc->name(), OS::nanotime() - start);
+
     return result;
 }
 
@@ -801,6 +826,7 @@ void Symbols::parseLibraries(CodeCacheArray* array, bool kernel_symbols) {
     collectSharedLibraries(libs, MAX_NATIVE_LIBS - array->count());
 
     for (auto& it : libs) {
+        u64 start = OS::nanotime();
         u64 inode = it.first;
         _parsed_inodes.insert(inode);
 
@@ -830,6 +856,8 @@ void Symbols::parseLibraries(CodeCacheArray* array, bool kernel_symbols) {
         cc->sort();
         applyPatch(cc);
         array->add(cc);
+
+        fprintf(stderr, "Symbols::parseLibraries (%s) total = %llu\n---------------------------------------------------\n", cc->name(), OS::nanotime() - start);
     }
 
     if (array->count() >= MAX_NATIVE_LIBS && !_libs_limit_reported) {

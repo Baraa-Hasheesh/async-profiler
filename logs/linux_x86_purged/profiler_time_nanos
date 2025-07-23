@@ -1,0 +1,133 @@
+ElfParser::parseDwarfInfo ([vdso]) total = 5390
+ElfParser::parseProgramHeaders ([vdso]) total = 51580
+Symbols::parseLibraries ([vdso]) total = 64970
+---------------------------------------------------
+ElfParser::loadSymbols (/usr/lib64/libdl-2.26.so) total = 9460
+ElfParser::parseFile (/usr/lib64/libdl-2.26.so) total = 68720
+ElfParser::parseDynamicSection (/usr/lib64/libdl-2.26.so) total = 1040
+ElfParser::parseDwarfInfo (/usr/lib64/libdl-2.26.so) total = 6760
+ElfParser::parseProgramHeaders (/usr/lib64/libdl-2.26.so) total = 24050
+Symbols::parseLibraries (/usr/lib64/libdl-2.26.so) total = 144060
+---------------------------------------------------
+ElfParser::loadSymbols (/local/home/bhashesh/.sdkman/candidates/java/11.0.27-amzn/lib/libjimage.so) total = 51460
+ElfParser::parseFile (/local/home/bhashesh/.sdkman/candidates/java/11.0.27-amzn/lib/libjimage.so) total = 101841
+ElfParser::parseDynamicSection (/local/home/bhashesh/.sdkman/candidates/java/11.0.27-amzn/lib/libjimage.so) total = 2070
+ElfParser::parseDwarfInfo (/local/home/bhashesh/.sdkman/candidates/java/11.0.27-amzn/lib/libjimage.so) total = 49140
+ElfParser::parseProgramHeaders (/local/home/bhashesh/.sdkman/candidates/java/11.0.27-amzn/lib/libjimage.so) total = 66810
+Symbols::parseLibraries (/local/home/bhashesh/.sdkman/candidates/java/11.0.27-amzn/lib/libjimage.so) total = 222221
+---------------------------------------------------
+ElfParser::loadSymbols (/local/home/bhashesh/.sdkman/candidates/java/11.0.27-amzn/lib/libzip.so) total = 17100
+ElfParser::parseFile (/local/home/bhashesh/.sdkman/candidates/java/11.0.27-amzn/lib/libzip.so) total = 62381
+ElfParser::parseDynamicSection (/local/home/bhashesh/.sdkman/candidates/java/11.0.27-amzn/lib/libzip.so) total = 1450
+ElfParser::parseDwarfInfo (/local/home/bhashesh/.sdkman/candidates/java/11.0.27-amzn/lib/libzip.so) total = 15020
+ElfParser::parseProgramHeaders (/local/home/bhashesh/.sdkman/candidates/java/11.0.27-amzn/lib/libzip.so) total = 30840
+Symbols::parseLibraries (/local/home/bhashesh/.sdkman/candidates/java/11.0.27-amzn/lib/libzip.so) total = 118771
+---------------------------------------------------
+ElfParser::loadSymbols (/usr/lib64/libm-2.26.so) total = 1034813
+ElfParser::parseFile (/usr/lib64/libm-2.26.so) total = 1091534
+ElfParser::parseDynamicSection (/usr/lib64/libm-2.26.so) total = 3900
+ElfParser::parseDwarfInfo (/usr/lib64/libm-2.26.so) total = 125280
+ElfParser::parseProgramHeaders (/usr/lib64/libm-2.26.so) total = 144360
+Symbols::parseLibraries (/usr/lib64/libm-2.26.so) total = 1487865
+---------------------------------------------------
+ElfParser::loadSymbols (/local/home/bhashesh/.sdkman/candidates/java/11.0.27-amzn/lib/jli/libjli.so) total = 22400
+ElfParser::parseFile (/local/home/bhashesh/.sdkman/candidates/java/11.0.27-amzn/lib/jli/libjli.so) total = 74760
+ElfParser::parseDynamicSection (/local/home/bhashesh/.sdkman/candidates/java/11.0.27-amzn/lib/jli/libjli.so) total = 1950
+ElfParser::parseDwarfInfo (/local/home/bhashesh/.sdkman/candidates/java/11.0.27-amzn/lib/jli/libjli.so) total = 8000
+ElfParser::parseProgramHeaders (/local/home/bhashesh/.sdkman/candidates/java/11.0.27-amzn/lib/jli/libjli.so) total = 25830
+Symbols::parseLibraries (/local/home/bhashesh/.sdkman/candidates/java/11.0.27-amzn/lib/jli/libjli.so) total = 149910
+---------------------------------------------------
+ElfParser::loadSymbols (/local/home/bhashesh/.sdkman/candidates/java/11.0.27-amzn/lib/libnet.so) total = 35410
+ElfParser::parseFile (/local/home/bhashesh/.sdkman/candidates/java/11.0.27-amzn/lib/libnet.so) total = 79960
+ElfParser::parseDynamicSection (/local/home/bhashesh/.sdkman/candidates/java/11.0.27-amzn/lib/libnet.so) total = 1910
+ElfParser::parseDwarfInfo (/local/home/bhashesh/.sdkman/candidates/java/11.0.27-amzn/lib/libnet.so) total = 26570
+ElfParser::parseProgramHeaders (/local/home/bhashesh/.sdkman/candidates/java/11.0.27-amzn/lib/libnet.so) total = 41790
+Symbols::parseLibraries (/local/home/bhashesh/.sdkman/candidates/java/11.0.27-amzn/lib/libnet.so) total = 171190
+---------------------------------------------------
+ElfParser::loadSymbols (/usr/lib64/ld-2.26.so) total = 35230
+ElfParser::parseFile (/usr/lib64/ld-2.26.so) total = 85960
+ElfParser::parseDynamicSection (/usr/lib64/ld-2.26.so) total = 840
+ElfParser::parseDwarfInfo (/usr/lib64/ld-2.26.so) total = 44080
+ElfParser::parseProgramHeaders (/usr/lib64/ld-2.26.so) total = 59010
+Symbols::parseLibraries (/usr/lib64/ld-2.26.so) total = 197101
+---------------------------------------------------
+ElfParser::loadSymbols (/local/home/bhashesh/.sdkman/candidates/java/11.0.27-amzn/lib/libnio.so) total = 55400
+ElfParser::parseFile (/local/home/bhashesh/.sdkman/candidates/java/11.0.27-amzn/lib/libnio.so) total = 103130
+ElfParser::parseDynamicSection (/local/home/bhashesh/.sdkman/candidates/java/11.0.27-amzn/lib/libnio.so) total = 2470
+ElfParser::parseDwarfInfo (/local/home/bhashesh/.sdkman/candidates/java/11.0.27-amzn/lib/libnio.so) total = 35200
+ElfParser::parseProgramHeaders (/local/home/bhashesh/.sdkman/candidates/java/11.0.27-amzn/lib/libnio.so) total = 52240
+Symbols::parseLibraries (/local/home/bhashesh/.sdkman/candidates/java/11.0.27-amzn/lib/libnio.so) total = 201741
+---------------------------------------------------
+ElfParser::loadSymbols (/local/home/bhashesh/.sdkman/candidates/java/11.0.27-amzn/bin/java) total = 7210
+ElfParser::parseFile (/local/home/bhashesh/.sdkman/candidates/java/11.0.27-amzn/bin/java) total = 48430
+ElfParser::parseDynamicSection (/local/home/bhashesh/.sdkman/candidates/java/11.0.27-amzn/bin/java) total = 540
+ElfParser::parseDwarfInfo (/local/home/bhashesh/.sdkman/candidates/java/11.0.27-amzn/bin/java) total = 830
+ElfParser::parseProgramHeaders (/local/home/bhashesh/.sdkman/candidates/java/11.0.27-amzn/bin/java) total = 14620
+Symbols::parseLibraries (/local/home/bhashesh/.sdkman/candidates/java/11.0.27-amzn/bin/java) total = 82090
+---------------------------------------------------
+ElfParser::loadSymbols (/local/home/bhashesh/.sdkman/candidates/java/11.0.27-amzn/lib/server/libjvm.so) total = 27214188
+ElfParser::parseFile (/local/home/bhashesh/.sdkman/candidates/java/11.0.27-amzn/lib/server/libjvm.so) total = 27396638
+ElfParser::parseDynamicSection (/local/home/bhashesh/.sdkman/candidates/java/11.0.27-amzn/lib/server/libjvm.so) total = 5880
+ElfParser::parseDwarfInfo (/local/home/bhashesh/.sdkman/candidates/java/11.0.27-amzn/lib/server/libjvm.so) total = 17204262
+ElfParser::parseProgramHeaders (/local/home/bhashesh/.sdkman/candidates/java/11.0.27-amzn/lib/server/libjvm.so) total = 17246012
+Symbols::parseLibraries (/local/home/bhashesh/.sdkman/candidates/java/11.0.27-amzn/lib/server/libjvm.so) total = 51960487
+---------------------------------------------------
+ElfParser::loadSymbols (/workplace/bhashesh/async-profiler/build/lib/libasyncProfiler.so) total = 1851726
+ElfParser::parseFile (/workplace/bhashesh/async-profiler/build/lib/libasyncProfiler.so) total = 1929787
+ElfParser::parseDynamicSection (/workplace/bhashesh/async-profiler/build/lib/libasyncProfiler.so) total = 3910
+ElfParser::parseDwarfInfo (/workplace/bhashesh/async-profiler/build/lib/libasyncProfiler.so) total = 44240
+ElfParser::parseProgramHeaders (/workplace/bhashesh/async-profiler/build/lib/libasyncProfiler.so) total = 65520
+Symbols::parseLibraries (/workplace/bhashesh/async-profiler/build/lib/libasyncProfiler.so) total = 2117347
+---------------------------------------------------
+ElfParser::loadSymbols (/local/home/bhashesh/.sdkman/candidates/java/11.0.27-amzn/lib/libverify.so) total = 11410
+ElfParser::parseFile (/local/home/bhashesh/.sdkman/candidates/java/11.0.27-amzn/lib/libverify.so) total = 55840
+ElfParser::parseDynamicSection (/local/home/bhashesh/.sdkman/candidates/java/11.0.27-amzn/lib/libverify.so) total = 1090
+ElfParser::parseDwarfInfo (/local/home/bhashesh/.sdkman/candidates/java/11.0.27-amzn/lib/libverify.so) total = 4450
+ElfParser::parseProgramHeaders (/local/home/bhashesh/.sdkman/candidates/java/11.0.27-amzn/lib/libverify.so) total = 18530
+Symbols::parseLibraries (/local/home/bhashesh/.sdkman/candidates/java/11.0.27-amzn/lib/libverify.so) total = 93041
+---------------------------------------------------
+ElfParser::loadSymbols (/usr/lib64/libpthread-2.26.so) total = 52270
+ElfParser::parseFile (/usr/lib64/libpthread-2.26.so) total = 94220
+ElfParser::parseDynamicSection (/usr/lib64/libpthread-2.26.so) total = 1510
+ElfParser::parseDwarfInfo (/usr/lib64/libpthread-2.26.so) total = 19470
+ElfParser::parseProgramHeaders (/usr/lib64/libpthread-2.26.so) total = 37570
+Symbols::parseLibraries (/usr/lib64/libpthread-2.26.so) total = 214340
+---------------------------------------------------
+ElfParser::loadSymbols (/usr/lib64/librt-2.26.so) total = 15610
+ElfParser::parseFile (/usr/lib64/librt-2.26.so) total = 51641
+ElfParser::parseDynamicSection (/usr/lib64/librt-2.26.so) total = 1720
+ElfParser::parseDwarfInfo (/usr/lib64/librt-2.26.so) total = 5350
+ElfParser::parseProgramHeaders (/usr/lib64/librt-2.26.so) total = 23310
+Symbols::parseLibraries (/usr/lib64/librt-2.26.so) total = 116001
+---------------------------------------------------
+ElfParser::loadSymbols (/usr/lib64/libc-2.26.so) total = 2797800
+ElfParser::parseFile (/usr/lib64/libc-2.26.so) total = 2846250
+ElfParser::parseDynamicSection (/usr/lib64/libc-2.26.so) total = 6310
+ElfParser::parseDwarfInfo (/usr/lib64/libc-2.26.so) total = 966793
+ElfParser::parseProgramHeaders (/usr/lib64/libc-2.26.so) total = 993503
+Symbols::parseLibraries (/usr/lib64/libc-2.26.so) total = 4490086
+---------------------------------------------------
+ElfParser::loadSymbols (/local/home/bhashesh/.sdkman/candidates/java/11.0.27-amzn/lib/libjava.so) total = 73160
+ElfParser::parseFile (/local/home/bhashesh/.sdkman/candidates/java/11.0.27-amzn/lib/libjava.so) total = 116660
+ElfParser::parseDynamicSection (/local/home/bhashesh/.sdkman/candidates/java/11.0.27-amzn/lib/libjava.so) total = 3040
+ElfParser::parseDwarfInfo (/local/home/bhashesh/.sdkman/candidates/java/11.0.27-amzn/lib/libjava.so) total = 20980
+ElfParser::parseProgramHeaders (/local/home/bhashesh/.sdkman/candidates/java/11.0.27-amzn/lib/libjava.so) total = 37360
+Symbols::parseLibraries (/local/home/bhashesh/.sdkman/candidates/java/11.0.27-amzn/lib/libjava.so) total = 210010
+---------------------------------------------------
+ElfParser::loadSymbols (/usr/lib64/libz.so.1.2.7) total = 671132
+ElfParser::parseFile (/usr/lib64/libz.so.1.2.7) total = 6728704
+ElfParser::loadSymbols (/usr/lib64/libz.so.1.2.7) total = 6748994
+ElfParser::parseFile (/usr/lib64/libz.so.1.2.7) total = 6782914
+ElfParser::parseDynamicSection (/usr/lib64/libz.so.1.2.7) total = 1430
+ElfParser::parseDwarfInfo (/usr/lib64/libz.so.1.2.7) total = 15830
+ElfParser::parseProgramHeaders (/usr/lib64/libz.so.1.2.7) total = 30990
+Symbols::parseLibraries (/usr/lib64/libz.so.1.2.7) total = 6864094
+---------------------------------------------------
+ZINIT TOTAL = 74737826
+ElfParser::loadSymbols (/local/home/bhashesh/.sdkman/candidates/java/11.0.27-amzn/lib/libinstrument.so) total = 14630
+ElfParser::parseFile (/local/home/bhashesh/.sdkman/candidates/java/11.0.27-amzn/lib/libinstrument.so) total = 89660
+ElfParser::parseDynamicSection (/local/home/bhashesh/.sdkman/candidates/java/11.0.27-amzn/lib/libinstrument.so) total = 1570
+ElfParser::parseDwarfInfo (/local/home/bhashesh/.sdkman/candidates/java/11.0.27-amzn/lib/libinstrument.so) total = 22630
+ElfParser::parseProgramHeaders (/local/home/bhashesh/.sdkman/candidates/java/11.0.27-amzn/lib/libinstrument.so) total = 38110
+Symbols::parseLibraries (/local/home/bhashesh/.sdkman/candidates/java/11.0.27-amzn/lib/libinstrument.so) total = 160840
+---------------------------------------------------

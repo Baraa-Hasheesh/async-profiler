@@ -1,0 +1,638 @@
+[0.045s][debug][safepoint] Safepoint synchronization initiated. (9 threads)
+[0.046s][info ][safepoint] Entering safepoint region: EnableBiasedLocking
+[0.046s][info ][safepoint,cleanup] deflating idle monitors, 0.0000004 secs
+[0.046s][info ][safepoint,cleanup] updating inline caches, 0.0000352 secs
+[0.046s][info ][safepoint,cleanup] compilation policy safepoint handler, 0.0000006 secs
+[0.046s][info ][safepoint,cleanup] purging class loader data graph, 0.0000001 secs
+[0.046s][info ][safepoint,cleanup] resizing system dictionaries, 0.0000007 secs
+[0.046s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0001840 secs
+[0.046s][info ][safepoint        ] Leaving safepoint region
+[0.046s][info ][safepoint        ] Total time for which application threads were stopped: 0.0002620 seconds, Stopping threads took: 0.0000122 seconds
+[0.049s][debug][safepoint        ] Safepoint synchronization initiated. (10 threads)
+[0.049s][info ][safepoint        ] Application time: 0.0029540 seconds
+[0.049s][debug][safepoint        ] Waiting for 1 thread(s) to block
+[0.049s][info ][safepoint        ] Entering safepoint region: RevokeBias
+[0.049s][info ][safepoint,cleanup] deflating idle monitors, 0.0000001 secs
+[0.049s][info ][safepoint,cleanup] updating inline caches, 0.0000002 secs
+[0.049s][info ][safepoint,cleanup] compilation policy safepoint handler, 0.0000000 secs
+[0.049s][info ][safepoint,cleanup] purging class loader data graph, 0.0000000 secs
+[0.049s][info ][safepoint,cleanup] resizing system dictionaries, 0.0000002 secs
+[0.049s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0000594 secs
+[0.049s][info ][safepoint        ] Leaving safepoint region
+[0.049s][info ][safepoint        ] Total time for which application threads were stopped: 0.0001577 seconds, Stopping threads took: 0.0000501 seconds
+[0.144s][debug][safepoint        ] Safepoint synchronization initiated. (20 threads)
+[0.144s][info ][safepoint        ] Application time: 0.0952045 seconds
+[0.144s][info ][safepoint        ] Entering safepoint region: G1CollectForAllocation
+[0.144s][info ][safepoint,cleanup] deflating idle monitors, 0.0000003 secs
+[0.144s][info ][safepoint,cleanup] updating inline caches, 0.0000146 secs
+[0.144s][info ][safepoint,cleanup] compilation policy safepoint handler, 0.0000002 secs
+[0.144s][info ][safepoint,cleanup] purging class loader data graph, 0.0000001 secs
+[0.144s][info ][safepoint,cleanup] resizing system dictionaries, 0.0000008 secs
+[0.144s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0001710 secs
+[0.149s][info ][safepoint        ] Leaving safepoint region
+[0.149s][info ][safepoint        ] Total time for which application threads were stopped: 0.0045803 seconds, Stopping threads took: 0.0000127 seconds
+[0.149s][debug][safepoint        ] Safepoint synchronization initiated. (20 threads)
+[0.149s][info ][safepoint        ] Application time: 0.0001570 seconds
+[0.149s][debug][safepoint        ] ... found polling page return exception at pc = 0x00007efdc03ae73d, stub =0x00007efdb8807600
+[0.149s][debug][safepoint        ] Waiting for 1 thread(s) to block
+[0.149s][info ][safepoint        ] Entering safepoint region: RevokeBias
+[0.149s][info ][safepoint,cleanup] deflating idle monitors, 0.0000000 secs
+[0.149s][info ][safepoint,cleanup] compilation policy safepoint handler, 0.0000002 secs
+[0.149s][info ][safepoint,cleanup] updating inline caches, 0.0000008 secs
+[0.149s][info ][safepoint,cleanup] resizing system dictionaries, 0.0000009 secs
+[0.149s][info ][safepoint,cleanup] purging class loader data graph, 0.0000000 secs
+[0.149s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0001595 secs
+[0.149s][info ][safepoint        ] Leaving safepoint region
+[0.149s][info ][safepoint        ] Total time for which application threads were stopped: 0.0002847 seconds, Stopping threads took: 0.0000931 seconds
+[0.149s][debug][safepoint        ] Safepoint synchronization initiated. (20 threads)
+[0.149s][info ][safepoint        ] Application time: 0.0000572 seconds
+[0.149s][debug][safepoint        ] ... found polling page return exception at pc = 0x00007efdc03b2ba4, stub =0x00007efdb8807600
+[0.149s][debug][safepoint        ] Waiting for 1 thread(s) to block
+[0.149s][info ][safepoint        ] Entering safepoint region: RevokeBias
+[0.149s][info ][safepoint,cleanup] purging class loader data graph, 0.0000000 secs
+[0.149s][info ][safepoint,cleanup] updating inline caches, 0.0000002 secs
+[0.149s][info ][safepoint,cleanup] resizing system dictionaries, 0.0000002 secs
+[0.149s][info ][safepoint,cleanup] deflating idle monitors, 0.0000001 secs
+[0.149s][info ][safepoint,cleanup] compilation policy safepoint handler, 0.0000003 secs
+[0.150s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0001333 secs
+[0.150s][info ][safepoint        ] Leaving safepoint region
+[0.150s][info ][safepoint        ] Total time for which application threads were stopped: 0.0002302 seconds, Stopping threads took: 0.0000756 seconds
+[0.756s][debug][safepoint        ] Safepoint synchronization initiated. (19 threads)
+[0.756s][info ][safepoint        ] Application time: 0.6067389 seconds
+[0.756s][debug][safepoint        ] Waiting for 1 thread(s) to block
+[0.823s][info ][safepoint        ] Entering safepoint region: G1CollectForAllocation
+[0.823s][info ][safepoint,cleanup] deflating idle monitors, 0.0000003 secs
+[0.823s][info ][safepoint,cleanup] compilation policy safepoint handler, 0.0000006 secs
+[0.823s][info ][safepoint,cleanup] purging class loader data graph, 0.0000002 secs
+[0.823s][info ][safepoint,cleanup] resizing system dictionaries, 0.0000008 secs
+[0.823s][info ][safepoint,cleanup] updating inline caches, 0.0000251 secs
+[0.824s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0001966 secs
+[0.836s][info ][safepoint        ] Leaving safepoint region
+[0.836s][info ][safepoint        ] Total time for which application threads were stopped: 0.0797595 seconds, Stopping threads took: 0.0669692 seconds
+[0.839s][debug][safepoint        ] Safepoint synchronization initiated. (19 threads)
+[0.839s][info ][safepoint        ] Application time: 0.0029833 seconds
+[0.839s][info ][safepoint        ] Entering safepoint region: G1CollectForAllocation
+[0.839s][info ][safepoint,cleanup] updating inline caches, 0.0000002 secs
+[0.839s][info ][safepoint,cleanup] compilation policy safepoint handler, 0.0000007 secs
+[0.839s][info ][safepoint,cleanup] purging class loader data graph, 0.0000001 secs
+[0.839s][info ][safepoint,cleanup] resizing system dictionaries, 0.0000008 secs
+[0.839s][info ][safepoint,cleanup] deflating idle monitors, 0.0000026 secs
+[0.839s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0001941 secs
+[0.856s][info ][safepoint        ] Leaving safepoint region
+[0.856s][info ][safepoint        ] Total time for which application threads were stopped: 0.0169986 seconds, Stopping threads took: 0.0000141 seconds
+[0.856s][debug][safepoint        ] Safepoint synchronization initiated. (19 threads)
+[0.856s][info ][safepoint        ] Application time: 0.0000900 seconds
+[0.856s][debug][safepoint        ] ... found polling page return exception at pc = 0x00007efdc03d0cac, stub =0x00007efdb8807600
+[0.856s][debug][safepoint        ] Waiting for 1 thread(s) to block
+[0.856s][info ][safepoint        ] Entering safepoint region: RevokeBias
+[0.856s][info ][safepoint,cleanup] deflating idle monitors, 0.0000022 secs
+[0.856s][info ][safepoint,cleanup] compilation policy safepoint handler, 0.0000006 secs
+[0.856s][info ][safepoint,cleanup] resizing system dictionaries, 0.0000007 secs
+[0.856s][info ][safepoint,cleanup] updating inline caches, 0.0000004 secs
+[0.856s][info ][safepoint,cleanup] purging class loader data graph, 0.0000002 secs
+[0.857s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0001720 secs
+[0.857s][info ][safepoint        ] Leaving safepoint region
+[0.857s][info ][safepoint        ] Total time for which application threads were stopped: 0.0003579 seconds, Stopping threads took: 0.0001361 seconds
+[0.911s][debug][safepoint        ] Safepoint synchronization initiated. (17 threads)
+[0.911s][info ][safepoint        ] Application time: 0.0542125 seconds
+[0.911s][info ][safepoint        ] Entering safepoint region: G1CollectForAllocation
+[0.911s][info ][safepoint,cleanup] deflating idle monitors, 0.0000004 secs
+[0.911s][info ][safepoint,cleanup] compilation policy safepoint handler, 0.0000007 secs
+[0.911s][info ][safepoint,cleanup] resizing system dictionaries, 0.0000008 secs
+[0.911s][info ][safepoint,cleanup] purging class loader data graph, 0.0000002 secs
+[0.911s][info ][safepoint,cleanup] updating inline caches, 0.0000095 secs
+[0.911s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0002098 secs
+[0.917s][info ][safepoint        ] Leaving safepoint region
+[0.917s][info ][safepoint        ] Total time for which application threads were stopped: 0.0058184 seconds, Stopping threads took: 0.0000268 seconds
+[0.971s][debug][safepoint        ] Safepoint synchronization initiated. (17 threads)
+[0.971s][info ][safepoint        ] Application time: 0.0548038 seconds
+[0.971s][info ][safepoint        ] Entering safepoint region: G1CollectForAllocation
+[0.972s][info ][safepoint,cleanup] compilation policy safepoint handler, 0.0000002 secs
+[0.972s][info ][safepoint,cleanup] purging class loader data graph, 0.0000002 secs
+[0.972s][info ][safepoint,cleanup] deflating idle monitors, 0.0000005 secs
+[0.972s][info ][safepoint,cleanup] resizing system dictionaries, 0.0000009 secs
+[0.972s][info ][safepoint,cleanup] updating inline caches, 0.0000074 secs
+[0.972s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0002506 secs
+[0.981s][info ][safepoint        ] Leaving safepoint region
+[0.981s][info ][safepoint        ] Total time for which application threads were stopped: 0.0091476 seconds, Stopping threads took: 0.0000123 seconds
+[1.036s][debug][safepoint        ] Safepoint synchronization initiated. (17 threads)
+[1.036s][info ][safepoint        ] Application time: 0.0550886 seconds
+[1.036s][info ][safepoint        ] Entering safepoint region: G1CollectForAllocation
+[1.036s][info ][safepoint,cleanup] deflating idle monitors, 0.0000004 secs
+[1.036s][info ][safepoint,cleanup] purging class loader data graph, 0.0000002 secs
+[1.036s][info ][safepoint,cleanup] resizing system dictionaries, 0.0000005 secs
+[1.036s][info ][safepoint,cleanup] compilation policy safepoint handler, 0.0000007 secs
+[1.036s][info ][safepoint,cleanup] updating inline caches, 0.0000101 secs
+[1.036s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0001697 secs
+[1.042s][info ][safepoint        ] Leaving safepoint region
+[1.042s][info ][safepoint        ] Total time for which application threads were stopped: 0.0066842 seconds, Stopping threads took: 0.0000135 seconds
+[1.138s][debug][safepoint        ] Safepoint synchronization initiated. (13 threads)
+[1.138s][info ][safepoint        ] Application time: 0.0954154 seconds
+[1.138s][info ][safepoint        ] Entering safepoint region: G1CollectForAllocation
+[1.138s][info ][safepoint,cleanup] deflating idle monitors, 0.0000003 secs
+[1.138s][info ][safepoint,cleanup] updating inline caches, 0.0000006 secs
+[1.138s][info ][safepoint,cleanup] resizing system dictionaries, 0.0000008 secs
+[1.138s][info ][safepoint,cleanup] purging class loader data graph, 0.0000004 secs
+[1.138s][info ][safepoint,cleanup] compilation policy safepoint handler, 0.0000009 secs
+[1.138s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0002401 secs
+[1.145s][info ][safepoint        ] Leaving safepoint region
+[1.145s][info ][safepoint        ] Total time for which application threads were stopped: 0.0075790 seconds, Stopping threads took: 0.0000114 seconds
+[1.200s][debug][safepoint        ] Safepoint synchronization initiated. (11 threads)
+[1.200s][info ][safepoint        ] Application time: 0.0549736 seconds
+[1.200s][info ][safepoint        ] Entering safepoint region: G1CollectForAllocation
+[1.200s][info ][safepoint,cleanup] purging class loader data graph, 0.0000002 secs
+[1.200s][info ][safepoint,cleanup] resizing system dictionaries, 0.0000002 secs
+[1.200s][info ][safepoint,cleanup] compilation policy safepoint handler, 0.0000003 secs
+[1.200s][info ][safepoint,cleanup] deflating idle monitors, 0.0000003 secs
+[1.200s][info ][safepoint,cleanup] updating inline caches, 0.0000087 secs
+[1.201s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0002735 secs
+[1.207s][info ][safepoint        ] Leaving safepoint region
+[1.207s][info ][safepoint        ] Total time for which application threads were stopped: 0.0070676 seconds, Stopping threads took: 0.0000114 seconds
+[1.264s][debug][safepoint        ] Safepoint synchronization initiated. (10 threads)
+[1.264s][info ][safepoint        ] Application time: 0.0564845 seconds
+[1.264s][info ][safepoint        ] Entering safepoint region: G1CollectForAllocation
+[1.264s][info ][safepoint,cleanup] deflating idle monitors, 0.0000003 secs
+[1.264s][info ][safepoint,cleanup] compilation policy safepoint handler, 0.0000007 secs
+[1.264s][info ][safepoint,cleanup] purging class loader data graph, 0.0000002 secs
+[1.264s][info ][safepoint,cleanup] updating inline caches, 0.0000068 secs
+[1.264s][info ][safepoint,cleanup] resizing system dictionaries, 0.0000007 secs
+[1.264s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0002011 secs
+[1.271s][info ][safepoint        ] Leaving safepoint region
+[1.271s][info ][safepoint        ] Total time for which application threads were stopped: 0.0072680 seconds, Stopping threads took: 0.0000127 seconds
+[1.349s][debug][safepoint        ] Safepoint synchronization initiated. (10 threads)
+[1.349s][info ][safepoint        ] Application time: 0.0777596 seconds
+[1.349s][info ][safepoint        ] Entering safepoint region: G1CollectForAllocation
+[1.349s][info ][safepoint,cleanup] compilation policy safepoint handler, 0.0000005 secs
+[1.349s][info ][safepoint,cleanup] updating inline caches, 0.0000008 secs
+[1.349s][info ][safepoint,cleanup] deflating idle monitors, 0.0000003 secs
+[1.349s][info ][safepoint,cleanup] purging class loader data graph, 0.0000003 secs
+[1.349s][info ][safepoint,cleanup] resizing system dictionaries, 0.0000010 secs
+[1.349s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0002683 secs
+[1.358s][info ][safepoint        ] Leaving safepoint region
+[1.358s][info ][safepoint        ] Total time for which application threads were stopped: 0.0090693 seconds, Stopping threads took: 0.0000103 seconds
+[1.474s][debug][safepoint        ] Safepoint synchronization initiated. (10 threads)
+[1.474s][info ][safepoint        ] Application time: 0.1154569 seconds
+[1.474s][info ][safepoint        ] Entering safepoint region: G1CollectForAllocation
+[1.474s][info ][safepoint,cleanup] deflating idle monitors, 0.0000002 secs
+[1.474s][info ][safepoint,cleanup] updating inline caches, 0.0000007 secs
+[1.474s][info ][safepoint,cleanup] compilation policy safepoint handler, 0.0000007 secs
+[1.474s][info ][safepoint,cleanup] purging class loader data graph, 0.0000002 secs
+[1.474s][info ][safepoint,cleanup] resizing system dictionaries, 0.0000004 secs
+[1.474s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0002632 secs
+[1.484s][info ][safepoint        ] Leaving safepoint region
+[1.484s][info ][safepoint        ] Total time for which application threads were stopped: 0.0108643 seconds, Stopping threads took: 0.0000110 seconds
+[1.586s][debug][safepoint        ] Safepoint synchronization initiated. (10 threads)
+[1.586s][info ][safepoint        ] Application time: 0.1015847 seconds
+[1.586s][info ][safepoint        ] Entering safepoint region: RevokeBias
+[1.586s][info ][safepoint,cleanup] deflating idle monitors, 0.0000004 secs
+[1.586s][info ][safepoint,cleanup] purging class loader data graph, 0.0000000 secs
+[1.586s][info ][safepoint,cleanup] compilation policy safepoint handler, 0.0000005 secs
+[1.586s][info ][safepoint,cleanup] resizing system dictionaries, 0.0000008 secs
+[1.586s][info ][safepoint,cleanup] updating inline caches, 0.0000014 secs
+[1.586s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0002503 secs
+[1.586s][info ][safepoint        ] Leaving safepoint region
+[1.586s][info ][safepoint        ] Total time for which application threads were stopped: 0.0002953 seconds, Stopping threads took: 0.0000120 seconds
+[1.623s][debug][safepoint        ] Safepoint synchronization initiated. (10 threads)
+[1.623s][info ][safepoint        ] Application time: 0.0369075 seconds
+[1.623s][info ][safepoint        ] Entering safepoint region: G1CollectForAllocation
+[1.623s][info ][safepoint,cleanup] deflating idle monitors, 0.0000005 secs
+[1.623s][info ][safepoint,cleanup] purging class loader data graph, 0.0000000 secs
+[1.623s][info ][safepoint,cleanup] resizing system dictionaries, 0.0000003 secs
+[1.623s][info ][safepoint,cleanup] compilation policy safepoint handler, 0.0000008 secs
+[1.623s][info ][safepoint,cleanup] updating inline caches, 0.0000201 secs
+[1.623s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0001884 secs
+[1.637s][info ][safepoint        ] Leaving safepoint region
+[1.637s][info ][safepoint        ] Total time for which application threads were stopped: 0.0138728 seconds, Stopping threads took: 0.0000094 seconds
+[1.808s][debug][safepoint        ] Safepoint synchronization initiated. (10 threads)
+[1.808s][info ][safepoint        ] Application time: 0.1707386 seconds
+[1.808s][info ][safepoint        ] Entering safepoint region: G1CollectForAllocation
+[1.808s][info ][safepoint,cleanup] compilation policy safepoint handler, 0.0000003 secs
+[1.808s][info ][safepoint,cleanup] updating inline caches, 0.0000055 secs
+[1.808s][info ][safepoint,cleanup] deflating idle monitors, 0.0000003 secs
+[1.808s][info ][safepoint,cleanup] purging class loader data graph, 0.0000002 secs
+[1.808s][info ][safepoint,cleanup] resizing system dictionaries, 0.0000008 secs
+[1.808s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0002635 secs
+[1.819s][info ][safepoint        ] Leaving safepoint region
+[1.819s][info ][safepoint        ] Total time for which application threads were stopped: 0.0113310 seconds, Stopping threads took: 0.0000116 seconds
+[2.103s][debug][safepoint        ] Safepoint synchronization initiated. (10 threads)
+[2.103s][info ][safepoint        ] Application time: 0.2837420 seconds
+[2.103s][info ][safepoint        ] Entering safepoint region: G1CollectForAllocation
+[2.103s][info ][safepoint,cleanup] compilation policy safepoint handler, 0.0000010 secs
+[2.103s][info ][safepoint,cleanup] updating inline caches, 0.0000010 secs
+[2.103s][info ][safepoint,cleanup] deflating idle monitors, 0.0000004 secs
+[2.103s][info ][safepoint,cleanup] purging class loader data graph, 0.0000002 secs
+[2.103s][info ][safepoint,cleanup] resizing system dictionaries, 0.0000009 secs
+[2.103s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0002658 secs
+[2.118s][info ][safepoint        ] Leaving safepoint region
+[2.118s][info ][safepoint        ] Total time for which application threads were stopped: 0.0154831 seconds, Stopping threads took: 0.0000126 seconds
+[2.345s][debug][safepoint        ] Safepoint synchronization initiated. (10 threads)
+[2.345s][info ][safepoint        ] Application time: 0.2265976 seconds
+[2.345s][info ][safepoint        ] Entering safepoint region: G1CollectForAllocation
+[2.345s][info ][safepoint,cleanup] updating inline caches, 0.0000010 secs
+[2.345s][info ][safepoint,cleanup] deflating idle monitors, 0.0000003 secs
+[2.345s][info ][safepoint,cleanup] compilation policy safepoint handler, 0.0000005 secs
+[2.345s][info ][safepoint,cleanup] purging class loader data graph, 0.0000002 secs
+[2.345s][info ][safepoint,cleanup] resizing system dictionaries, 0.0000008 secs
+[2.345s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0001916 secs
+[2.362s][info ][safepoint        ] Leaving safepoint region
+[2.362s][info ][safepoint        ] Total time for which application threads were stopped: 0.0164558 seconds, Stopping threads took: 0.0000119 seconds
+[2.597s][debug][safepoint        ] Safepoint synchronization initiated. (10 threads)
+[2.597s][info ][safepoint        ] Application time: 0.2356709 seconds
+[2.597s][info ][safepoint        ] Entering safepoint region: G1CollectForAllocation
+[2.597s][info ][safepoint,cleanup] deflating idle monitors, 0.0000003 secs
+[2.597s][info ][safepoint,cleanup] updating inline caches, 0.0000012 secs
+[2.597s][info ][safepoint,cleanup] compilation policy safepoint handler, 0.0000007 secs
+[2.597s][info ][safepoint,cleanup] purging class loader data graph, 0.0000004 secs
+[2.597s][info ][safepoint,cleanup] resizing system dictionaries, 0.0000010 secs
+[2.598s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0002327 secs
+[2.616s][info ][safepoint        ] Leaving safepoint region
+[2.616s][info ][safepoint        ] Total time for which application threads were stopped: 0.0188399 seconds, Stopping threads took: 0.0000281 seconds
+[2.834s][debug][safepoint        ] Safepoint synchronization initiated. (10 threads)
+[2.834s][info ][safepoint        ] Application time: 0.2175779 seconds
+[2.834s][info ][safepoint        ] Entering safepoint region: G1CollectForAllocation
+[2.834s][info ][safepoint,cleanup] updating inline caches, 0.0000007 secs
+[2.834s][info ][safepoint,cleanup] deflating idle monitors, 0.0000006 secs
+[2.834s][info ][safepoint,cleanup] compilation policy safepoint handler, 0.0000006 secs
+[2.834s][info ][safepoint,cleanup] purging class loader data graph, 0.0000002 secs
+[2.834s][info ][safepoint,cleanup] resizing system dictionaries, 0.0000009 secs
+[2.834s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0001978 secs
+[2.849s][info ][safepoint        ] Leaving safepoint region
+[2.849s][info ][safepoint        ] Total time for which application threads were stopped: 0.0153442 seconds, Stopping threads took: 0.0000115 seconds
+[3.054s][debug][safepoint        ] Safepoint synchronization initiated. (10 threads)
+[3.054s][info ][safepoint        ] Application time: 0.2047216 seconds
+[3.054s][info ][safepoint        ] Entering safepoint region: G1CollectForAllocation
+[3.054s][info ][safepoint,cleanup] deflating idle monitors, 0.0000002 secs
+[3.054s][info ][safepoint,cleanup] updating inline caches, 0.0000008 secs
+[3.054s][info ][safepoint,cleanup] resizing system dictionaries, 0.0000007 secs
+[3.054s][info ][safepoint,cleanup] purging class loader data graph, 0.0000003 secs
+[3.054s][info ][safepoint,cleanup] compilation policy safepoint handler, 0.0000008 secs
+[3.054s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0002791 secs
+[3.071s][info ][safepoint        ] Leaving safepoint region
+[3.071s][info ][safepoint        ] Total time for which application threads were stopped: 0.0169288 seconds, Stopping threads took: 0.0000098 seconds
+[3.101s][debug][safepoint        ] Safepoint synchronization initiated. (10 threads)
+[3.102s][info ][safepoint        ] Application time: 0.0308357 seconds
+[3.102s][debug][safepoint        ] ... found polling page return exception at pc = 0x00007efdc03d0cac, stub =0x00007efdb8807600
+[3.102s][debug][safepoint        ] Waiting for 1 thread(s) to block
+[3.102s][info ][safepoint        ] Entering safepoint region: CGC_Operation
+[3.102s][info ][safepoint,cleanup] updating inline caches, 0.0000008 secs
+[3.102s][info ][safepoint,cleanup] purging class loader data graph, 0.0000002 secs
+[3.102s][info ][safepoint,cleanup] deflating idle monitors, 0.0000003 secs
+[3.102s][info ][safepoint,cleanup] resizing system dictionaries, 0.0000010 secs
+[3.102s][info ][safepoint,cleanup] compilation policy safepoint handler, 0.0000011 secs
+[3.102s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0002615 secs
+[3.103s][info ][safepoint        ] Leaving safepoint region
+[3.103s][info ][safepoint        ] Total time for which application threads were stopped: 0.0016770 seconds, Stopping threads took: 0.0001081 seconds
+[3.119s][debug][safepoint        ] Safepoint synchronization initiated. (10 threads)
+[3.119s][info ][safepoint        ] Application time: 0.0157243 seconds
+[3.119s][debug][safepoint        ] ... found polling page return exception at pc = 0x00007efdc03d0cac, stub =0x00007efdb8807600
+[3.119s][debug][safepoint        ] Waiting for 1 thread(s) to block
+[3.119s][info ][safepoint        ] Entering safepoint region: CGC_Operation
+[3.119s][info ][safepoint,cleanup] compilation policy safepoint handler, 0.0000003 secs
+[3.119s][info ][safepoint,cleanup] purging class loader data graph, 0.0000000 secs
+[3.119s][info ][safepoint,cleanup] deflating idle monitors, 0.0000003 secs
+[3.119s][info ][safepoint,cleanup] updating inline caches, 0.0000001 secs
+[3.119s][info ][safepoint,cleanup] resizing system dictionaries, 0.0000007 secs
+[3.119s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0001840 secs
+[3.120s][info ][safepoint        ] Leaving safepoint region
+[3.120s][info ][safepoint        ] Total time for which application threads were stopped: 0.0005483 seconds, Stopping threads took: 0.0000801 seconds
+[3.237s][debug][safepoint        ] Safepoint synchronization initiated. (10 threads)
+[3.237s][info ][safepoint        ] Application time: 0.1176332 seconds
+[3.237s][info ][safepoint        ] Entering safepoint region: G1CollectForAllocation
+[3.237s][info ][safepoint,cleanup] deflating idle monitors, 0.0000003 secs
+[3.237s][info ][safepoint,cleanup] updating inline caches, 0.0000007 secs
+[3.237s][info ][safepoint,cleanup] resizing system dictionaries, 0.0000008 secs
+[3.237s][info ][safepoint,cleanup] compilation policy safepoint handler, 0.0000006 secs
+[3.237s][info ][safepoint,cleanup] purging class loader data graph, 0.0000003 secs
+[3.237s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0002333 secs
+[3.254s][info ][safepoint        ] Leaving safepoint region
+[3.254s][info ][safepoint        ] Total time for which application threads were stopped: 0.0171606 seconds, Stopping threads took: 0.0000119 seconds
+[3.277s][debug][safepoint        ] Safepoint synchronization initiated. (10 threads)
+[3.277s][info ][safepoint        ] Application time: 0.0230000 seconds
+[3.277s][info ][safepoint        ] Entering safepoint region: G1CollectForAllocation
+[3.277s][info ][safepoint,cleanup] compilation policy safepoint handler, 0.0000007 secs
+[3.277s][info ][safepoint,cleanup] deflating idle monitors, 0.0000003 secs
+[3.277s][info ][safepoint,cleanup] updating inline caches, 0.0000006 secs
+[3.277s][info ][safepoint,cleanup] resizing system dictionaries, 0.0000008 secs
+[3.277s][info ][safepoint,cleanup] purging class loader data graph, 0.0000002 secs
+[3.278s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0002546 secs
+[3.284s][info ][safepoint        ] Leaving safepoint region
+[3.284s][info ][safepoint        ] Total time for which application threads were stopped: 0.0064426 seconds, Stopping threads took: 0.0000092 seconds
+[3.611s][debug][safepoint        ] Safepoint synchronization initiated. (10 threads)
+[3.611s][info ][safepoint        ] Application time: 0.3270659 seconds
+[3.611s][info ][safepoint        ] Entering safepoint region: G1CollectForAllocation
+[3.611s][info ][safepoint,cleanup] deflating idle monitors, 0.0000002 secs
+[3.611s][info ][safepoint,cleanup] updating inline caches, 0.0000011 secs
+[3.611s][info ][safepoint,cleanup] resizing system dictionaries, 0.0000008 secs
+[3.611s][info ][safepoint,cleanup] purging class loader data graph, 0.0000002 secs
+[3.611s][info ][safepoint,cleanup] compilation policy safepoint handler, 0.0000006 secs
+[3.611s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0002159 secs
+[3.628s][info ][safepoint        ] Leaving safepoint region
+[3.628s][info ][safepoint        ] Total time for which application threads were stopped: 0.0169258 seconds, Stopping threads took: 0.0000125 seconds
+[3.917s][debug][safepoint        ] Safepoint synchronization initiated. (10 threads)
+[3.917s][info ][safepoint        ] Application time: 0.2888242 seconds
+[3.917s][info ][safepoint        ] Entering safepoint region: G1CollectForAllocation
+[3.917s][info ][safepoint,cleanup] deflating idle monitors, 0.0000002 secs
+[3.917s][info ][safepoint,cleanup] updating inline caches, 0.0000008 secs
+[3.917s][info ][safepoint,cleanup] purging class loader data graph, 0.0000002 secs
+[3.917s][info ][safepoint,cleanup] compilation policy safepoint handler, 0.0000006 secs
+[3.917s][info ][safepoint,cleanup] resizing system dictionaries, 0.0000007 secs
+[3.917s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0002678 secs
+[3.936s][info ][safepoint        ] Leaving safepoint region
+[3.936s][info ][safepoint        ] Total time for which application threads were stopped: 0.0197427 seconds, Stopping threads took: 0.0000108 seconds
+[4.378s][debug][safepoint        ] Safepoint synchronization initiated. (10 threads)
+[4.378s][info ][safepoint        ] Application time: 0.4418390 seconds
+[4.378s][info ][safepoint        ] Entering safepoint region: G1CollectForAllocation
+[4.378s][info ][safepoint,cleanup] deflating idle monitors, 0.0000004 secs
+[4.378s][info ][safepoint,cleanup] compilation policy safepoint handler, 0.0000008 secs
+[4.378s][info ][safepoint,cleanup] purging class loader data graph, 0.0000002 secs
+[4.378s][info ][safepoint,cleanup] updating inline caches, 0.0000011 secs
+[4.378s][info ][safepoint,cleanup] resizing system dictionaries, 0.0000010 secs
+[4.379s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0002466 secs
+[4.395s][info ][safepoint        ] Leaving safepoint region
+[4.395s][info ][safepoint        ] Total time for which application threads were stopped: 0.0170144 seconds, Stopping threads took: 0.0000113 seconds
+[5.395s][debug][safepoint        ] Safepoint synchronization initiated. (10 threads)
+[5.395s][info ][safepoint        ] Application time: 1.0001275 seconds
+[5.395s][debug][safepoint        ] Waiting for 1 thread(s) to block
+[5.395s][info ][safepoint        ] Entering safepoint region: Cleanup
+[5.396s][info ][safepoint,cleanup] updating inline caches, 0.0000007 secs
+[5.396s][info ][safepoint,cleanup] deflating idle monitors, 0.0000003 secs
+[5.396s][info ][safepoint,cleanup] compilation policy safepoint handler, 0.0000006 secs
+[5.396s][info ][safepoint,cleanup] resizing system dictionaries, 0.0000007 secs
+[5.396s][info ][safepoint,cleanup] purging class loader data graph, 0.0000004 secs
+[5.396s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0001907 secs
+[5.396s][info ][safepoint        ] Leaving safepoint region
+[5.396s][info ][safepoint        ] Total time for which application threads were stopped: 0.0002521 seconds, Stopping threads took: 0.0000433 seconds
+[5.691s][debug][safepoint        ] Safepoint synchronization initiated. (11 threads)
+[5.691s][info ][safepoint        ] Application time: 0.2953335 seconds
+[5.691s][debug][safepoint        ] Waiting for 1 thread(s) to block
+[5.691s][info ][safepoint        ] Entering safepoint region: RevokeBias
+[5.691s][info ][safepoint,cleanup] deflating idle monitors, 0.0000001 secs
+[5.691s][info ][safepoint,cleanup] compilation policy safepoint handler, 0.0000006 secs
+[5.691s][info ][safepoint,cleanup] purging class loader data graph, 0.0000001 secs
+[5.691s][info ][safepoint,cleanup] resizing system dictionaries, 0.0000004 secs
+[5.691s][info ][safepoint,cleanup] updating inline caches, 0.0000079 secs
+[5.691s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0002183 secs
+[5.691s][info ][safepoint        ] Leaving safepoint region
+[5.691s][info ][safepoint        ] Total time for which application threads were stopped: 0.0002936 seconds, Stopping threads took: 0.0000424 seconds
+[5.691s][debug][safepoint        ] Safepoint synchronization initiated. (11 threads)
+[5.691s][info ][safepoint        ] Application time: 0.0000459 seconds
+[5.691s][debug][safepoint        ] Waiting for 1 thread(s) to block
+[5.691s][info ][safepoint        ] Entering safepoint region: RevokeBias
+[5.691s][info ][safepoint,cleanup] deflating idle monitors, 0.0000001 secs
+[5.691s][info ][safepoint,cleanup] resizing system dictionaries, 0.0000001 secs
+[5.691s][info ][safepoint,cleanup] updating inline caches, 0.0000004 secs
+[5.691s][info ][safepoint,cleanup] purging class loader data graph, 0.0000003 secs
+[5.691s][info ][safepoint,cleanup] compilation policy safepoint handler, 0.0000009 secs
+[5.692s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0001890 secs
+[5.692s][info ][safepoint        ] Leaving safepoint region
+[5.692s][info ][safepoint        ] Total time for which application threads were stopped: 0.0002449 seconds, Stopping threads took: 0.0000331 seconds
+[5.692s][debug][safepoint        ] Safepoint synchronization initiated. (11 threads)
+[5.692s][info ][safepoint        ] Application time: 0.0000233 seconds
+[5.692s][info ][safepoint        ] Entering safepoint region: RevokeBias
+[5.692s][info ][safepoint,cleanup] updating inline caches, 0.0000007 secs
+[5.692s][info ][safepoint,cleanup] purging class loader data graph, 0.0000004 secs
+[5.692s][info ][safepoint,cleanup] resizing system dictionaries, 0.0000007 secs
+[5.692s][info ][safepoint,cleanup] deflating idle monitors, 0.0000108 secs
+[5.692s][info ][safepoint,cleanup] compilation policy safepoint handler, 0.0000003 secs
+[5.692s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0001739 secs
+[5.692s][info ][safepoint        ] Leaving safepoint region
+[5.692s][info ][safepoint        ] Total time for which application threads were stopped: 0.0002208 seconds, Stopping threads took: 0.0000208 seconds
+[5.692s][debug][safepoint        ] Safepoint synchronization initiated. (11 threads)
+[5.692s][info ][safepoint        ] Application time: 0.0000267 seconds
+[5.692s][debug][safepoint        ] Waiting for 1 thread(s) to block
+[5.692s][info ][safepoint        ] Entering safepoint region: RevokeBias
+[5.692s][info ][safepoint,cleanup] deflating idle monitors, 0.0000002 secs
+[5.692s][info ][safepoint,cleanup] updating inline caches, 0.0000002 secs
+[5.692s][info ][safepoint,cleanup] compilation policy safepoint handler, 0.0000002 secs
+[5.692s][info ][safepoint,cleanup] resizing system dictionaries, 0.0000002 secs
+[5.692s][info ][safepoint,cleanup] purging class loader data graph, 0.0000001 secs
+[5.692s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0001050 secs
+[5.692s][info ][safepoint        ] Leaving safepoint region
+[5.692s][info ][safepoint        ] Total time for which application threads were stopped: 0.0001548 seconds, Stopping threads took: 0.0000270 seconds
+[5.692s][debug][safepoint        ] Safepoint synchronization initiated. (11 threads)
+[5.692s][info ][safepoint        ] Application time: 0.0000642 seconds
+[5.692s][debug][safepoint        ] Waiting for 1 thread(s) to block
+[5.692s][info ][safepoint        ] Entering safepoint region: RevokeBias
+[5.692s][info ][safepoint,cleanup] compilation policy safepoint handler, 0.0000001 secs
+[5.692s][info ][safepoint,cleanup] purging class loader data graph, 0.0000000 secs
+[5.692s][info ][safepoint,cleanup] resizing system dictionaries, 0.0000000 secs
+[5.692s][info ][safepoint,cleanup] updating inline caches, 0.0000003 secs
+[5.692s][info ][safepoint,cleanup] deflating idle monitors, 0.0000031 secs
+[5.692s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0001428 secs
+[5.692s][info ][safepoint        ] Leaving safepoint region
+[5.692s][info ][safepoint        ] Total time for which application threads were stopped: 0.0001883 seconds, Stopping threads took: 0.0000241 seconds
+[5.692s][debug][safepoint        ] Safepoint synchronization initiated. (11 threads)
+[5.692s][info ][safepoint        ] Application time: 0.0000419 seconds
+[5.692s][debug][safepoint        ] Waiting for 2 thread(s) to block
+[5.692s][info ][safepoint        ] Entering safepoint region: RevokeBias
+[5.692s][info ][safepoint,cleanup] compilation policy safepoint handler, 0.0000000 secs
+[5.692s][info ][safepoint,cleanup] resizing system dictionaries, 0.0000008 secs
+[5.692s][info ][safepoint,cleanup] deflating idle monitors, 0.0000002 secs
+[5.692s][info ][safepoint,cleanup] updating inline caches, 0.0000010 secs
+[5.692s][info ][safepoint,cleanup] purging class loader data graph, 0.0000000 secs
+[5.693s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0001021 secs
+[5.693s][info ][safepoint        ] Leaving safepoint region
+[5.693s][info ][safepoint        ] Total time for which application threads were stopped: 0.0001530 seconds, Stopping threads took: 0.0000283 seconds
+[5.693s][debug][safepoint        ] Safepoint synchronization initiated. (11 threads)
+[5.693s][info ][safepoint        ] Application time: 0.0000264 seconds
+[5.693s][debug][safepoint        ] Waiting for 1 thread(s) to block
+[5.693s][info ][safepoint        ] Entering safepoint region: RevokeBias
+[5.693s][info ][safepoint,cleanup] updating inline caches, 0.0000002 secs
+[5.693s][info ][safepoint,cleanup] deflating idle monitors, 0.0000002 secs
+[5.693s][info ][safepoint,cleanup] purging class loader data graph, 0.0000000 secs
+[5.693s][info ][safepoint,cleanup] compilation policy safepoint handler, 0.0000000 secs
+[5.693s][info ][safepoint,cleanup] resizing system dictionaries, 0.0000000 secs
+[5.693s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0000946 secs
+[5.693s][info ][safepoint        ] Leaving safepoint region
+[5.693s][info ][safepoint        ] Total time for which application threads were stopped: 0.0001410 seconds, Stopping threads took: 0.0000258 seconds
+[5.696s][debug][safepoint        ] Safepoint synchronization initiated. (11 threads)
+[5.696s][info ][safepoint        ] Application time: 0.0029866 seconds
+[5.696s][debug][safepoint        ] Waiting for 1 thread(s) to block
+[5.696s][info ][safepoint        ] Entering safepoint region: RevokeBias
+[5.696s][info ][safepoint,cleanup] deflating idle monitors, 0.0000001 secs
+[5.696s][info ][safepoint,cleanup] compilation policy safepoint handler, 0.0000003 secs
+[5.696s][info ][safepoint,cleanup] purging class loader data graph, 0.0000001 secs
+[5.696s][info ][safepoint,cleanup] resizing system dictionaries, 0.0000003 secs
+[5.696s][info ][safepoint,cleanup] updating inline caches, 0.0000055 secs
+[5.696s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0001178 secs
+[5.696s][info ][safepoint        ] Leaving safepoint region
+[5.696s][info ][safepoint        ] Total time for which application threads were stopped: 0.0001661 seconds, Stopping threads took: 0.0000255 seconds
+[5.773s][debug][safepoint        ] Safepoint synchronization initiated. (11 threads)
+[5.774s][info ][safepoint        ] Application time: 0.0775927 seconds
+[5.774s][debug][safepoint        ] Waiting for 1 thread(s) to block
+[5.774s][info ][safepoint        ] Entering safepoint region: RevokeBias
+[5.774s][info ][safepoint,cleanup] deflating idle monitors, 0.0000001 secs
+[5.774s][info ][safepoint,cleanup] resizing system dictionaries, 0.0000003 secs
+[5.774s][info ][safepoint,cleanup] purging class loader data graph, 0.0000004 secs
+[5.774s][info ][safepoint,cleanup] updating inline caches, 0.0000098 secs
+[5.774s][info ][safepoint,cleanup] compilation policy safepoint handler, 0.0000009 secs
+[5.774s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0001888 secs
+[5.774s][info ][safepoint        ] Leaving safepoint region
+[5.774s][info ][safepoint        ] Total time for which application threads were stopped: 0.0002508 seconds, Stopping threads took: 0.0000325 seconds
+[5.774s][debug][safepoint        ] Safepoint synchronization initiated. (11 threads)
+[5.774s][info ][safepoint        ] Application time: 0.0000311 seconds
+[5.774s][debug][safepoint        ] Waiting for 1 thread(s) to block
+[5.774s][info ][safepoint        ] Entering safepoint region: RevokeBias
+[5.774s][info ][safepoint,cleanup] deflating idle monitors, 0.0000004 secs
+[5.774s][info ][safepoint,cleanup] compilation policy safepoint handler, 0.0000003 secs
+[5.774s][info ][safepoint,cleanup] purging class loader data graph, 0.0000000 secs
+[5.774s][info ][safepoint,cleanup] updating inline caches, 0.0000010 secs
+[5.774s][info ][safepoint,cleanup] resizing system dictionaries, 0.0000006 secs
+[5.774s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0001894 secs
+[5.774s][info ][safepoint        ] Leaving safepoint region
+[5.774s][info ][safepoint        ] Total time for which application threads were stopped: 0.0002366 seconds, Stopping threads took: 0.0000245 seconds
+[5.774s][debug][safepoint        ] Safepoint synchronization initiated. (11 threads)
+[5.774s][info ][safepoint        ] Application time: 0.0000292 seconds
+[5.774s][debug][safepoint        ] Waiting for 1 thread(s) to block
+[5.774s][info ][safepoint        ] Entering safepoint region: RevokeBias
+[5.774s][info ][safepoint,cleanup] deflating idle monitors, 0.0000002 secs
+[5.774s][info ][safepoint,cleanup] purging class loader data graph, 0.0000000 secs
+[5.774s][info ][safepoint,cleanup] compilation policy safepoint handler, 0.0000004 secs
+[5.774s][info ][safepoint,cleanup] resizing system dictionaries, 0.0000007 secs
+[5.774s][info ][safepoint,cleanup] updating inline caches, 0.0000009 secs
+[5.774s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0001606 secs
+[5.774s][info ][safepoint        ] Leaving safepoint region
+[5.774s][info ][safepoint        ] Total time for which application threads were stopped: 0.0002082 seconds, Stopping threads took: 0.0000243 seconds
+[5.774s][debug][safepoint        ] Safepoint synchronization initiated. (11 threads)
+[5.774s][info ][safepoint        ] Application time: 0.0000328 seconds
+[5.774s][debug][safepoint        ] Waiting for 1 thread(s) to block
+[5.774s][info ][safepoint        ] Entering safepoint region: RevokeBias
+[5.774s][info ][safepoint,cleanup] deflating idle monitors, 0.0000001 secs
+[5.774s][info ][safepoint,cleanup] updating inline caches, 0.0000006 secs
+[5.774s][info ][safepoint,cleanup] purging class loader data graph, 0.0000000 secs
+[5.774s][info ][safepoint,cleanup] compilation policy safepoint handler, 0.0000002 secs
+[5.774s][info ][safepoint,cleanup] resizing system dictionaries, 0.0000001 secs
+[5.775s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0001388 secs
+[5.775s][info ][safepoint        ] Leaving safepoint region
+[5.775s][info ][safepoint        ] Total time for which application threads were stopped: 0.0001807 seconds, Stopping threads took: 0.0000241 seconds
+[5.775s][debug][safepoint        ] Safepoint synchronization initiated. (11 threads)
+[5.775s][info ][safepoint        ] Application time: 0.0000170 seconds
+[5.775s][debug][safepoint        ] Waiting for 1 thread(s) to block
+[5.775s][info ][safepoint        ] Entering safepoint region: RevokeBias
+[5.775s][info ][safepoint,cleanup] purging class loader data graph, 0.0000000 secs
+[5.775s][info ][safepoint,cleanup] compilation policy safepoint handler, 0.0000001 secs
+[5.775s][info ][safepoint,cleanup] deflating idle monitors, 0.0000004 secs
+[5.775s][info ][safepoint,cleanup] updating inline caches, 0.0000003 secs
+[5.775s][info ][safepoint,cleanup] resizing system dictionaries, 0.0000001 secs
+[5.775s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0000877 secs
+[5.775s][info ][safepoint        ] Leaving safepoint region
+[5.775s][info ][safepoint        ] Total time for which application threads were stopped: 0.0001312 seconds, Stopping threads took: 0.0000235 seconds
+[5.775s][debug][safepoint        ] Safepoint synchronization initiated. (11 threads)
+[5.775s][info ][safepoint        ] Application time: 0.0000176 seconds
+[5.775s][debug][safepoint        ] Waiting for 1 thread(s) to block
+[5.775s][info ][safepoint        ] Entering safepoint region: RevokeBias
+[5.775s][info ][safepoint,cleanup] compilation policy safepoint handler, 0.0000001 secs
+[5.775s][info ][safepoint,cleanup] purging class loader data graph, 0.0000002 secs
+[5.775s][info ][safepoint,cleanup] resizing system dictionaries, 0.0000001 secs
+[5.775s][info ][safepoint,cleanup] updating inline caches, 0.0000004 secs
+[5.775s][info ][safepoint,cleanup] deflating idle monitors, 0.0000048 secs
+[5.775s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0001168 secs
+[5.775s][info ][safepoint        ] Leaving safepoint region
+[5.775s][info ][safepoint        ] Total time for which application threads were stopped: 0.0001612 seconds, Stopping threads took: 0.0000249 seconds
+[5.775s][debug][safepoint        ] Safepoint synchronization initiated. (11 threads)
+[5.775s][info ][safepoint        ] Application time: 0.0001040 seconds
+[5.775s][debug][safepoint        ] Waiting for 1 thread(s) to block
+[5.775s][info ][safepoint        ] Entering safepoint region: RevokeBias
+[5.775s][info ][safepoint,cleanup] compilation policy safepoint handler, 0.0000000 secs
+[5.775s][info ][safepoint,cleanup] updating inline caches, 0.0000002 secs
+[5.775s][info ][safepoint,cleanup] deflating idle monitors, 0.0000002 secs
+[5.775s][info ][safepoint,cleanup] purging class loader data graph, 0.0000001 secs
+[5.775s][info ][safepoint,cleanup] resizing system dictionaries, 0.0000005 secs
+[5.775s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0000999 secs
+[5.775s][info ][safepoint        ] Leaving safepoint region
+[5.775s][info ][safepoint        ] Total time for which application threads were stopped: 0.0001548 seconds, Stopping threads took: 0.0000241 seconds
+[5.776s][debug][safepoint        ] Safepoint synchronization initiated. (11 threads)
+[5.776s][info ][safepoint        ] Application time: 0.0008019 seconds
+[5.776s][debug][safepoint        ] Waiting for 1 thread(s) to block
+[5.776s][info ][safepoint        ] Entering safepoint region: RevokeBias
+[5.776s][info ][safepoint,cleanup] resizing system dictionaries, 0.0000000 secs
+[5.776s][info ][safepoint,cleanup] compilation policy safepoint handler, 0.0000001 secs
+[5.776s][info ][safepoint,cleanup] updating inline caches, 0.0000001 secs
+[5.776s][info ][safepoint,cleanup] purging class loader data graph, 0.0000002 secs
+[5.776s][info ][safepoint,cleanup] deflating idle monitors, 0.0000004 secs
+[5.776s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0001175 secs
+[5.776s][info ][safepoint        ] Leaving safepoint region
+[5.776s][info ][safepoint        ] Total time for which application threads were stopped: 0.0001641 seconds, Stopping threads took: 0.0000250 seconds
+[5.777s][debug][safepoint        ] Safepoint synchronization initiated. (11 threads)
+[5.777s][info ][safepoint        ] Application time: 0.0004707 seconds
+[5.777s][info ][safepoint        ] Entering safepoint region: RevokeBias
+[5.777s][info ][safepoint,cleanup] deflating idle monitors, 0.0000000 secs
+[5.777s][info ][safepoint,cleanup] updating inline caches, 0.0000003 secs
+[5.777s][info ][safepoint,cleanup] purging class loader data graph, 0.0000000 secs
+[5.777s][info ][safepoint,cleanup] compilation policy safepoint handler, 0.0000001 secs
+[5.777s][info ][safepoint,cleanup] resizing system dictionaries, 0.0000001 secs
+[5.777s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0001033 secs
+[5.777s][info ][safepoint        ] Leaving safepoint region
+[5.777s][info ][safepoint        ] Total time for which application threads were stopped: 0.0001333 seconds, Stopping threads took: 0.0000083 seconds
+[5.777s][debug][safepoint        ] Safepoint synchronization initiated. (11 threads)
+[5.777s][info ][safepoint        ] Application time: 0.0000273 seconds
+[5.777s][info ][safepoint        ] Entering safepoint region: RevokeBias
+[5.777s][info ][safepoint,cleanup] updating inline caches, 0.0000002 secs
+[5.777s][info ][safepoint,cleanup] compilation policy safepoint handler, 0.0000000 secs
+[5.777s][info ][safepoint,cleanup] deflating idle monitors, 0.0000001 secs
+[5.777s][info ][safepoint,cleanup] resizing system dictionaries, 0.0000000 secs
+[5.777s][info ][safepoint,cleanup] purging class loader data graph, 0.0000001 secs
+[5.777s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0000986 secs
+[5.777s][info ][safepoint        ] Leaving safepoint region
+[5.777s][info ][safepoint        ] Total time for which application threads were stopped: 0.0001272 seconds, Stopping threads took: 0.0000094 seconds
+[6.777s][debug][safepoint        ] Safepoint synchronization initiated. (11 threads)
+[6.777s][info ][safepoint        ] Application time: 1.0001512 seconds
+[6.777s][debug][safepoint        ] ... found polling page return exception at pc = 0x00007efdc03d0cac, stub =0x00007efdb8807600
+[6.777s][debug][safepoint        ] Waiting for 1 thread(s) to block
+[6.777s][info ][safepoint        ] Entering safepoint region: Cleanup
+[6.777s][info ][safepoint,cleanup] deflating idle monitors, 0.0000004 secs
+[6.777s][info ][safepoint,cleanup] purging class loader data graph, 0.0000002 secs
+[6.777s][info ][safepoint,cleanup] updating inline caches, 0.0000129 secs
+[6.777s][info ][safepoint,cleanup] compilation policy safepoint handler, 0.0000005 secs
+[6.777s][info ][safepoint,cleanup] resizing system dictionaries, 0.0000008 secs
+[6.777s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0002077 secs
+[6.777s][info ][safepoint        ] Leaving safepoint region
+[6.777s][info ][safepoint        ] Total time for which application threads were stopped: 0.0003643 seconds, Stopping threads took: 0.0001362 seconds
+[7.196s][debug][safepoint        ] Safepoint synchronization initiated. (11 threads)
+[7.196s][info ][safepoint        ] Application time: 0.4187250 seconds
+[7.196s][info ][safepoint        ] Entering safepoint region: G1CollectForAllocation
+[7.196s][info ][safepoint,cleanup] deflating idle monitors, 0.0000031 secs
+[7.196s][info ][safepoint,cleanup] compilation policy safepoint handler, 0.0000007 secs
+[7.196s][info ][safepoint,cleanup] updating inline caches, 0.0000008 secs
+[7.196s][info ][safepoint,cleanup] purging class loader data graph, 0.0000004 secs
+[7.196s][info ][safepoint,cleanup] resizing system dictionaries, 0.0000009 secs
+[7.196s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0002049 secs
+[7.204s][info ][safepoint        ] Leaving safepoint region
+[7.204s][info ][safepoint        ] Total time for which application threads were stopped: 0.0074941 seconds, Stopping threads took: 0.0000143 seconds
+[7.218s][debug][safepoint        ] Safepoint synchronization initiated. (11 threads)
+[7.218s][info ][safepoint        ] Application time: 0.0146696 seconds
+[7.218s][debug][safepoint        ] ... found polling page loop exception at pc = 0x00007efdc03d7f5b, stub =0x00007efdb880a680
+[7.218s][debug][safepoint        ] Waiting for 1 thread(s) to block
+[7.218s][info ][safepoint        ] Entering safepoint region: CGC_Operation
+[7.219s][info ][safepoint,cleanup] compilation policy safepoint handler, 0.0000005 secs
+[7.219s][info ][safepoint,cleanup] deflating idle monitors, 0.0000168 secs
+[7.219s][info ][safepoint,cleanup] purging class loader data graph, 0.0000002 secs
+[7.219s][info ][safepoint,cleanup] resizing system dictionaries, 0.0000007 secs
+[7.219s][info ][safepoint,cleanup] updating inline caches, 0.0000008 secs
+[7.219s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0001974 secs
+[7.220s][info ][safepoint        ] Leaving safepoint region
+[7.220s][info ][safepoint        ] Total time for which application threads were stopped: 0.0018031 seconds, Stopping threads took: 0.0000979 seconds
+[7.229s][debug][safepoint        ] Safepoint synchronization initiated. (11 threads)
+[7.229s][info ][safepoint        ] Application time: 0.0088461 seconds
+[7.229s][debug][safepoint        ] ... found polling page loop exception at pc = 0x00007efdc03d7f5b, stub =0x00007efdb880a680
+[7.229s][debug][safepoint        ] Waiting for 1 thread(s) to block
+[7.229s][info ][safepoint        ] Entering safepoint region: CGC_Operation
+[7.229s][info ][safepoint,cleanup] resizing system dictionaries, 0.0000007 secs
+[7.229s][info ][safepoint,cleanup] purging class loader data graph, 0.0000002 secs
+[7.229s][info ][safepoint,cleanup] updating inline caches, 0.0000002 secs
+[7.229s][info ][safepoint,cleanup] compilation policy safepoint handler, 0.0000004 secs
+[7.229s][info ][safepoint,cleanup] deflating idle monitors, 0.0000001 secs
+[7.229s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0002194 secs
+[7.230s][info ][safepoint        ] Leaving safepoint region
+[7.230s][info ][safepoint        ] Total time for which application threads were stopped: 0.0004867 seconds, Stopping threads took: 0.0000816 seconds
+[7.390s][debug][safepoint        ] Safepoint synchronization initiated. (12 threads)
+[7.390s][info ][safepoint        ] Application time: 0.1606621 seconds
+[7.390s][debug][safepoint        ] ... found polling page loop exception at pc = 0x00007efdc03e2142, stub =0x00007efdb880a680
+[7.390s][debug][safepoint        ] Waiting for 1 thread(s) to block
+[7.390s][info ][safepoint        ] Entering safepoint region: Exit
+[7.390s][info ][safepoint,cleanup] purging class loader data graph, 0.0000002 secs
+[7.390s][info ][safepoint,cleanup] deflating idle monitors, 0.0000003 secs
+[7.390s][info ][safepoint,cleanup] resizing system dictionaries, 0.0000007 secs
+[7.390s][info ][safepoint,cleanup] updating inline caches, 0.0000004 secs
+[7.390s][info ][safepoint,cleanup] compilation policy safepoint handler, 0.0000006 secs
+[7.391s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0001897 secs
