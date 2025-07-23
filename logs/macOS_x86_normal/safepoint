@@ -1,0 +1,120 @@
+[0.115s][debug][safepoint] Safepoint synchronization initiated using striped semaphore wait barrier. (12 threads)
+[0.116s][info ][safepoint,cleanup] updating inline caches, 0.0000058 secs
+[0.116s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0000243 secs
+[0.117s][info ][safepoint,stats  ] VM Operation                 [ threads: total initial_running ][ time:       sync    cleanup       vmop      total ] page_trap_count
+[0.117s][info ][safepoint,stats  ] G1CollectForAllocation       [             12               0 ][            74522      33580    1157702    1265804 ]               0
+[0.117s][info ][safepoint        ] Safepoint "G1CollectForAllocation", Time since last: 98103549 ns, Reaching safepoint: 74522 ns, Cleanup: 33580 ns, At safepoint: 1157702 ns, Total: 1265804 ns
+[0.196s][debug][safepoint        ] Safepoint synchronization initiated using striped semaphore wait barrier. (12 threads)
+[0.196s][info ][safepoint,cleanup] updating inline caches, 0.0000002 secs
+[0.196s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0000141 secs
+[0.197s][info ][safepoint,stats  ] G1CollectForAllocation       [             12               0 ][            45315      22625     610765     678705 ]               0
+[0.197s][info ][safepoint        ] Safepoint "G1CollectForAllocation", Time since last: 79504775 ns, Reaching safepoint: 45315 ns, Cleanup: 22625 ns, At safepoint: 610765 ns, Total: 678705 ns
+[0.893s][debug][safepoint        ] Safepoint synchronization initiated using striped semaphore wait barrier. (13 threads)
+[0.893s][debug][safepoint        ] ... found polling page loop exception at pc = 0x000000011bda9cd7, stub =0x000000011b82dd00
+[0.893s][info ][safepoint,cleanup] updating inline caches, 0.0000464 secs
+[0.893s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0000640 secs
+[0.894s][info ][safepoint,stats  ] SetNotifyJvmtiEventsMode     [             13               1 ][           141339      93726       5051     240116 ]               1
+[0.894s][info ][safepoint        ] Safepoint "SetNotifyJvmtiEventsMode", Time since last: 696342688 ns, Reaching safepoint: 141339 ns, Cleanup: 93726 ns, At safepoint: 5051 ns, Total: 240116 ns
+[0.950s][debug][safepoint        ] Safepoint synchronization initiated using striped semaphore wait barrier. (13 threads)
+[0.950s][info ][safepoint,cleanup] updating inline caches, 0.0000002 secs
+[0.950s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0000137 secs
+[0.987s][info ][safepoint,stats  ] G1CollectForAllocation       [             13               0 ][            50896      21563   36812765   36885224 ]               0
+[0.987s][info ][safepoint        ] Safepoint "G1CollectForAllocation", Time since last: 56321293 ns, Reaching safepoint: 50896 ns, Cleanup: 21563 ns, At safepoint: 36812765 ns, Total: 36885224 ns
+[1.060s][debug][safepoint        ] Safepoint synchronization initiated using striped semaphore wait barrier. (13 threads)
+[1.060s][info ][safepoint,cleanup] updating inline caches, 0.0000022 secs
+[1.060s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0000159 secs
+[1.086s][info ][safepoint,stats  ] G1CollectForAllocation       [             13               0 ][            91003      24366   26612964   26728333 ]               0
+[1.086s][info ][safepoint        ] Safepoint "G1CollectForAllocation", Time since last: 72911430 ns, Reaching safepoint: 91003 ns, Cleanup: 24366 ns, At safepoint: 26612964 ns, Total: 26728333 ns
+[1.113s][debug][safepoint        ] Safepoint synchronization initiated using striped semaphore wait barrier. (13 threads)
+[1.113s][info ][safepoint,cleanup] updating inline caches, 0.0000190 secs
+[1.113s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0000410 secs
+[1.127s][info ][safepoint,stats  ] G1CollectForAllocation       [             13               1 ][           102451      66875   13759888   13929214 ]               0
+[1.127s][info ][safepoint        ] Safepoint "G1CollectForAllocation", Time since last: 26583557 ns, Reaching safepoint: 102451 ns, Cleanup: 66875 ns, At safepoint: 13759888 ns, Total: 13929214 ns
+[1.166s][debug][safepoint        ] Safepoint synchronization initiated using striped semaphore wait barrier. (13 threads)
+[1.166s][info ][safepoint,cleanup] updating inline caches, 0.0000002 secs
+[1.166s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0000123 secs
+[1.178s][info ][safepoint,stats  ] G1CollectForAllocation       [             13               0 ][            61009      18690   11816133   11895832 ]               0
+[1.178s][info ][safepoint        ] Safepoint "G1CollectForAllocation", Time since last: 39130244 ns, Reaching safepoint: 61009 ns, Cleanup: 18690 ns, At safepoint: 11816133 ns, Total: 11895832 ns
+[1.237s][debug][safepoint        ] Safepoint synchronization initiated using striped semaphore wait barrier. (13 threads)
+[1.238s][info ][safepoint,cleanup] updating inline caches, 0.0000004 secs
+[1.238s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0000110 secs
+[1.251s][info ][safepoint,stats  ] G1CollectForAllocation       [             13               0 ][            37214      17805   13719104   13774123 ]               0
+[1.251s][info ][safepoint        ] Safepoint "G1CollectForAllocation", Time since last: 59582049 ns, Reaching safepoint: 37214 ns, Cleanup: 17805 ns, At safepoint: 13719104 ns, Total: 13774123 ns
+[1.308s][debug][safepoint        ] Safepoint synchronization initiated using striped semaphore wait barrier. (13 threads)
+[1.308s][info ][safepoint,cleanup] updating inline caches, 0.0000002 secs
+[1.308s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0000122 secs
+[1.324s][info ][safepoint,stats  ] G1CollectForAllocation       [             13               0 ][            34520      18810   15987110   16040440 ]               0
+[1.324s][info ][safepoint        ] Safepoint "G1CollectForAllocation", Time since last: 56957856 ns, Reaching safepoint: 34520 ns, Cleanup: 18810 ns, At safepoint: 15987110 ns, Total: 16040440 ns
+[1.383s][debug][safepoint        ] Safepoint synchronization initiated using striped semaphore wait barrier. (12 threads)
+[1.383s][info ][safepoint,cleanup] updating inline caches, 0.0000054 secs
+[1.383s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0000164 secs
+[1.399s][info ][safepoint,stats  ] G1CollectForAllocation       [             12               0 ][            50256      22851   15431527   15504634 ]               0
+[1.399s][info ][safepoint        ] Safepoint "G1CollectForAllocation", Time since last: 58838830 ns, Reaching safepoint: 50256 ns, Cleanup: 22851 ns, At safepoint: 15431527 ns, Total: 15504634 ns
+[1.617s][debug][safepoint        ] Safepoint synchronization initiated using striped semaphore wait barrier. (11 threads)
+[1.617s][info ][safepoint,cleanup] updating inline caches, 0.0000002 secs
+[1.617s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0000137 secs
+[1.650s][info ][safepoint,stats  ] G1CollectForAllocation       [             11               0 ][            38778      21148   32462298   32522224 ]               0
+[1.650s][info ][safepoint        ] Safepoint "G1CollectForAllocation", Time since last: 218641434 ns, Reaching safepoint: 38778 ns, Cleanup: 21148 ns, At safepoint: 32462298 ns, Total: 32522224 ns
+[1.781s][debug][safepoint        ] Safepoint synchronization initiated using striped semaphore wait barrier. (11 threads)
+[1.781s][info ][safepoint,cleanup] updating inline caches, 0.0000001 secs
+[1.781s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0000124 secs
+[1.809s][info ][safepoint,stats  ] G1CollectForAllocation       [             11               0 ][            48247      18495   28426321   28493063 ]               0
+[1.809s][info ][safepoint        ] Safepoint "G1CollectForAllocation", Time since last: 130812115 ns, Reaching safepoint: 48247 ns, Cleanup: 18495 ns, At safepoint: 28426321 ns, Total: 28493063 ns
+[1.954s][debug][safepoint        ] Safepoint synchronization initiated using striped semaphore wait barrier. (11 threads)
+[1.954s][info ][safepoint,cleanup] updating inline caches, 0.0000001 secs
+[1.954s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0000105 secs
+[1.980s][info ][safepoint,stats  ] G1CollectForAllocation       [             11               0 ][            45034      16556   26498718   26560308 ]               0
+[1.980s][info ][safepoint        ] Safepoint "G1CollectForAllocation", Time since last: 144673068 ns, Reaching safepoint: 45034 ns, Cleanup: 16556 ns, At safepoint: 26498718 ns, Total: 26560308 ns
+[2.243s][debug][safepoint        ] Safepoint synchronization initiated using striped semaphore wait barrier. (11 threads)
+[2.243s][info ][safepoint,cleanup] updating inline caches, 0.0000037 secs
+[2.243s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0000156 secs
+[2.284s][info ][safepoint,stats  ] G1CollectForAllocation       [             11               0 ][            38844      22315   40644618   40705777 ]               0
+[2.284s][info ][safepoint        ] Safepoint "G1CollectForAllocation", Time since last: 262917386 ns, Reaching safepoint: 38844 ns, Cleanup: 22315 ns, At safepoint: 40644618 ns, Total: 40705777 ns
+[2.586s][debug][safepoint        ] Safepoint synchronization initiated using striped semaphore wait barrier. (11 threads)
+[2.586s][info ][safepoint,cleanup] updating inline caches, 0.0000002 secs
+[2.586s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0000122 secs
+[2.634s][info ][safepoint,stats  ] G1CollectForAllocation       [             11               0 ][            37398      18347   47950142   48005887 ]               0
+[2.634s][info ][safepoint        ] Safepoint "G1CollectForAllocation", Time since last: 302062745 ns, Reaching safepoint: 37398 ns, Cleanup: 18347 ns, At safepoint: 47950142 ns, Total: 48005887 ns
+[2.696s][debug][safepoint        ] Safepoint synchronization initiated using striped semaphore wait barrier. (11 threads)
+[2.696s][info ][safepoint,cleanup] updating inline caches, 0.0000002 secs
+[2.696s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0000109 secs
+[2.718s][info ][safepoint,stats  ] G1TryInitiateConcMark        [             11               0 ][            28381      17335   22679342   22725058 ]               0
+[2.718s][info ][safepoint        ] Safepoint "G1TryInitiateConcMark", Time since last: 61588791 ns, Reaching safepoint: 28381 ns, Cleanup: 17335 ns, At safepoint: 22679342 ns, Total: 22725058 ns
+[2.729s][debug][safepoint        ] Safepoint synchronization initiated using striped semaphore wait barrier. (11 threads)
+[2.729s][info ][safepoint,cleanup] updating inline caches, 0.0000004 secs
+[2.729s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0000479 secs
+[2.730s][info ][safepoint,stats  ] G1PauseRemark                [             11               1 ][           106471      56870     841170    1004511 ]               1
+[2.730s][info ][safepoint        ] Safepoint "G1PauseRemark", Time since last: 10666092 ns, Reaching safepoint: 106471 ns, Cleanup: 56870 ns, At safepoint: 841170 ns, Total: 1004511 ns
+[2.738s][debug][safepoint        ] Safepoint synchronization initiated using striped semaphore wait barrier. (11 threads)
+[2.738s][debug][safepoint        ] ... found polling page loop exception at pc = 0x000000011bdd4a81, stub =0x000000011b82dd00
+[2.738s][info ][safepoint,cleanup] updating inline caches, 0.0000001 secs
+[2.738s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0000105 secs
+[2.738s][info ][safepoint,stats  ] G1PauseCleanup               [             11               1 ][            90509      17456     177219     285184 ]               1
+[2.738s][info ][safepoint        ] Safepoint "G1PauseCleanup", Time since last: 7628102 ns, Reaching safepoint: 90509 ns, Cleanup: 17456 ns, At safepoint: 177219 ns, Total: 285184 ns
+[2.954s][debug][safepoint        ] Safepoint synchronization initiated using striped semaphore wait barrier. (11 threads)
+[2.954s][info ][safepoint,cleanup] updating inline caches, 0.0000001 secs
+[2.954s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0000120 secs
+[2.984s][info ][safepoint,stats  ] G1CollectForAllocation       [             11               0 ][            50162      18250   30665342   30733754 ]               0
+[2.985s][info ][safepoint        ] Safepoint "G1CollectForAllocation", Time since last: 215845244 ns, Reaching safepoint: 50162 ns, Cleanup: 18250 ns, At safepoint: 30665342 ns, Total: 30733754 ns
+[3.461s][debug][safepoint        ] Safepoint synchronization initiated using striped semaphore wait barrier. (11 threads)
+[3.461s][info ][safepoint,cleanup] updating inline caches, 0.0000002 secs
+[3.461s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0000120 secs
+[3.523s][info ][safepoint,stats  ] G1CollectForAllocation       [             11               0 ][            37970      18591   62490430   62546991 ]               0
+[3.523s][info ][safepoint        ] Safepoint "G1CollectForAllocation", Time since last: 476124879 ns, Reaching safepoint: 37970 ns, Cleanup: 18591 ns, At safepoint: 62490430 ns, Total: 62546991 ns
+[3.898s][debug][safepoint        ] Safepoint synchronization initiated using striped semaphore wait barrier. (11 threads)
+[3.898s][info ][safepoint,cleanup] updating inline caches, 0.0000001 secs
+[3.898s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0000103 secs
+[3.962s][info ][safepoint,stats  ] G1CollectForAllocation       [             11               0 ][            48720      16725   64024846   64090291 ]               0
+[3.963s][info ][safepoint        ] Safepoint "G1CollectForAllocation", Time since last: 375240854 ns, Reaching safepoint: 48720 ns, Cleanup: 16725 ns, At safepoint: 64024846 ns, Total: 64090291 ns
+[7.018s][debug][safepoint        ] Safepoint synchronization initiated using striped semaphore wait barrier. (12 threads)
+[7.018s][info ][safepoint,cleanup] updating inline caches, 0.0000088 secs
+[7.018s][info ][safepoint,cleanup] safepoint cleanup tasks, 0.0000523 secs
+[7.020s][info ][safepoint,stats  ] G1CollectForAllocation              17
+[7.020s][info ][safepoint,stats  ] G1PauseRemark                        1
+[7.020s][info ][safepoint,stats  ] G1PauseCleanup                       1
+[7.020s][info ][safepoint,stats  ] G1TryInitiateConcMark                1
+[7.020s][info ][safepoint,stats  ] SetNotifyJvmtiEventsMode             1
+[7.020s][info ][safepoint,stats  ] Exit                                 1
+[7.020s][info ][safepoint,stats  ] Maximum sync time  141339 ns
+[7.020s][info ][safepoint,stats  ] Maximum cleanup time  93726 ns
+[7.020s][info ][safepoint,stats  ] Maximum vm operation time (except for Exit VM operation)  64041571 ns

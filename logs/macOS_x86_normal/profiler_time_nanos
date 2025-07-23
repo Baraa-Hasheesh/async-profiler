@@ -1,0 +1,1849 @@
+findSymbolPtrSection (/Users/ec2-user/.sdkman/candidates/java/21.0.6-amzn/bin/java) = 132
+loadSymbols (/Users/ec2-user/.sdkman/candidates/java/21.0.6-amzn/bin/java) = 4340
+loadImports (/Users/ec2-user/.sdkman/candidates/java/21.0.6-amzn/bin/java) = 1537
+loadImports (/Users/ec2-user/.sdkman/candidates/java/21.0.6-amzn/bin/java) = 142
+Symbols::parseLibraries (/Users/ec2-user/.sdkman/candidates/java/21.0.6-amzn/bin/java) total = 136510
+---------------------------------------------------
+findSymbolPtrSection (/Users/ec2-user/.sdkman/candidates/java/21.0.6-amzn/lib/libjli.dylib) = 132
+loadSymbols (/Users/ec2-user/.sdkman/candidates/java/21.0.6-amzn/lib/libjli.dylib) = 18449
+loadImports (/Users/ec2-user/.sdkman/candidates/java/21.0.6-amzn/lib/libjli.dylib) = 268
+loadImports (/Users/ec2-user/.sdkman/candidates/java/21.0.6-amzn/lib/libjli.dylib) = 1686
+Symbols::parseLibraries (/Users/ec2-user/.sdkman/candidates/java/21.0.6-amzn/lib/libjli.dylib) total = 101808
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/libz.1.dylib) = 102
+loadSymbols (/usr/lib/libz.1.dylib) = 8533
+Symbols::parseLibraries (/usr/lib/libz.1.dylib) total = 27769
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/libSystem.B.dylib) = 38
+findSymbolPtrSection (/usr/lib/libSystem.B.dylib) = 33
+loadSymbols (/usr/lib/libSystem.B.dylib) = 5641
+loadImports (/usr/lib/libSystem.B.dylib) = 3112
+Symbols::parseLibraries (/usr/lib/libSystem.B.dylib) total = 31578
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/system/libcache.dylib) = 248
+loadSymbols (/usr/lib/system/libcache.dylib) = 6907
+Symbols::parseLibraries (/usr/lib/system/libcache.dylib) total = 20869
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/system/libcommonCrypto.dylib) = 75
+findSymbolPtrSection (/usr/lib/system/libcommonCrypto.dylib) = 32
+loadSymbols (/usr/lib/system/libcommonCrypto.dylib) = 31140
+Symbols::parseLibraries (/usr/lib/system/libcommonCrypto.dylib) total = 67271
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/system/libcompiler_rt.dylib) = 29
+findSymbolPtrSection (/usr/lib/system/libcompiler_rt.dylib) = 22
+loadSymbols (/usr/lib/system/libcompiler_rt.dylib) = 9558
+Symbols::parseLibraries (/usr/lib/system/libcompiler_rt.dylib) total = 31183
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/system/libcopyfile.dylib) = 31
+findSymbolPtrSection (/usr/lib/system/libcopyfile.dylib) = 22
+loadSymbols (/usr/lib/system/libcopyfile.dylib) = 8434
+Symbols::parseLibraries (/usr/lib/system/libcopyfile.dylib) total = 26147
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/system/libcorecrypto.dylib) = 72
+findSymbolPtrSection (/usr/lib/system/libcorecrypto.dylib) = 38
+loadSymbols (/usr/lib/system/libcorecrypto.dylib) = 295735
+Symbols::parseLibraries (/usr/lib/system/libcorecrypto.dylib) total = 488165
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/system/libdispatch.dylib) = 114
+findSymbolPtrSection (/usr/lib/system/libdispatch.dylib) = 47
+loadSymbols (/usr/lib/system/libdispatch.dylib) = 210295
+loadImports (/usr/lib/system/libdispatch.dylib) = 5555
+Symbols::parseLibraries (/usr/lib/system/libdispatch.dylib) total = 353532
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/system/libdyld.dylib) = 38
+findSymbolPtrSection (/usr/lib/system/libdyld.dylib) = 28
+loadSymbols (/usr/lib/system/libdyld.dylib) = 183364
+Symbols::parseLibraries (/usr/lib/system/libdyld.dylib) total = 298045
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/system/libkeymgr.dylib) = 34
+loadSymbols (/usr/lib/system/libkeymgr.dylib) = 1265
+Symbols::parseLibraries (/usr/lib/system/libkeymgr.dylib) total = 52437
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/system/libmacho.dylib) = 30
+loadSymbols (/usr/lib/system/libmacho.dylib) = 20151
+Symbols::parseLibraries (/usr/lib/system/libmacho.dylib) total = 48255
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/system/libquarantine.dylib) = 73
+findSymbolPtrSection (/usr/lib/system/libquarantine.dylib) = 31
+loadSymbols (/usr/lib/system/libquarantine.dylib) = 11315
+Symbols::parseLibraries (/usr/lib/system/libquarantine.dylib) total = 28247
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/system/libremovefile.dylib) = 81
+loadSymbols (/usr/lib/system/libremovefile.dylib) = 2650
+Symbols::parseLibraries (/usr/lib/system/libremovefile.dylib) total = 12684
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/system/libsystem_asl.dylib) = 28
+findSymbolPtrSection (/usr/lib/system/libsystem_asl.dylib) = 37
+loadSymbols (/usr/lib/system/libsystem_asl.dylib) = 35135
+Symbols::parseLibraries (/usr/lib/system/libsystem_asl.dylib) total = 67542
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/system/libsystem_blocks.dylib) = 83
+findSymbolPtrSection (/usr/lib/system/libsystem_blocks.dylib) = 22
+loadSymbols (/usr/lib/system/libsystem_blocks.dylib) = 16804
+Symbols::parseLibraries (/usr/lib/system/libsystem_blocks.dylib) total = 34847
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/system/libsystem_c.dylib) = 57
+findSymbolPtrSection (/usr/lib/system/libsystem_c.dylib) = 36
+loadSymbols (/usr/lib/system/libsystem_c.dylib) = 136877
+Symbols::parseLibraries (/usr/lib/system/libsystem_c.dylib) total = 280716
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/system/libsystem_collections.dylib) = 25
+loadSymbols (/usr/lib/system/libsystem_collections.dylib) = 10037
+Symbols::parseLibraries (/usr/lib/system/libsystem_collections.dylib) total = 24767
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/system/libsystem_configuration.dylib) = 23
+findSymbolPtrSection (/usr/lib/system/libsystem_configuration.dylib) = 37
+loadSymbols (/usr/lib/system/libsystem_configuration.dylib) = 9038
+Symbols::parseLibraries (/usr/lib/system/libsystem_configuration.dylib) total = 24609
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/system/libsystem_containermanager.dylib) = 23
+findSymbolPtrSection (/usr/lib/system/libsystem_containermanager.dylib) = 30
+loadSymbols (/usr/lib/system/libsystem_containermanager.dylib) = 59977
+Symbols::parseLibraries (/usr/lib/system/libsystem_containermanager.dylib) total = 104293
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/system/libsystem_coreservices.dylib) = 80
+findSymbolPtrSection (/usr/lib/system/libsystem_coreservices.dylib) = 30
+loadSymbols (/usr/lib/system/libsystem_coreservices.dylib) = 10576
+Symbols::parseLibraries (/usr/lib/system/libsystem_coreservices.dylib) total = 26559
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/system/libsystem_darwin.dylib) = 76
+findSymbolPtrSection (/usr/lib/system/libsystem_darwin.dylib) = 22
+loadSymbols (/usr/lib/system/libsystem_darwin.dylib) = 14614
+Symbols::parseLibraries (/usr/lib/system/libsystem_darwin.dylib) total = 33195
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/system/libsystem_darwindirectory.dylib) = 75
+findSymbolPtrSection (/usr/lib/system/libsystem_darwindirectory.dylib) = 30
+loadSymbols (/usr/lib/system/libsystem_darwindirectory.dylib) = 9786
+Symbols::parseLibraries (/usr/lib/system/libsystem_darwindirectory.dylib) total = 24241
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/system/libsystem_dnssd.dylib) = 22
+findSymbolPtrSection (/usr/lib/system/libsystem_dnssd.dylib) = 22
+loadSymbols (/usr/lib/system/libsystem_dnssd.dylib) = 11542
+Symbols::parseLibraries (/usr/lib/system/libsystem_dnssd.dylib) total = 26658
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/system/libsystem_eligibility.dylib) = 23
+findSymbolPtrSection (/usr/lib/system/libsystem_eligibility.dylib) = 23
+loadSymbols (/usr/lib/system/libsystem_eligibility.dylib) = 3266
+Symbols::parseLibraries (/usr/lib/system/libsystem_eligibility.dylib) total = 25622
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/system/libsystem_featureflags.dylib) = 32
+findSymbolPtrSection (/usr/lib/system/libsystem_featureflags.dylib) = 30
+loadSymbols (/usr/lib/system/libsystem_featureflags.dylib) = 3245
+Symbols::parseLibraries (/usr/lib/system/libsystem_featureflags.dylib) total = 14962
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/system/libsystem_info.dylib) = 41
+findSymbolPtrSection (/usr/lib/system/libsystem_info.dylib) = 36
+loadSymbols (/usr/lib/system/libsystem_info.dylib) = 79204
+Symbols::parseLibraries (/usr/lib/system/libsystem_info.dylib) total = 147339
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/system/libsystem_m.dylib) = 28
+findSymbolPtrSection (/usr/lib/system/libsystem_m.dylib) = 28
+loadSymbols (/usr/lib/system/libsystem_m.dylib) = 43328
+Symbols::parseLibraries (/usr/lib/system/libsystem_m.dylib) total = 102179
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/system/libsystem_malloc.dylib) = 23
+findSymbolPtrSection (/usr/lib/system/libsystem_malloc.dylib) = 95
+loadSymbols (/usr/lib/system/libsystem_malloc.dylib) = 83552
+Symbols::parseLibraries (/usr/lib/system/libsystem_malloc.dylib) total = 141243
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/system/libsystem_networkextension.dylib) = 39
+findSymbolPtrSection (/usr/lib/system/libsystem_networkextension.dylib) = 36
+loadSymbols (/usr/lib/system/libsystem_networkextension.dylib) = 30206
+Symbols::parseLibraries (/usr/lib/system/libsystem_networkextension.dylib) total = 60023
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/system/libsystem_notify.dylib) = 22
+findSymbolPtrSection (/usr/lib/system/libsystem_notify.dylib) = 34
+loadSymbols (/usr/lib/system/libsystem_notify.dylib) = 1476
+Symbols::parseLibraries (/usr/lib/system/libsystem_notify.dylib) total = 12858
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/system/libsystem_sandbox.dylib) = 22
+findSymbolPtrSection (/usr/lib/system/libsystem_sandbox.dylib) = 27
+loadSymbols (/usr/lib/system/libsystem_sandbox.dylib) = 15141
+Symbols::parseLibraries (/usr/lib/system/libsystem_sandbox.dylib) total = 36632
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/system/libsystem_sanitizers.dylib) = 22
+findSymbolPtrSection (/usr/lib/system/libsystem_sanitizers.dylib) = 30
+loadSymbols (/usr/lib/system/libsystem_sanitizers.dylib) = 21292
+Symbols::parseLibraries (/usr/lib/system/libsystem_sanitizers.dylib) total = 40193
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/system/libsystem_secinit.dylib) = 22
+findSymbolPtrSection (/usr/lib/system/libsystem_secinit.dylib) = 27
+loadSymbols (/usr/lib/system/libsystem_secinit.dylib) = 6534
+Symbols::parseLibraries (/usr/lib/system/libsystem_secinit.dylib) total = 18569
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/system/libsystem_kernel.dylib) = 32
+findSymbolPtrSection (/usr/lib/system/libsystem_kernel.dylib) = 48
+loadSymbols (/usr/lib/system/libsystem_kernel.dylib) = 109496
+Symbols::parseLibraries (/usr/lib/system/libsystem_kernel.dylib) total = 217323
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/system/libsystem_platform.dylib) = 38
+findSymbolPtrSection (/usr/lib/system/libsystem_platform.dylib) = 27
+loadSymbols (/usr/lib/system/libsystem_platform.dylib) = 18788
+loadImports (/usr/lib/system/libsystem_platform.dylib) = 605
+Symbols::parseLibraries (/usr/lib/system/libsystem_platform.dylib) total = 47019
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/system/libsystem_pthread.dylib) = 32
+findSymbolPtrSection (/usr/lib/system/libsystem_pthread.dylib) = 46
+loadSymbols (/usr/lib/system/libsystem_pthread.dylib) = 26622
+loadImports (/usr/lib/system/libsystem_pthread.dylib) = 753
+Symbols::parseLibraries (/usr/lib/system/libsystem_pthread.dylib) total = 67610
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/system/libsystem_symptoms.dylib) = 29
+findSymbolPtrSection (/usr/lib/system/libsystem_symptoms.dylib) = 29
+loadSymbols (/usr/lib/system/libsystem_symptoms.dylib) = 10061
+Symbols::parseLibraries (/usr/lib/system/libsystem_symptoms.dylib) total = 24615
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/system/libsystem_trace.dylib) = 100
+findSymbolPtrSection (/usr/lib/system/libsystem_trace.dylib) = 41
+loadSymbols (/usr/lib/system/libsystem_trace.dylib) = 35044
+Symbols::parseLibraries (/usr/lib/system/libsystem_trace.dylib) total = 67992
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/system/libunwind.dylib) = 36
+findSymbolPtrSection (/usr/lib/system/libunwind.dylib) = 30
+loadSymbols (/usr/lib/system/libunwind.dylib) = 10939
+Symbols::parseLibraries (/usr/lib/system/libunwind.dylib) total = 26028
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/system/libxpc.dylib) = 92
+findSymbolPtrSection (/usr/lib/system/libxpc.dylib) = 41
+loadSymbols (/usr/lib/system/libxpc.dylib) = 180650
+Symbols::parseLibraries (/usr/lib/system/libxpc.dylib) total = 322500
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/libobjc.A.dylib) = 81
+findSymbolPtrSection (/usr/lib/libobjc.A.dylib) = 38
+loadSymbols (/usr/lib/libobjc.A.dylib) = 95355
+Symbols::parseLibraries (/usr/lib/libobjc.A.dylib) total = 172036
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation) = 117
+findSymbolPtrSection (/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation) = 83
+loadSymbols (/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation) = 987495
+Symbols::parseLibraries (/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation) total = 1762759
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/swift/libswiftCore.dylib) = 104
+findSymbolPtrSection (/usr/lib/swift/libswiftCore.dylib) = 43
+loadSymbols (/usr/lib/swift/libswiftCore.dylib) = 3813651
+Symbols::parseLibraries (/usr/lib/swift/libswiftCore.dylib) total = 6360748
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/libc++abi.dylib) = 133
+findSymbolPtrSection (/usr/lib/libc++abi.dylib) = 78
+loadSymbols (/usr/lib/libc++abi.dylib) = 103579
+Symbols::parseLibraries (/usr/lib/libc++abi.dylib) total = 172253
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/liboah.dylib) = 30
+findSymbolPtrSection (/usr/lib/liboah.dylib) = 28
+loadSymbols (/usr/lib/liboah.dylib) = 2724
+Symbols::parseLibraries (/usr/lib/liboah.dylib) total = 16952
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/libc++.1.dylib) = 30
+findSymbolPtrSection (/usr/lib/libc++.1.dylib) = 84
+loadSymbols (/usr/lib/libc++.1.dylib) = 287754
+Symbols::parseLibraries (/usr/lib/libc++.1.dylib) total = 487896
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation) = 135
+findSymbolPtrSection (/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation) = 105
+loadSymbols (/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation) = 10281292
+loadImports (/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation) = 50224
+Symbols::parseLibraries (/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation) total = 15707991
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/swift/libswiftObjectiveC.dylib) = 123
+findSymbolPtrSection (/usr/lib/swift/libswiftObjectiveC.dylib) = 51
+loadSymbols (/usr/lib/swift/libswiftObjectiveC.dylib) = 27682
+Symbols::parseLibraries (/usr/lib/swift/libswiftObjectiveC.dylib) total = 71859
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/CoreServicesInternal.framework/Versions/A/CoreServicesInternal) = 90
+findSymbolPtrSection (/System/Library/PrivateFrameworks/CoreServicesInternal.framework/Versions/A/CoreServicesInternal) = 34
+loadSymbols (/System/Library/PrivateFrameworks/CoreServicesInternal.framework/Versions/A/CoreServicesInternal) = 94766
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/CoreServicesInternal.framework/Versions/A/CoreServicesInternal) total = 146144
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/libfakelink.dylib) = 52
+findSymbolPtrSection (/usr/lib/libfakelink.dylib) = 36
+loadSymbols (/usr/lib/libfakelink.dylib) = 6203
+loadImports (/usr/lib/libfakelink.dylib) = 431
+loadImports (/usr/lib/libfakelink.dylib) = 936
+Symbols::parseLibraries (/usr/lib/libfakelink.dylib) total = 27060
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/libicucore.A.dylib) = 32
+findSymbolPtrSection (/usr/lib/libicucore.A.dylib) = 34
+loadSymbols (/usr/lib/libicucore.A.dylib) = 796963
+Symbols::parseLibraries (/usr/lib/libicucore.A.dylib) total = 1342691
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/SoftLinking.framework/Versions/A/SoftLinking) = 90
+loadSymbols (/System/Library/PrivateFrameworks/SoftLinking.framework/Versions/A/SoftLinking) = 633
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/SoftLinking.framework/Versions/A/SoftLinking) total = 11314
+---------------------------------------------------
+loadSymbols (/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices) = 496
+Symbols::parseLibraries (/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices) total = 7074
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/Security.framework/Versions/A/Security) = 130
+findSymbolPtrSection (/System/Library/Frameworks/Security.framework/Versions/A/Security) = 50
+loadSymbols (/System/Library/Frameworks/Security.framework/Versions/A/Security) = 1884239
+Symbols::parseLibraries (/System/Library/Frameworks/Security.framework/Versions/A/Security) total = 3166704
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit) = 117
+findSymbolPtrSection (/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit) = 36
+loadSymbols (/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit) = 397774
+Symbols::parseLibraries (/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit) total = 686125
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/DiskImages.framework/Versions/A/DiskImages) = 100
+findSymbolPtrSection (/System/Library/PrivateFrameworks/DiskImages.framework/Versions/A/DiskImages) = 39
+loadSymbols (/System/Library/PrivateFrameworks/DiskImages.framework/Versions/A/DiskImages) = 267463
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/DiskImages.framework/Versions/A/DiskImages) total = 416914
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/NetFS.framework/Versions/A/NetFS) = 86
+findSymbolPtrSection (/System/Library/Frameworks/NetFS.framework/Versions/A/NetFS) = 38
+loadSymbols (/System/Library/Frameworks/NetFS.framework/Versions/A/NetFS) = 17076
+Symbols::parseLibraries (/System/Library/Frameworks/NetFS.framework/Versions/A/NetFS) total = 39644
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/CFNetwork.framework/Versions/A/CFNetwork) = 91
+findSymbolPtrSection (/System/Library/Frameworks/CFNetwork.framework/Versions/A/CFNetwork) = 38
+loadSymbols (/System/Library/Frameworks/CFNetwork.framework/Versions/A/CFNetwork) = 2103549
+Symbols::parseLibraries (/System/Library/Frameworks/CFNetwork.framework/Versions/A/CFNetwork) total = 2964480
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/FSEvents.framework/Versions/A/FSEvents) = 42
+findSymbolPtrSection (/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/FSEvents.framework/Versions/A/FSEvents) = 78
+loadSymbols (/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/FSEvents.framework/Versions/A/FSEvents) = 14801
+Symbols::parseLibraries (/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/FSEvents.framework/Versions/A/FSEvents) total = 36336
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework/Versions/A/CarbonCore) = 97
+findSymbolPtrSection (/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework/Versions/A/CarbonCore) = 45
+loadSymbols (/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework/Versions/A/CarbonCore) = 444937
+Symbols::parseLibraries (/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework/Versions/A/CarbonCore) total = 815785
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Metadata) = 84
+findSymbolPtrSection (/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Metadata) = 33
+loadSymbols (/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Metadata) = 295223
+Symbols::parseLibraries (/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Metadata) total = 554120
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/OSServices.framework/Versions/A/OSServices) = 88
+findSymbolPtrSection (/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/OSServices.framework/Versions/A/OSServices) = 34
+loadSymbols (/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/OSServices.framework/Versions/A/OSServices) = 110036
+Symbols::parseLibraries (/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/OSServices.framework/Versions/A/OSServices) total = 187428
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/SearchKit.framework/Versions/A/SearchKit) = 57
+findSymbolPtrSection (/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/SearchKit.framework/Versions/A/SearchKit) = 36
+loadSymbols (/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/SearchKit.framework/Versions/A/SearchKit) = 215437
+Symbols::parseLibraries (/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/SearchKit.framework/Versions/A/SearchKit) total = 355944
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/AE.framework/Versions/A/AE) = 91
+findSymbolPtrSection (/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/AE.framework/Versions/A/AE) = 29
+loadSymbols (/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/AE.framework/Versions/A/AE) = 17267
+Symbols::parseLibraries (/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/AE.framework/Versions/A/AE) total = 43696
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/LaunchServices) = 117
+findSymbolPtrSection (/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/LaunchServices) = 45
+loadSymbols (/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/LaunchServices) = 1711823
+Symbols::parseLibraries (/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/LaunchServices) total = 2484877
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/DictionaryServices.framework/Versions/A/DictionaryServices) = 79
+findSymbolPtrSection (/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/DictionaryServices.framework/Versions/A/DictionaryServices) = 34
+loadSymbols (/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/DictionaryServices.framework/Versions/A/DictionaryServices) = 156291
+Symbols::parseLibraries (/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/DictionaryServices.framework/Versions/A/DictionaryServices) total = 252340
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/SharedFileList.framework/Versions/A/SharedFileList) = 113
+findSymbolPtrSection (/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/SharedFileList.framework/Versions/A/SharedFileList) = 42
+loadSymbols (/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/SharedFileList.framework/Versions/A/SharedFileList) = 134771
+Symbols::parseLibraries (/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/SharedFileList.framework/Versions/A/SharedFileList) total = 234211
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/SystemConfiguration.framework/Versions/A/SystemConfiguration) = 38
+findSymbolPtrSection (/System/Library/Frameworks/SystemConfiguration.framework/Versions/A/SystemConfiguration) = 40
+loadSymbols (/System/Library/Frameworks/SystemConfiguration.framework/Versions/A/SystemConfiguration) = 304911
+Symbols::parseLibraries (/System/Library/Frameworks/SystemConfiguration.framework/Versions/A/SystemConfiguration) total = 504697
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/libapple_nghttp2.dylib) = 39
+findSymbolPtrSection (/usr/lib/libapple_nghttp2.dylib) = 27
+loadSymbols (/usr/lib/libapple_nghttp2.dylib) = 25714
+Symbols::parseLibraries (/usr/lib/libapple_nghttp2.dylib) total = 53663
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/libcompression.dylib) = 44
+findSymbolPtrSection (/usr/lib/libcompression.dylib) = 29
+loadSymbols (/usr/lib/libcompression.dylib) = 44420
+loadImports (/usr/lib/libcompression.dylib) = 727
+loadImports (/usr/lib/libcompression.dylib) = 2653
+Symbols::parseLibraries (/usr/lib/libcompression.dylib) total = 92260
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/libsqlite3.dylib) = 28
+findSymbolPtrSection (/usr/lib/libsqlite3.dylib) = 41
+loadSymbols (/usr/lib/libsqlite3.dylib) = 171338
+Symbols::parseLibraries (/usr/lib/libsqlite3.dylib) total = 288021
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/CoreAnalytics.framework/Versions/A/CoreAnalytics) = 93
+findSymbolPtrSection (/System/Library/PrivateFrameworks/CoreAnalytics.framework/Versions/A/CoreAnalytics) = 45
+loadSymbols (/System/Library/PrivateFrameworks/CoreAnalytics.framework/Versions/A/CoreAnalytics) = 148847
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/CoreAnalytics.framework/Versions/A/CoreAnalytics) total = 209872
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics) = 100
+findSymbolPtrSection (/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics) = 32
+loadSymbols (/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics) = 1727779
+Symbols::parseLibraries (/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics) total = 2812895
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/GSS.framework/Versions/A/GSS) = 45
+findSymbolPtrSection (/System/Library/Frameworks/GSS.framework/Versions/A/GSS) = 43
+loadSymbols (/System/Library/Frameworks/GSS.framework/Versions/A/GSS) = 76862
+loadImports (/System/Library/Frameworks/GSS.framework/Versions/A/GSS) = 7312
+Symbols::parseLibraries (/System/Library/Frameworks/GSS.framework/Versions/A/GSS) total = 152956
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/InternationalSupport.framework/Versions/A/InternationalSupport) = 101
+findSymbolPtrSection (/System/Library/PrivateFrameworks/InternationalSupport.framework/Versions/A/InternationalSupport) = 40
+loadSymbols (/System/Library/PrivateFrameworks/InternationalSupport.framework/Versions/A/InternationalSupport) = 18110
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/InternationalSupport.framework/Versions/A/InternationalSupport) total = 38220
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/RunningBoardServices.framework/Versions/A/RunningBoardServices) = 104
+findSymbolPtrSection (/System/Library/PrivateFrameworks/RunningBoardServices.framework/Versions/A/RunningBoardServices) = 43
+loadSymbols (/System/Library/PrivateFrameworks/RunningBoardServices.framework/Versions/A/RunningBoardServices) = 302491
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/RunningBoardServices.framework/Versions/A/RunningBoardServices) total = 489793
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/libenergytrace.dylib) = 35
+loadSymbols (/usr/lib/libenergytrace.dylib) = 1233
+Symbols::parseLibraries (/usr/lib/libenergytrace.dylib) total = 10684
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/Network.framework/Versions/A/Network) = 98
+findSymbolPtrSection (/System/Library/Frameworks/Network.framework/Versions/A/Network) = 34
+loadSymbols (/System/Library/Frameworks/Network.framework/Versions/A/Network) = 2484617
+Symbols::parseLibraries (/System/Library/Frameworks/Network.framework/Versions/A/Network) total = 3872593
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/libDiagnosticMessagesClient.dylib) = 81
+findSymbolPtrSection (/usr/lib/libDiagnosticMessagesClient.dylib) = 28
+loadSymbols (/usr/lib/libDiagnosticMessagesClient.dylib) = 4630
+Symbols::parseLibraries (/usr/lib/libDiagnosticMessagesClient.dylib) total = 19932
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/libbsm.0.dylib) = 29
+findSymbolPtrSection (/usr/lib/libbsm.0.dylib) = 23
+loadSymbols (/usr/lib/libbsm.0.dylib) = 24922
+Symbols::parseLibraries (/usr/lib/libbsm.0.dylib) total = 51249
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/system/libkxld.dylib) = 30
+findSymbolPtrSection (/usr/lib/system/libkxld.dylib) = 32
+loadSymbols (/usr/lib/system/libkxld.dylib) = 2563
+Symbols::parseLibraries (/usr/lib/system/libkxld.dylib) total = 14531
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/libCoreEntitlements.dylib) = 75
+findSymbolPtrSection (/usr/lib/libCoreEntitlements.dylib) = 28
+loadSymbols (/usr/lib/libCoreEntitlements.dylib) = 11948
+Symbols::parseLibraries (/usr/lib/libCoreEntitlements.dylib) total = 28762
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/MessageSecurity.framework/Versions/A/MessageSecurity) = 114
+findSymbolPtrSection (/System/Library/PrivateFrameworks/MessageSecurity.framework/Versions/A/MessageSecurity) = 44
+loadSymbols (/System/Library/PrivateFrameworks/MessageSecurity.framework/Versions/A/MessageSecurity) = 231570
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/MessageSecurity.framework/Versions/A/MessageSecurity) total = 399033
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/ProtocolBuffer.framework/Versions/A/ProtocolBuffer) = 111
+findSymbolPtrSection (/System/Library/PrivateFrameworks/ProtocolBuffer.framework/Versions/A/ProtocolBuffer) = 42
+loadSymbols (/System/Library/PrivateFrameworks/ProtocolBuffer.framework/Versions/A/ProtocolBuffer) = 50440
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/ProtocolBuffer.framework/Versions/A/ProtocolBuffer) total = 105045
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/libMobileGestalt.dylib) = 95
+findSymbolPtrSection (/usr/lib/libMobileGestalt.dylib) = 46
+loadSymbols (/usr/lib/libMobileGestalt.dylib) = 87156
+Symbols::parseLibraries (/usr/lib/libMobileGestalt.dylib) total = 149014
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/AppleFSCompression.framework/Versions/A/AppleFSCompression) = 41
+findSymbolPtrSection (/System/Library/PrivateFrameworks/AppleFSCompression.framework/Versions/A/AppleFSCompression) = 34
+loadSymbols (/System/Library/PrivateFrameworks/AppleFSCompression.framework/Versions/A/AppleFSCompression) = 5503
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/AppleFSCompression.framework/Versions/A/AppleFSCompression) total = 22786
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/libcoretls.dylib) = 76
+findSymbolPtrSection (/usr/lib/libcoretls.dylib) = 37
+loadSymbols (/usr/lib/libcoretls.dylib) = 28778
+Symbols::parseLibraries (/usr/lib/libcoretls.dylib) total = 59600
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/libcoretls_cfhelpers.dylib) = 36
+loadSymbols (/usr/lib/libcoretls_cfhelpers.dylib) = 3491
+Symbols::parseLibraries (/usr/lib/libcoretls_cfhelpers.dylib) total = 13169
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/libpam.2.dylib) = 40
+findSymbolPtrSection (/usr/lib/libpam.2.dylib) = 29
+loadSymbols (/usr/lib/libpam.2.dylib) = 7482
+Symbols::parseLibraries (/usr/lib/libpam.2.dylib) total = 22110
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/libxar.1.dylib) = 40
+findSymbolPtrSection (/usr/lib/libxar.1.dylib) = 29
+loadSymbols (/usr/lib/libxar.1.dylib) = 18941
+Symbols::parseLibraries (/usr/lib/libxar.1.dylib) total = 41967
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/CoreAutoLayout.framework/Versions/A/CoreAutoLayout) = 110
+findSymbolPtrSection (/System/Library/PrivateFrameworks/CoreAutoLayout.framework/Versions/A/CoreAutoLayout) = 47
+loadSymbols (/System/Library/PrivateFrameworks/CoreAutoLayout.framework/Versions/A/CoreAutoLayout) = 189189
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/CoreAutoLayout.framework/Versions/A/CoreAutoLayout) total = 274468
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration) = 34
+findSymbolPtrSection (/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration) = 33
+loadSymbols (/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration) = 21068
+Symbols::parseLibraries (/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration) total = 44761
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/libarchive.2.dylib) = 34
+findSymbolPtrSection (/usr/lib/libarchive.2.dylib) = 24
+loadSymbols (/usr/lib/libarchive.2.dylib) = 29468
+Symbols::parseLibraries (/usr/lib/libarchive.2.dylib) total = 61597
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/libxml2.2.dylib) = 23
+findSymbolPtrSection (/usr/lib/libxml2.2.dylib) = 31
+loadSymbols (/usr/lib/libxml2.2.dylib) = 194829
+Symbols::parseLibraries (/usr/lib/libxml2.2.dylib) total = 378494
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/liblangid.dylib) = 33
+findSymbolPtrSection (/usr/lib/liblangid.dylib) = 28
+loadSymbols (/usr/lib/liblangid.dylib) = 1911
+Symbols::parseLibraries (/usr/lib/liblangid.dylib) total = 14614
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/Combine.framework/Versions/A/Combine) = 80
+findSymbolPtrSection (/System/Library/Frameworks/Combine.framework/Versions/A/Combine) = 39
+loadSymbols (/System/Library/Frameworks/Combine.framework/Versions/A/Combine) = 1231515
+Symbols::parseLibraries (/System/Library/Frameworks/Combine.framework/Versions/A/Combine) total = 1839632
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/CollectionsInternal.framework/Versions/A/CollectionsInternal) = 78
+findSymbolPtrSection (/System/Library/PrivateFrameworks/CollectionsInternal.framework/Versions/A/CollectionsInternal) = 37
+loadSymbols (/System/Library/PrivateFrameworks/CollectionsInternal.framework/Versions/A/CollectionsInternal) = 73396
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/CollectionsInternal.framework/Versions/A/CollectionsInternal) total = 91155
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/ReflectionInternal.framework/Versions/A/ReflectionInternal) = 71
+findSymbolPtrSection (/System/Library/PrivateFrameworks/ReflectionInternal.framework/Versions/A/ReflectionInternal) = 35
+loadSymbols (/System/Library/PrivateFrameworks/ReflectionInternal.framework/Versions/A/ReflectionInternal) = 74659
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/ReflectionInternal.framework/Versions/A/ReflectionInternal) total = 122370
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/RuntimeInternal.framework/Versions/A/RuntimeInternal) = 71
+findSymbolPtrSection (/System/Library/PrivateFrameworks/RuntimeInternal.framework/Versions/A/RuntimeInternal) = 42
+loadSymbols (/System/Library/PrivateFrameworks/RuntimeInternal.framework/Versions/A/RuntimeInternal) = 315790
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/RuntimeInternal.framework/Versions/A/RuntimeInternal) total = 507364
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/swift/libswiftCoreFoundation.dylib) = 129
+findSymbolPtrSection (/usr/lib/swift/libswiftCoreFoundation.dylib) = 33
+loadSymbols (/usr/lib/swift/libswiftCoreFoundation.dylib) = 31118
+Symbols::parseLibraries (/usr/lib/swift/libswiftCoreFoundation.dylib) total = 62464
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/swift/libswiftDarwin.dylib) = 41
+findSymbolPtrSection (/usr/lib/swift/libswiftDarwin.dylib) = 23
+loadSymbols (/usr/lib/swift/libswiftDarwin.dylib) = 20004
+Symbols::parseLibraries (/usr/lib/swift/libswiftDarwin.dylib) total = 40756
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/swift/libswiftDispatch.dylib) = 86
+findSymbolPtrSection (/usr/lib/swift/libswiftDispatch.dylib) = 23
+loadSymbols (/usr/lib/swift/libswiftDispatch.dylib) = 228833
+Symbols::parseLibraries (/usr/lib/swift/libswiftDispatch.dylib) total = 355553
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/swift/libswiftIOKit.dylib) = 45
+findSymbolPtrSection (/usr/lib/swift/libswiftIOKit.dylib) = 30
+loadSymbols (/usr/lib/swift/libswiftIOKit.dylib) = 5782
+Symbols::parseLibraries (/usr/lib/swift/libswiftIOKit.dylib) total = 20415
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/swift/libswiftSystem.dylib) = 77
+findSymbolPtrSection (/usr/lib/swift/libswiftSystem.dylib) = 24
+loadSymbols (/usr/lib/swift/libswiftSystem.dylib) = 180058
+Symbols::parseLibraries (/usr/lib/swift/libswiftSystem.dylib) total = 281791
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/swift/libswiftXPC.dylib) = 95
+findSymbolPtrSection (/usr/lib/swift/libswiftXPC.dylib) = 28
+loadSymbols (/usr/lib/swift/libswiftXPC.dylib) = 284285
+Symbols::parseLibraries (/usr/lib/swift/libswiftXPC.dylib) total = 442636
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/swift/libswift_Builtin_float.dylib) = 35
+findSymbolPtrSection (/usr/lib/swift/libswift_Builtin_float.dylib) = 30
+loadSymbols (/usr/lib/swift/libswift_Builtin_float.dylib) = 4394
+Symbols::parseLibraries (/usr/lib/swift/libswift_Builtin_float.dylib) total = 28398
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/swift/libswift_Concurrency.dylib) = 127
+findSymbolPtrSection (/usr/lib/swift/libswift_Concurrency.dylib) = 38
+loadSymbols (/usr/lib/swift/libswift_Concurrency.dylib) = 473043
+Symbols::parseLibraries (/usr/lib/swift/libswift_Concurrency.dylib) total = 757871
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/swift/libswift_StringProcessing.dylib) = 80
+findSymbolPtrSection (/usr/lib/swift/libswift_StringProcessing.dylib) = 36
+loadSymbols (/usr/lib/swift/libswift_StringProcessing.dylib) = 496238
+Symbols::parseLibraries (/usr/lib/swift/libswift_StringProcessing.dylib) total = 704444
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/swift/libswift_errno.dylib) = 93
+findSymbolPtrSection (/usr/lib/swift/libswift_errno.dylib) = 35
+loadSymbols (/usr/lib/swift/libswift_errno.dylib) = 2651
+Symbols::parseLibraries (/usr/lib/swift/libswift_errno.dylib) total = 16379
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/swift/libswift_math.dylib) = 32
+findSymbolPtrSection (/usr/lib/swift/libswift_math.dylib) = 30
+loadSymbols (/usr/lib/swift/libswift_math.dylib) = 11405
+Symbols::parseLibraries (/usr/lib/swift/libswift_math.dylib) total = 28523
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/swift/libswift_signal.dylib) = 50
+findSymbolPtrSection (/usr/lib/swift/libswift_signal.dylib) = 29
+loadSymbols (/usr/lib/swift/libswift_signal.dylib) = 2245
+Symbols::parseLibraries (/usr/lib/swift/libswift_signal.dylib) total = 15322
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/swift/libswift_stdio.dylib) = 30
+findSymbolPtrSection (/usr/lib/swift/libswift_stdio.dylib) = 23
+loadSymbols (/usr/lib/swift/libswift_stdio.dylib) = 3755
+Symbols::parseLibraries (/usr/lib/swift/libswift_stdio.dylib) total = 15376
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/swift/libswift_time.dylib) = 23
+findSymbolPtrSection (/usr/lib/swift/libswift_time.dylib) = 21
+loadSymbols (/usr/lib/swift/libswift_time.dylib) = 1830
+Symbols::parseLibraries (/usr/lib/swift/libswift_time.dylib) total = 12803
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/swift/libswiftos.dylib) = 94
+findSymbolPtrSection (/usr/lib/swift/libswiftos.dylib) = 29
+loadSymbols (/usr/lib/swift/libswiftos.dylib) = 148698
+Symbols::parseLibraries (/usr/lib/swift/libswiftos.dylib) total = 239462
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/swift/libswiftsys_time.dylib) = 37
+findSymbolPtrSection (/usr/lib/swift/libswiftsys_time.dylib) = 31
+loadSymbols (/usr/lib/swift/libswiftsys_time.dylib) = 489
+Symbols::parseLibraries (/usr/lib/swift/libswiftsys_time.dylib) total = 11859
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/swift/libswiftunistd.dylib) = 37
+findSymbolPtrSection (/usr/lib/swift/libswiftunistd.dylib) = 32
+loadSymbols (/usr/lib/swift/libswiftunistd.dylib) = 2234
+Symbols::parseLibraries (/usr/lib/swift/libswiftunistd.dylib) total = 16389
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/AppleSystemInfo.framework/Versions/A/AppleSystemInfo) = 43
+findSymbolPtrSection (/System/Library/PrivateFrameworks/AppleSystemInfo.framework/Versions/A/AppleSystemInfo) = 27
+loadSymbols (/System/Library/PrivateFrameworks/AppleSystemInfo.framework/Versions/A/AppleSystemInfo) = 7764
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/AppleSystemInfo.framework/Versions/A/AppleSystemInfo) total = 23847
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/LoggingSupport.framework/Versions/A/LoggingSupport) = 125
+findSymbolPtrSection (/System/Library/PrivateFrameworks/LoggingSupport.framework/Versions/A/LoggingSupport) = 48
+loadSymbols (/System/Library/PrivateFrameworks/LoggingSupport.framework/Versions/A/LoggingSupport) = 274074
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/LoggingSupport.framework/Versions/A/LoggingSupport) total = 422787
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/UserManagement.framework/Versions/A/UserManagement) = 111
+findSymbolPtrSection (/System/Library/PrivateFrameworks/UserManagement.framework/Versions/A/UserManagement) = 44
+loadSymbols (/System/Library/PrivateFrameworks/UserManagement.framework/Versions/A/UserManagement) = 9650
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/UserManagement.framework/Versions/A/UserManagement) total = 27845
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/libboringssl.dylib) = 120
+findSymbolPtrSection (/usr/lib/libboringssl.dylib) = 45
+loadSymbols (/usr/lib/libboringssl.dylib) = 334238
+Symbols::parseLibraries (/usr/lib/libboringssl.dylib) total = 529715
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/libdns_services.dylib) = 72
+findSymbolPtrSection (/usr/lib/libdns_services.dylib) = 31
+loadSymbols (/usr/lib/libdns_services.dylib) = 28560
+Symbols::parseLibraries (/usr/lib/libdns_services.dylib) total = 53278
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/libquic.dylib) = 94
+findSymbolPtrSection (/usr/lib/libquic.dylib) = 31
+loadSymbols (/usr/lib/libquic.dylib) = 116205
+Symbols::parseLibraries (/usr/lib/libquic.dylib) total = 179167
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/libusrtcp.dylib) = 35
+findSymbolPtrSection (/usr/lib/libusrtcp.dylib) = 33
+loadSymbols (/usr/lib/libusrtcp.dylib) = 27986
+Symbols::parseLibraries (/usr/lib/libusrtcp.dylib) total = 53325
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/InternalSwiftProtobuf.framework/Versions/A/InternalSwiftProtobuf) = 71
+findSymbolPtrSection (/System/Library/PrivateFrameworks/InternalSwiftProtobuf.framework/Versions/A/InternalSwiftProtobuf) = 43
+loadSymbols (/System/Library/PrivateFrameworks/InternalSwiftProtobuf.framework/Versions/A/InternalSwiftProtobuf) = 89553
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/InternalSwiftProtobuf.framework/Versions/A/InternalSwiftProtobuf) total = 106329
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/swift/libswiftDistributed.dylib) = 75
+findSymbolPtrSection (/usr/lib/swift/libswiftDistributed.dylib) = 35
+loadSymbols (/usr/lib/swift/libswiftDistributed.dylib) = 81563
+Symbols::parseLibraries (/usr/lib/swift/libswiftDistributed.dylib) total = 131548
+---------------------------------------------------
+loadSymbols (/usr/lib/libnetwork.dylib) = 1828
+Symbols::parseLibraries (/usr/lib/libnetwork.dylib) total = 7682
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/AppleSauce.framework/Versions/A/AppleSauce) = 30
+findSymbolPtrSection (/System/Library/PrivateFrameworks/AppleSauce.framework/Versions/A/AppleSauce) = 29
+loadSymbols (/System/Library/PrivateFrameworks/AppleSauce.framework/Versions/A/AppleSauce) = 11045
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/AppleSauce.framework/Versions/A/AppleSauce) total = 27043
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/swift/libswiftObservation.dylib) = 65
+findSymbolPtrSection (/usr/lib/swift/libswiftObservation.dylib) = 29
+loadSymbols (/usr/lib/swift/libswiftObservation.dylib) = 44018
+Symbols::parseLibraries (/usr/lib/swift/libswiftObservation.dylib) total = 70821
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/Lexicon.framework/Versions/A/Lexicon) = 37
+findSymbolPtrSection (/System/Library/PrivateFrameworks/Lexicon.framework/Versions/A/Lexicon) = 45
+loadSymbols (/System/Library/PrivateFrameworks/Lexicon.framework/Versions/A/Lexicon) = 12018
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/Lexicon.framework/Versions/A/Lexicon) total = 38861
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/IO80211.framework/Versions/A/IO80211) = 75
+findSymbolPtrSection (/System/Library/PrivateFrameworks/IO80211.framework/Versions/A/IO80211) = 34
+loadSymbols (/System/Library/PrivateFrameworks/IO80211.framework/Versions/A/IO80211) = 80402
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/IO80211.framework/Versions/A/IO80211) total = 136716
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/FrontBoardServices.framework/Versions/A/FrontBoardServices) = 100
+findSymbolPtrSection (/System/Library/PrivateFrameworks/FrontBoardServices.framework/Versions/A/FrontBoardServices) = 39
+loadSymbols (/System/Library/PrivateFrameworks/FrontBoardServices.framework/Versions/A/FrontBoardServices) = 659900
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/FrontBoardServices.framework/Versions/A/FrontBoardServices) total = 961497
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/SecurityFoundation.framework/Versions/A/SecurityFoundation) = 99
+findSymbolPtrSection (/System/Library/Frameworks/SecurityFoundation.framework/Versions/A/SecurityFoundation) = 96
+loadSymbols (/System/Library/Frameworks/SecurityFoundation.framework/Versions/A/SecurityFoundation) = 396547
+Symbols::parseLibraries (/System/Library/Frameworks/SecurityFoundation.framework/Versions/A/SecurityFoundation) total = 560360
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/LinguisticData.framework/Versions/A/LinguisticData) = 75
+findSymbolPtrSection (/System/Library/PrivateFrameworks/LinguisticData.framework/Versions/A/LinguisticData) = 36
+loadSymbols (/System/Library/PrivateFrameworks/LinguisticData.framework/Versions/A/LinguisticData) = 2245
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/LinguisticData.framework/Versions/A/LinguisticData) total = 15861
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/IOMobileFramebuffer.framework/Versions/A/IOMobileFramebuffer) = 41
+findSymbolPtrSection (/System/Library/PrivateFrameworks/IOMobileFramebuffer.framework/Versions/A/IOMobileFramebuffer) = 34
+loadSymbols (/System/Library/PrivateFrameworks/IOMobileFramebuffer.framework/Versions/A/IOMobileFramebuffer) = 36081
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/IOMobileFramebuffer.framework/Versions/A/IOMobileFramebuffer) total = 69635
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/IOSurface.framework/Versions/A/IOSurface) = 100
+findSymbolPtrSection (/System/Library/Frameworks/IOSurface.framework/Versions/A/IOSurface) = 49
+loadSymbols (/System/Library/Frameworks/IOSurface.framework/Versions/A/IOSurface) = 83012
+Symbols::parseLibraries (/System/Library/Frameworks/IOSurface.framework/Versions/A/IOSurface) total = 147306
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/BaseBoard.framework/Versions/A/BaseBoard) = 104
+findSymbolPtrSection (/System/Library/PrivateFrameworks/BaseBoard.framework/Versions/A/BaseBoard) = 30
+loadSymbols (/System/Library/PrivateFrameworks/BaseBoard.framework/Versions/A/BaseBoard) = 565955
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/BaseBoard.framework/Versions/A/BaseBoard) total = 876173
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/BoardServices.framework/Versions/A/BoardServices) = 109
+findSymbolPtrSection (/System/Library/PrivateFrameworks/BoardServices.framework/Versions/A/BoardServices) = 31
+loadSymbols (/System/Library/PrivateFrameworks/BoardServices.framework/Versions/A/BoardServices) = 176607
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/BoardServices.framework/Versions/A/BoardServices) total = 271604
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/AssertionServices.framework/Versions/A/AssertionServices) = 131
+findSymbolPtrSection (/System/Library/PrivateFrameworks/AssertionServices.framework/Versions/A/AssertionServices) = 38
+loadSymbols (/System/Library/PrivateFrameworks/AssertionServices.framework/Versions/A/AssertionServices) = 34422
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/AssertionServices.framework/Versions/A/AssertionServices) total = 65463
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/BackBoardServices.framework/Versions/A/BackBoardServices) = 100
+findSymbolPtrSection (/System/Library/PrivateFrameworks/BackBoardServices.framework/Versions/A/BackBoardServices) = 30
+loadSymbols (/System/Library/PrivateFrameworks/BackBoardServices.framework/Versions/A/BackBoardServices) = 262620
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/BackBoardServices.framework/Versions/A/BackBoardServices) total = 396671
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/ImageIO.framework/Versions/A/ImageIO) = 108
+findSymbolPtrSection (/System/Library/Frameworks/ImageIO.framework/Versions/A/ImageIO) = 31
+loadSymbols (/System/Library/Frameworks/ImageIO.framework/Versions/A/ImageIO) = 1690630
+Symbols::parseLibraries (/System/Library/Frameworks/ImageIO.framework/Versions/A/ImageIO) total = 2397594
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/SkyLight) = 109
+findSymbolPtrSection (/System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/SkyLight) = 31
+loadSymbols (/System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/SkyLight) = 2088168
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/SkyLight) total = 3109041
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/FontServices.framework/libFontParser.dylib) = 102
+findSymbolPtrSection (/System/Library/PrivateFrameworks/FontServices.framework/libFontParser.dylib) = 26
+loadSymbols (/System/Library/PrivateFrameworks/FontServices.framework/libFontParser.dylib) = 570337
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/FontServices.framework/libFontParser.dylib) total = 868256
+---------------------------------------------------
+loadSymbols (/System/Library/Frameworks/Accelerate.framework/Versions/A/Accelerate) = 41
+Symbols::parseLibraries (/System/Library/Frameworks/Accelerate.framework/Versions/A/Accelerate) total = 5758
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/TCC.framework/Versions/A/TCC) = 97
+findSymbolPtrSection (/System/Library/PrivateFrameworks/TCC.framework/Versions/A/TCC) = 43
+loadSymbols (/System/Library/PrivateFrameworks/TCC.framework/Versions/A/TCC) = 92560
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/TCC.framework/Versions/A/TCC) total = 150973
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/IOSurfaceAccelerator.framework/Versions/A/IOSurfaceAccelerator) = 42
+findSymbolPtrSection (/System/Library/PrivateFrameworks/IOSurfaceAccelerator.framework/Versions/A/IOSurfaceAccelerator) = 28
+loadSymbols (/System/Library/PrivateFrameworks/IOSurfaceAccelerator.framework/Versions/A/IOSurfaceAccelerator) = 9900
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/IOSurfaceAccelerator.framework/Versions/A/IOSurfaceAccelerator) total = 28354
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/WatchdogClient.framework/Versions/A/WatchdogClient) = 28
+loadSymbols (/System/Library/PrivateFrameworks/WatchdogClient.framework/Versions/A/WatchdogClient) = 6277
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/WatchdogClient.framework/Versions/A/WatchdogClient) total = 16570
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/CoreDisplay.framework/Versions/A/CoreDisplay) = 107
+findSymbolPtrSection (/System/Library/Frameworks/CoreDisplay.framework/Versions/A/CoreDisplay) = 40
+loadSymbols (/System/Library/Frameworks/CoreDisplay.framework/Versions/A/CoreDisplay) = 349808
+Symbols::parseLibraries (/System/Library/Frameworks/CoreDisplay.framework/Versions/A/CoreDisplay) total = 554981
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/CoreMedia.framework/Versions/A/CoreMedia) = 96
+findSymbolPtrSection (/System/Library/Frameworks/CoreMedia.framework/Versions/A/CoreMedia) = 32
+loadSymbols (/System/Library/Frameworks/CoreMedia.framework/Versions/A/CoreMedia) = 802653
+Symbols::parseLibraries (/System/Library/Frameworks/CoreMedia.framework/Versions/A/CoreMedia) total = 1334787
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/IOAccelerator.framework/Versions/A/IOAccelerator) = 97
+findSymbolPtrSection (/System/Library/PrivateFrameworks/IOAccelerator.framework/Versions/A/IOAccelerator) = 31
+loadSymbols (/System/Library/PrivateFrameworks/IOAccelerator.framework/Versions/A/IOAccelerator) = 25081
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/IOAccelerator.framework/Versions/A/IOAccelerator) total = 54448
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/Metal.framework/Versions/A/Metal) = 460
+findSymbolPtrSection (/System/Library/Frameworks/Metal.framework/Versions/A/Metal) = 25
+loadSymbols (/System/Library/Frameworks/Metal.framework/Versions/A/Metal) = 2100821
+Symbols::parseLibraries (/System/Library/Frameworks/Metal.framework/Versions/A/Metal) total = 2938903
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/CoreVideo.framework/Versions/A/CoreVideo) = 90
+findSymbolPtrSection (/System/Library/Frameworks/CoreVideo.framework/Versions/A/CoreVideo) = 24
+loadSymbols (/System/Library/Frameworks/CoreVideo.framework/Versions/A/CoreVideo) = 274951
+Symbols::parseLibraries (/System/Library/Frameworks/CoreVideo.framework/Versions/A/CoreVideo) total = 429123
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/MetalPerformanceShaders) = 34
+findSymbolPtrSection (/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/MetalPerformanceShaders) = 33
+loadSymbols (/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/MetalPerformanceShaders) = 928
+Symbols::parseLibraries (/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/MetalPerformanceShaders) total = 14396
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/MultitouchSupport.framework/Versions/A/MultitouchSupport) = 100
+findSymbolPtrSection (/System/Library/PrivateFrameworks/MultitouchSupport.framework/Versions/A/MultitouchSupport) = 38
+loadSymbols (/System/Library/PrivateFrameworks/MultitouchSupport.framework/Versions/A/MultitouchSupport) = 55785
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/MultitouchSupport.framework/Versions/A/MultitouchSupport) total = 106072
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/QuartzCore.framework/Versions/A/QuartzCore) = 122
+findSymbolPtrSection (/System/Library/Frameworks/QuartzCore.framework/Versions/A/QuartzCore) = 46
+loadSymbols (/System/Library/Frameworks/QuartzCore.framework/Versions/A/QuartzCore) = 1385693
+Symbols::parseLibraries (/System/Library/Frameworks/QuartzCore.framework/Versions/A/QuartzCore) total = 2125623
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary) = 89
+findSymbolPtrSection (/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary) = 34
+loadSymbols (/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary) = 52161
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary) total = 82055
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/VideoToolbox.framework/Versions/A/VideoToolbox) = 98
+findSymbolPtrSection (/System/Library/Frameworks/VideoToolbox.framework/Versions/A/VideoToolbox) = 30
+loadSymbols (/System/Library/Frameworks/VideoToolbox.framework/Versions/A/VideoToolbox) = 110988
+Symbols::parseLibraries (/System/Library/Frameworks/VideoToolbox.framework/Versions/A/VideoToolbox) total = 195393
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/swift/libswiftMetal.dylib) = 92
+findSymbolPtrSection (/usr/lib/swift/libswiftMetal.dylib) = 39
+loadSymbols (/usr/lib/swift/libswiftMetal.dylib) = 30953
+Symbols::parseLibraries (/usr/lib/swift/libswiftMetal.dylib) total = 54160
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/swift/libswiftOSLog.dylib) = 79
+findSymbolPtrSection (/usr/lib/swift/libswiftOSLog.dylib) = 35
+loadSymbols (/usr/lib/swift/libswiftOSLog.dylib) = 8167
+Symbols::parseLibraries (/usr/lib/swift/libswiftOSLog.dylib) total = 23492
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/swift/libswiftQuartzCore.dylib) = 110
+findSymbolPtrSection (/usr/lib/swift/libswiftQuartzCore.dylib) = 36
+loadSymbols (/usr/lib/swift/libswiftQuartzCore.dylib) = 7619
+Symbols::parseLibraries (/usr/lib/swift/libswiftQuartzCore.dylib) total = 23283
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/swift/libswiftUniformTypeIdentifiers.dylib) = 82
+findSymbolPtrSection (/usr/lib/swift/libswiftUniformTypeIdentifiers.dylib) = 32
+loadSymbols (/usr/lib/swift/libswiftUniformTypeIdentifiers.dylib) = 98396
+Symbols::parseLibraries (/usr/lib/swift/libswiftUniformTypeIdentifiers.dylib) total = 174479
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/swift/libswiftsimd.dylib) = 49
+findSymbolPtrSection (/usr/lib/swift/libswiftsimd.dylib) = 35
+loadSymbols (/usr/lib/swift/libswiftsimd.dylib) = 188358
+Symbols::parseLibraries (/usr/lib/swift/libswiftsimd.dylib) total = 332254
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/MobileKeyBag.framework/Versions/A/MobileKeyBag) = 99
+findSymbolPtrSection (/System/Library/PrivateFrameworks/MobileKeyBag.framework/Versions/A/MobileKeyBag) = 39
+loadSymbols (/System/Library/PrivateFrameworks/MobileKeyBag.framework/Versions/A/MobileKeyBag) = 43049
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/MobileKeyBag.framework/Versions/A/MobileKeyBag) total = 78800
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/AggregateDictionary.framework/Versions/A/AggregateDictionary) = 93
+findSymbolPtrSection (/System/Library/PrivateFrameworks/AggregateDictionary.framework/Versions/A/AggregateDictionary) = 33
+loadSymbols (/System/Library/PrivateFrameworks/AggregateDictionary.framework/Versions/A/AggregateDictionary) = 2148
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/AggregateDictionary.framework/Versions/A/AggregateDictionary) total = 15353
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/APFS.framework/Versions/A/APFS) = 37
+findSymbolPtrSection (/System/Library/PrivateFrameworks/APFS.framework/Versions/A/APFS) = 34
+loadSymbols (/System/Library/PrivateFrameworks/APFS.framework/Versions/A/APFS) = 74869
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/APFS.framework/Versions/A/APFS) total = 123893
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/AppleKeyStore.framework/Versions/A/AppleKeyStore) = 94
+findSymbolPtrSection (/System/Library/PrivateFrameworks/AppleKeyStore.framework/Versions/A/AppleKeyStore) = 29
+loadSymbols (/System/Library/PrivateFrameworks/AppleKeyStore.framework/Versions/A/AppleKeyStore) = 131706
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/AppleKeyStore.framework/Versions/A/AppleKeyStore) total = 226405
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/libutil.dylib) = 38
+findSymbolPtrSection (/usr/lib/libutil.dylib) = 29
+loadSymbols (/usr/lib/libutil.dylib) = 4582
+Symbols::parseLibraries (/usr/lib/libutil.dylib) total = 18610
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/liblzma.5.dylib) = 30
+loadSymbols (/usr/lib/liblzma.5.dylib) = 22774
+Symbols::parseLibraries (/usr/lib/liblzma.5.dylib) total = 47666
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vImage.framework/Versions/A/vImage) = 22
+findSymbolPtrSection (/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vImage.framework/Versions/A/vImage) = 34
+loadSymbols (/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vImage.framework/Versions/A/vImage) = 478913
+Symbols::parseLibraries (/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vImage.framework/Versions/A/vImage) total = 748561
+---------------------------------------------------
+loadSymbols (/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/vecLib) = 43
+Symbols::parseLibraries (/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/vecLib) total = 6332
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libvMisc.dylib) = 23
+findSymbolPtrSection (/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libvMisc.dylib) = 29
+loadSymbols (/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libvMisc.dylib) = 34346
+Symbols::parseLibraries (/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libvMisc.dylib) total = 74261
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib) = 23
+findSymbolPtrSection (/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib) = 94
+loadSymbols (/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib) = 80925
+Symbols::parseLibraries (/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib) total = 175699
+---------------------------------------------------
+loadSymbols (/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices) = 510
+Symbols::parseLibraries (/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices) total = 6620
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/ColorSync.framework/Versions/A/ColorSync) = 36
+findSymbolPtrSection (/System/Library/Frameworks/ColorSync.framework/Versions/A/ColorSync) = 24
+loadSymbols (/System/Library/Frameworks/ColorSync.framework/Versions/A/ColorSync) = 416741
+Symbols::parseLibraries (/System/Library/Frameworks/ColorSync.framework/Versions/A/ColorSync) total = 618146
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/CoreText.framework/Versions/A/CoreText) = 157
+findSymbolPtrSection (/System/Library/Frameworks/CoreText.framework/Versions/A/CoreText) = 41
+loadSymbols (/System/Library/Frameworks/CoreText.framework/Versions/A/CoreText) = 776916
+Symbols::parseLibraries (/System/Library/Frameworks/CoreText.framework/Versions/A/CoreText) total = 1125515
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/ATS) = 66
+findSymbolPtrSection (/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/ATS) = 39
+loadSymbols (/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/ATS) = 162036
+Symbols::parseLibraries (/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/ATS) total = 272802
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/HIServices.framework/Versions/A/HIServices) = 90
+findSymbolPtrSection (/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/HIServices.framework/Versions/A/HIServices) = 38
+loadSymbols (/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/HIServices.framework/Versions/A/HIServices) = 190217
+Symbols::parseLibraries (/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/HIServices.framework/Versions/A/HIServices) total = 319721
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/PrintCore.framework/Versions/A/PrintCore) = 91
+findSymbolPtrSection (/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/PrintCore.framework/Versions/A/PrintCore) = 40
+loadSymbols (/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/PrintCore.framework/Versions/A/PrintCore) = 199355
+Symbols::parseLibraries (/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/PrintCore.framework/Versions/A/PrintCore) total = 318301
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/QD.framework/Versions/A/QD) = 34
+findSymbolPtrSection (/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/QD.framework/Versions/A/QD) = 34
+loadSymbols (/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/QD.framework/Versions/A/QD) = 17881
+Symbols::parseLibraries (/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/QD.framework/Versions/A/QD) total = 41609
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ColorSyncLegacy.framework/Versions/A/ColorSyncLegacy) = 41
+findSymbolPtrSection (/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ColorSyncLegacy.framework/Versions/A/ColorSyncLegacy) = 36
+loadSymbols (/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ColorSyncLegacy.framework/Versions/A/ColorSyncLegacy) = 53403
+Symbols::parseLibraries (/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ColorSyncLegacy.framework/Versions/A/ColorSyncLegacy) total = 88774
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/SpeechSynthesis.framework/Versions/A/SpeechSynthesis) = 120
+findSymbolPtrSection (/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/SpeechSynthesis.framework/Versions/A/SpeechSynthesis) = 31
+loadSymbols (/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/SpeechSynthesis.framework/Versions/A/SpeechSynthesis) = 121301
+Symbols::parseLibraries (/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/SpeechSynthesis.framework/Versions/A/SpeechSynthesis) total = 194193
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/CoreEmoji.framework/Versions/A/CoreEmoji) = 78
+findSymbolPtrSection (/System/Library/PrivateFrameworks/CoreEmoji.framework/Versions/A/CoreEmoji) = 36
+loadSymbols (/System/Library/PrivateFrameworks/CoreEmoji.framework/Versions/A/CoreEmoji) = 160584
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/CoreEmoji.framework/Versions/A/CoreEmoji) total = 229345
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/FontServices.framework/Versions/A/FontServices) = 53
+loadSymbols (/System/Library/PrivateFrameworks/FontServices.framework/Versions/A/FontServices) = 605
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/FontServices.framework/Versions/A/FontServices) total = 10024
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/UniformTypeIdentifiers.framework/Versions/A/UniformTypeIdentifiers) = 99
+findSymbolPtrSection (/System/Library/Frameworks/UniformTypeIdentifiers.framework/Versions/A/UniformTypeIdentifiers) = 29
+loadSymbols (/System/Library/Frameworks/UniformTypeIdentifiers.framework/Versions/A/UniformTypeIdentifiers) = 56524
+Symbols::parseLibraries (/System/Library/Frameworks/UniformTypeIdentifiers.framework/Versions/A/UniformTypeIdentifiers) total = 100620
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/OTSVG.framework/Versions/A/OTSVG) = 98
+findSymbolPtrSection (/System/Library/PrivateFrameworks/OTSVG.framework/Versions/A/OTSVG) = 41
+loadSymbols (/System/Library/PrivateFrameworks/OTSVG.framework/Versions/A/OTSVG) = 250219
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/OTSVG.framework/Versions/A/OTSVG) total = 311905
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/Resources/libFontRegistry.dylib) = 117
+findSymbolPtrSection (/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/Resources/libFontRegistry.dylib) = 43
+loadSymbols (/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/Resources/libFontRegistry.dylib) = 211610
+Symbols::parseLibraries (/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/Resources/libFontRegistry.dylib) total = 314322
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/FontServices.framework/libhvf.dylib) = 35
+findSymbolPtrSection (/System/Library/PrivateFrameworks/FontServices.framework/libhvf.dylib) = 38
+loadSymbols (/System/Library/PrivateFrameworks/FontServices.framework/libhvf.dylib) = 7898
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/FontServices.framework/libhvf.dylib) total = 23965
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/ParsingInternal.framework/Versions/A/ParsingInternal) = 23
+findSymbolPtrSection (/System/Library/PrivateFrameworks/ParsingInternal.framework/Versions/A/ParsingInternal) = 72
+loadSymbols (/System/Library/PrivateFrameworks/ParsingInternal.framework/Versions/A/ParsingInternal) = 87766
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/ParsingInternal.framework/Versions/A/ParsingInternal) total = 104615
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/swift/libswiftRegexBuilder.dylib) = 108
+findSymbolPtrSection (/usr/lib/swift/libswiftRegexBuilder.dylib) = 29
+loadSymbols (/usr/lib/swift/libswiftRegexBuilder.dylib) = 61916
+Symbols::parseLibraries (/usr/lib/swift/libswiftRegexBuilder.dylib) total = 104031
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/swift/libswift_RegexParser.dylib) = 34
+findSymbolPtrSection (/usr/lib/swift/libswift_RegexParser.dylib) = 32
+loadSymbols (/usr/lib/swift/libswift_RegexParser.dylib) = 650504
+Symbols::parseLibraries (/usr/lib/swift/libswift_RegexParser.dylib) total = 1006050
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/AppleJPEG.framework/Versions/A/AppleJPEG) = 77
+findSymbolPtrSection (/System/Library/PrivateFrameworks/AppleJPEG.framework/Versions/A/AppleJPEG) = 32
+loadSymbols (/System/Library/PrivateFrameworks/AppleJPEG.framework/Versions/A/AppleJPEG) = 44076
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/AppleJPEG.framework/Versions/A/AppleJPEG) total = 100645
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/libexpat.1.dylib) = 29
+loadSymbols (/usr/lib/libexpat.1.dylib) = 28340
+Symbols::parseLibraries (/usr/lib/libexpat.1.dylib) total = 54124
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libPng.dylib) = 30
+findSymbolPtrSection (/System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libPng.dylib) = 34
+loadSymbols (/System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libPng.dylib) = 41383
+Symbols::parseLibraries (/System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libPng.dylib) total = 77592
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libTIFF.dylib) = 33
+findSymbolPtrSection (/System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libTIFF.dylib) = 24
+loadSymbols (/System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libTIFF.dylib) = 77557
+Symbols::parseLibraries (/System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libTIFF.dylib) total = 137089
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libGIF.dylib) = 33
+findSymbolPtrSection (/System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libGIF.dylib) = 29
+loadSymbols (/System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libGIF.dylib) = 4028
+Symbols::parseLibraries (/System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libGIF.dylib) total = 18363
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libJP2.dylib) = 34
+findSymbolPtrSection (/System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libJP2.dylib) = 32
+loadSymbols (/System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libJP2.dylib) = 293360
+Symbols::parseLibraries (/System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libJP2.dylib) total = 429540
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/libate.dylib) = 94
+findSymbolPtrSection (/usr/lib/libate.dylib) = 43
+loadSymbols (/usr/lib/libate.dylib) = 36432
+Symbols::parseLibraries (/usr/lib/libate.dylib) total = 85773
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libJPEG.dylib) = 36
+loadSymbols (/System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libJPEG.dylib) = 26837
+Symbols::parseLibraries (/System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libJPEG.dylib) total = 54387
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libRadiance.dylib) = 28
+loadSymbols (/System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libRadiance.dylib) = 3884
+Symbols::parseLibraries (/System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libRadiance.dylib) total = 12966
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/libllvm-flatbuffers.dylib) = 32
+findSymbolPtrSection (/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/libllvm-flatbuffers.dylib) = 24
+loadSymbols (/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/libllvm-flatbuffers.dylib) = 21704
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/libllvm-flatbuffers.dylib) total = 41898
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/FramePacing.framework/Versions/A/FramePacing) = 91
+findSymbolPtrSection (/System/Library/PrivateFrameworks/FramePacing.framework/Versions/A/FramePacing) = 45
+loadSymbols (/System/Library/PrivateFrameworks/FramePacing.framework/Versions/A/FramePacing) = 34025
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/FramePacing.framework/Versions/A/FramePacing) total = 60891
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libCoreFSCache.dylib) = 30
+loadSymbols (/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libCoreFSCache.dylib) = 13786
+Symbols::parseLibraries (/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libCoreFSCache.dylib) total = 26914
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/libGPUCompilerUtils.dylib) = 27
+loadSymbols (/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/libGPUCompilerUtils.dylib) = 2089
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/libGPUCompilerUtils.dylib) total = 10957
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/FontServices.framework/libXTFontStaticRegistryData.dylib) = 54
+findSymbolPtrSection (/System/Library/PrivateFrameworks/FontServices.framework/libXTFontStaticRegistryData.dylib) = 27
+loadSymbols (/System/Library/PrivateFrameworks/FontServices.framework/libXTFontStaticRegistryData.dylib) = 1576
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/FontServices.framework/libXTFontStaticRegistryData.dylib) total = 12859
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/CoreImage.framework/Versions/A/CoreImage) = 123
+findSymbolPtrSection (/System/Library/Frameworks/CoreImage.framework/Versions/A/CoreImage) = 82
+loadSymbols (/System/Library/Frameworks/CoreImage.framework/Versions/A/CoreImage) = 2481916
+Symbols::parseLibraries (/System/Library/Frameworks/CoreImage.framework/Versions/A/CoreImage) total = 3491921
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/Symbolication.framework/Versions/A/Symbolication) = 111
+findSymbolPtrSection (/System/Library/PrivateFrameworks/Symbolication.framework/Versions/A/Symbolication) = 38
+loadSymbols (/System/Library/PrivateFrameworks/Symbolication.framework/Versions/A/Symbolication) = 481027
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/Symbolication.framework/Versions/A/Symbolication) total = 720236
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/PhotosensitivityProcessing.framework/Versions/A/PhotosensitivityProcessing) = 98
+findSymbolPtrSection (/System/Library/PrivateFrameworks/PhotosensitivityProcessing.framework/Versions/A/PhotosensitivityProcessing) = 37
+loadSymbols (/System/Library/PrivateFrameworks/PhotosensitivityProcessing.framework/Versions/A/PhotosensitivityProcessing) = 33381
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/PhotosensitivityProcessing.framework/Versions/A/PhotosensitivityProcessing) total = 59024
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/OpenGL.framework/Versions/A/OpenGL) = 75
+findSymbolPtrSection (/System/Library/Frameworks/OpenGL.framework/Versions/A/OpenGL) = 31
+loadSymbols (/System/Library/Frameworks/OpenGL.framework/Versions/A/OpenGL) = 4485
+Symbols::parseLibraries (/System/Library/Frameworks/OpenGL.framework/Versions/A/OpenGL) total = 22078
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/OpenCL.framework/Versions/A/OpenCL) = 32
+findSymbolPtrSection (/System/Library/Frameworks/OpenCL.framework/Versions/A/OpenCL) = 49
+loadSymbols (/System/Library/Frameworks/OpenCL.framework/Versions/A/OpenCL) = 13416
+Symbols::parseLibraries (/System/Library/Frameworks/OpenCL.framework/Versions/A/OpenCL) total = 43176
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/GraphVisualizer.framework/Versions/A/GraphVisualizer) = 93
+findSymbolPtrSection (/System/Library/PrivateFrameworks/GraphVisualizer.framework/Versions/A/GraphVisualizer) = 48
+loadSymbols (/System/Library/PrivateFrameworks/GraphVisualizer.framework/Versions/A/GraphVisualizer) = 30705
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/GraphVisualizer.framework/Versions/A/GraphVisualizer) total = 48875
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGLU.dylib) = 33
+findSymbolPtrSection (/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGLU.dylib) = 33
+loadSymbols (/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGLU.dylib) = 65274
+Symbols::parseLibraries (/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGLU.dylib) total = 108686
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGFXShared.dylib) = 38
+findSymbolPtrSection (/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGFXShared.dylib) = 31
+loadSymbols (/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGFXShared.dylib) = 12512
+Symbols::parseLibraries (/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGFXShared.dylib) total = 30260
+---------------------------------------------------
+loadSymbols (/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGL.dylib) = 82107
+Symbols::parseLibraries (/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGL.dylib) total = 163705
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGLImage.dylib) = 28
+findSymbolPtrSection (/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGLImage.dylib) = 28
+loadSymbols (/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGLImage.dylib) = 18063
+Symbols::parseLibraries (/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGLImage.dylib) total = 39549
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libCVMSPluginSupport.dylib) = 27
+findSymbolPtrSection (/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libCVMSPluginSupport.dylib) = 31
+loadSymbols (/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libCVMSPluginSupport.dylib) = 5366
+Symbols::parseLibraries (/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libCVMSPluginSupport.dylib) total = 19997
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/libRosetta.dylib) = 23
+findSymbolPtrSection (/usr/lib/libRosetta.dylib) = 30
+loadSymbols (/usr/lib/libRosetta.dylib) = 5437
+Symbols::parseLibraries (/usr/lib/libRosetta.dylib) total = 18656
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libCoreVMClient.dylib) = 23
+findSymbolPtrSection (/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libCoreVMClient.dylib) = 34
+loadSymbols (/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libCoreVMClient.dylib) = 10413
+Symbols::parseLibraries (/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libCoreVMClient.dylib) total = 26806
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSCore.framework/Versions/A/MPSCore) = 109
+findSymbolPtrSection (/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSCore.framework/Versions/A/MPSCore) = 43
+loadSymbols (/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSCore.framework/Versions/A/MPSCore) = 50296
+Symbols::parseLibraries (/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSCore.framework/Versions/A/MPSCore) total = 100229
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSImage.framework/Versions/A/MPSImage) = 116
+findSymbolPtrSection (/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSImage.framework/Versions/A/MPSImage) = 33
+loadSymbols (/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSImage.framework/Versions/A/MPSImage) = 13794
+Symbols::parseLibraries (/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSImage.framework/Versions/A/MPSImage) total = 32780
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSNeuralNetwork.framework/Versions/A/MPSNeuralNetwork) = 91
+findSymbolPtrSection (/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSNeuralNetwork.framework/Versions/A/MPSNeuralNetwork) = 34
+loadSymbols (/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSNeuralNetwork.framework/Versions/A/MPSNeuralNetwork) = 54887
+Symbols::parseLibraries (/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSNeuralNetwork.framework/Versions/A/MPSNeuralNetwork) total = 96892
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSMatrix.framework/Versions/A/MPSMatrix) = 87
+findSymbolPtrSection (/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSMatrix.framework/Versions/A/MPSMatrix) = 28
+loadSymbols (/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSMatrix.framework/Versions/A/MPSMatrix) = 3863
+Symbols::parseLibraries (/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSMatrix.framework/Versions/A/MPSMatrix) total = 17607
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSRayIntersector.framework/Versions/A/MPSRayIntersector) = 102
+findSymbolPtrSection (/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSRayIntersector.framework/Versions/A/MPSRayIntersector) = 43
+loadSymbols (/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSRayIntersector.framework/Versions/A/MPSRayIntersector) = 6609
+Symbols::parseLibraries (/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSRayIntersector.framework/Versions/A/MPSRayIntersector) total = 22741
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSNDArray.framework/Versions/A/MPSNDArray) = 92
+findSymbolPtrSection (/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSNDArray.framework/Versions/A/MPSNDArray) = 38
+loadSymbols (/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSNDArray.framework/Versions/A/MPSNDArray) = 47207
+Symbols::parseLibraries (/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSNDArray.framework/Versions/A/MPSNDArray) total = 88794
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSFunctions.framework/Versions/A/MPSFunctions) = 94
+findSymbolPtrSection (/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSFunctions.framework/Versions/A/MPSFunctions) = 41
+loadSymbols (/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSFunctions.framework/Versions/A/MPSFunctions) = 2044
+Symbols::parseLibraries (/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSFunctions.framework/Versions/A/MPSFunctions) total = 22125
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSBenchmarkLoop.framework/Versions/A/MPSBenchmarkLoop) = 90
+findSymbolPtrSection (/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSBenchmarkLoop.framework/Versions/A/MPSBenchmarkLoop) = 36
+loadSymbols (/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSBenchmarkLoop.framework/Versions/A/MPSBenchmarkLoop) = 2952
+Symbols::parseLibraries (/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSBenchmarkLoop.framework/Versions/A/MPSBenchmarkLoop) total = 15447
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/MetalTools.framework/Versions/A/MetalTools) = 94
+findSymbolPtrSection (/System/Library/PrivateFrameworks/MetalTools.framework/Versions/A/MetalTools) = 28
+loadSymbols (/System/Library/PrivateFrameworks/MetalTools.framework/Versions/A/MetalTools) = 1035602
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/MetalTools.framework/Versions/A/MetalTools) total = 1492448
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/IOAccelMemoryInfo.framework/Versions/A/IOAccelMemoryInfo) = 91
+findSymbolPtrSection (/System/Library/PrivateFrameworks/IOAccelMemoryInfo.framework/Versions/A/IOAccelMemoryInfo) = 34
+loadSymbols (/System/Library/PrivateFrameworks/IOAccelMemoryInfo.framework/Versions/A/IOAccelMemoryInfo) = 24575
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/IOAccelMemoryInfo.framework/Versions/A/IOAccelMemoryInfo) total = 44017
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/kperf.framework/Versions/A/kperf) = 32
+findSymbolPtrSection (/System/Library/PrivateFrameworks/kperf.framework/Versions/A/kperf) = 29
+loadSymbols (/System/Library/PrivateFrameworks/kperf.framework/Versions/A/kperf) = 14877
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/kperf.framework/Versions/A/kperf) total = 34237
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/GPURawCounter.framework/Versions/A/GPURawCounter) = 96
+findSymbolPtrSection (/System/Library/PrivateFrameworks/GPURawCounter.framework/Versions/A/GPURawCounter) = 46
+loadSymbols (/System/Library/PrivateFrameworks/GPURawCounter.framework/Versions/A/GPURawCounter) = 16786
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/GPURawCounter.framework/Versions/A/GPURawCounter) total = 34538
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/CoreSymbolication.framework/Versions/A/CoreSymbolication) = 77
+findSymbolPtrSection (/System/Library/PrivateFrameworks/CoreSymbolication.framework/Versions/A/CoreSymbolication) = 43
+loadSymbols (/System/Library/PrivateFrameworks/CoreSymbolication.framework/Versions/A/CoreSymbolication) = 848169
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/CoreSymbolication.framework/Versions/A/CoreSymbolication) total = 1126586
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/MallocStackLogging.framework/Versions/A/MallocStackLogging) = 30
+findSymbolPtrSection (/System/Library/PrivateFrameworks/MallocStackLogging.framework/Versions/A/MallocStackLogging) = 37
+loadSymbols (/System/Library/PrivateFrameworks/MallocStackLogging.framework/Versions/A/MallocStackLogging) = 19445
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/MallocStackLogging.framework/Versions/A/MallocStackLogging) total = 52424
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/CrashReporterSupport.framework/Versions/A/CrashReporterSupport) = 117
+findSymbolPtrSection (/System/Library/PrivateFrameworks/CrashReporterSupport.framework/Versions/A/CrashReporterSupport) = 30
+loadSymbols (/System/Library/PrivateFrameworks/CrashReporterSupport.framework/Versions/A/CrashReporterSupport) = 40030
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/CrashReporterSupport.framework/Versions/A/CrashReporterSupport) total = 73806
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/DebugSymbols.framework/Versions/A/DebugSymbols) = 53
+findSymbolPtrSection (/System/Library/PrivateFrameworks/DebugSymbols.framework/Versions/A/DebugSymbols) = 41
+loadSymbols (/System/Library/PrivateFrameworks/DebugSymbols.framework/Versions/A/DebugSymbols) = 117614
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/DebugSymbols.framework/Versions/A/DebugSymbols) total = 183943
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/OSAnalytics.framework/Versions/A/OSAnalytics) = 97
+findSymbolPtrSection (/System/Library/PrivateFrameworks/OSAnalytics.framework/Versions/A/OSAnalytics) = 29
+loadSymbols (/System/Library/PrivateFrameworks/OSAnalytics.framework/Versions/A/OSAnalytics) = 139975
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/OSAnalytics.framework/Versions/A/OSAnalytics) total = 228809
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATSUI.framework/Versions/A/ATSUI) = 70
+findSymbolPtrSection (/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATSUI.framework/Versions/A/ATSUI) = 38
+loadSymbols (/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATSUI.framework/Versions/A/ATSUI) = 55611
+Symbols::parseLibraries (/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATSUI.framework/Versions/A/ATSUI) total = 87980
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/libcups.2.dylib) = 107
+findSymbolPtrSection (/usr/lib/libcups.2.dylib) = 37
+loadSymbols (/usr/lib/libcups.2.dylib) = 40511
+loadImports (/usr/lib/libcups.2.dylib) = 2062
+loadImports (/usr/lib/libcups.2.dylib) = 7209
+Symbols::parseLibraries (/usr/lib/libcups.2.dylib) total = 100356
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/Kerberos.framework/Versions/A/Kerberos) = 40
+findSymbolPtrSection (/System/Library/Frameworks/Kerberos.framework/Versions/A/Kerberos) = 29
+loadSymbols (/System/Library/Frameworks/Kerberos.framework/Versions/A/Kerberos) = 68229
+loadImports (/System/Library/Frameworks/Kerberos.framework/Versions/A/Kerberos) = 2902
+Symbols::parseLibraries (/System/Library/Frameworks/Kerberos.framework/Versions/A/Kerberos) total = 125508
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/libresolv.9.dylib) = 32
+findSymbolPtrSection (/usr/lib/libresolv.9.dylib) = 27
+loadSymbols (/usr/lib/libresolv.9.dylib) = 22837
+Symbols::parseLibraries (/usr/lib/libresolv.9.dylib) total = 47045
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/libiconv.2.dylib) = 28
+findSymbolPtrSection (/usr/lib/libiconv.2.dylib) = 30
+loadSymbols (/usr/lib/libiconv.2.dylib) = 9511
+Symbols::parseLibraries (/usr/lib/libiconv.2.dylib) total = 27205
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/Heimdal.framework/Versions/A/Heimdal) = 66
+findSymbolPtrSection (/System/Library/PrivateFrameworks/Heimdal.framework/Versions/A/Heimdal) = 24
+loadSymbols (/System/Library/PrivateFrameworks/Heimdal.framework/Versions/A/Heimdal) = 303167
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/Heimdal.framework/Versions/A/Heimdal) total = 524862
+---------------------------------------------------
+loadSymbols (/System/Library/Frameworks/Kerberos.framework/Versions/A/Libraries/libHeimdalProxy.dylib) = 352
+Symbols::parseLibraries (/System/Library/Frameworks/Kerberos.framework/Versions/A/Libraries/libHeimdalProxy.dylib) total = 6722
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/libheimdal-asn1.dylib) = 34
+findSymbolPtrSection (/usr/lib/libheimdal-asn1.dylib) = 35
+loadSymbols (/usr/lib/libheimdal-asn1.dylib) = 11384
+Symbols::parseLibraries (/usr/lib/libheimdal-asn1.dylib) total = 30260
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/OpenDirectory.framework/Versions/A/OpenDirectory) = 129
+findSymbolPtrSection (/System/Library/Frameworks/OpenDirectory.framework/Versions/A/OpenDirectory) = 45
+loadSymbols (/System/Library/Frameworks/OpenDirectory.framework/Versions/A/OpenDirectory) = 56379
+Symbols::parseLibraries (/System/Library/Frameworks/OpenDirectory.framework/Versions/A/OpenDirectory) total = 89334
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/CommonAuth.framework/Versions/A/CommonAuth) = 40
+findSymbolPtrSection (/System/Library/PrivateFrameworks/CommonAuth.framework/Versions/A/CommonAuth) = 36
+loadSymbols (/System/Library/PrivateFrameworks/CommonAuth.framework/Versions/A/CommonAuth) = 17377
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/CommonAuth.framework/Versions/A/CommonAuth) total = 38632
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/OpenDirectory.framework/Versions/A/Frameworks/CFOpenDirectory.framework/Versions/A/CFOpenDirectory) = 66
+findSymbolPtrSection (/System/Library/Frameworks/OpenDirectory.framework/Versions/A/Frameworks/CFOpenDirectory.framework/Versions/A/CFOpenDirectory) = 97
+loadSymbols (/System/Library/Frameworks/OpenDirectory.framework/Versions/A/Frameworks/CFOpenDirectory.framework/Versions/A/CFOpenDirectory) = 79994
+Symbols::parseLibraries (/System/Library/Frameworks/OpenDirectory.framework/Versions/A/Frameworks/CFOpenDirectory.framework/Versions/A/CFOpenDirectory) total = 142191
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/libcharset.1.dylib) = 29
+findSymbolPtrSection (/usr/lib/libcharset.1.dylib) = 31
+loadSymbols (/usr/lib/libcharset.1.dylib) = 975
+Symbols::parseLibraries (/usr/lib/libcharset.1.dylib) total = 12533
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/AVFAudio.framework/Versions/A/AVFAudio) = 152
+findSymbolPtrSection (/System/Library/Frameworks/AVFAudio.framework/Versions/A/AVFAudio) = 38
+loadSymbols (/System/Library/Frameworks/AVFAudio.framework/Versions/A/AVFAudio) = 612488
+Symbols::parseLibraries (/System/Library/Frameworks/AVFAudio.framework/Versions/A/AVFAudio) total = 757541
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/AXCoreUtilities.framework/Versions/A/AXCoreUtilities) = 105
+findSymbolPtrSection (/System/Library/PrivateFrameworks/AXCoreUtilities.framework/Versions/A/AXCoreUtilities) = 41
+loadSymbols (/System/Library/PrivateFrameworks/AXCoreUtilities.framework/Versions/A/AXCoreUtilities) = 377231
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/AXCoreUtilities.framework/Versions/A/AXCoreUtilities) total = 596408
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/AudioToolbox.framework/Versions/A/AudioToolbox) = 113
+findSymbolPtrSection (/System/Library/Frameworks/AudioToolbox.framework/Versions/A/AudioToolbox) = 41
+loadSymbols (/System/Library/Frameworks/AudioToolbox.framework/Versions/A/AudioToolbox) = 901313
+Symbols::parseLibraries (/System/Library/Frameworks/AudioToolbox.framework/Versions/A/AudioToolbox) total = 1252869
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/CoreAudio.framework/Versions/A/CoreAudio) = 106
+findSymbolPtrSection (/System/Library/Frameworks/CoreAudio.framework/Versions/A/CoreAudio) = 41
+loadSymbols (/System/Library/Frameworks/CoreAudio.framework/Versions/A/CoreAudio) = 4870642
+Symbols::parseLibraries (/System/Library/Frameworks/CoreAudio.framework/Versions/A/CoreAudio) total = 6408624
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/IsolatedCoreAudioClient.framework/Versions/A/IsolatedCoreAudioClient) = 113
+findSymbolPtrSection (/System/Library/PrivateFrameworks/IsolatedCoreAudioClient.framework/Versions/A/IsolatedCoreAudioClient) = 29
+loadSymbols (/System/Library/PrivateFrameworks/IsolatedCoreAudioClient.framework/Versions/A/IsolatedCoreAudioClient) = 157815
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/IsolatedCoreAudioClient.framework/Versions/A/IsolatedCoreAudioClient) total = 230378
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/libAudioStatistics.dylib) = 105
+findSymbolPtrSection (/usr/lib/libAudioStatistics.dylib) = 29
+loadSymbols (/usr/lib/libAudioStatistics.dylib) = 67319
+Symbols::parseLibraries (/usr/lib/libAudioStatistics.dylib) total = 100037
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/caulk.framework/Versions/A/caulk) = 79
+findSymbolPtrSection (/System/Library/PrivateFrameworks/caulk.framework/Versions/A/caulk) = 38
+loadSymbols (/System/Library/PrivateFrameworks/caulk.framework/Versions/A/caulk) = 258375
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/caulk.framework/Versions/A/caulk) total = 350293
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/AudioToolboxCore.framework/Versions/A/AudioToolboxCore) = 120
+findSymbolPtrSection (/System/Library/PrivateFrameworks/AudioToolboxCore.framework/Versions/A/AudioToolboxCore) = 38
+loadSymbols (/System/Library/PrivateFrameworks/AudioToolboxCore.framework/Versions/A/AudioToolboxCore) = 2033943
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/AudioToolboxCore.framework/Versions/A/AudioToolboxCore) total = 2846272
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/CoreMIDI.framework/Versions/A/CoreMIDI) = 113
+findSymbolPtrSection (/System/Library/Frameworks/CoreMIDI.framework/Versions/A/CoreMIDI) = 35
+loadSymbols (/System/Library/Frameworks/CoreMIDI.framework/Versions/A/CoreMIDI) = 424162
+Symbols::parseLibraries (/System/Library/Frameworks/CoreMIDI.framework/Versions/A/CoreMIDI) total = 601943
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/AudioSession.framework/Versions/A/AudioSession) = 95
+findSymbolPtrSection (/System/Library/PrivateFrameworks/AudioSession.framework/Versions/A/AudioSession) = 32
+loadSymbols (/System/Library/PrivateFrameworks/AudioSession.framework/Versions/A/AudioSession) = 300632
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/AudioSession.framework/Versions/A/AudioSession) total = 381274
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/IOBluetooth.framework/Versions/A/IOBluetooth) = 100
+findSymbolPtrSection (/System/Library/Frameworks/IOBluetooth.framework/Versions/A/IOBluetooth) = 31
+loadSymbols (/System/Library/Frameworks/IOBluetooth.framework/Versions/A/IOBluetooth) = 438342
+Symbols::parseLibraries (/System/Library/Frameworks/IOBluetooth.framework/Versions/A/IOBluetooth) total = 676866
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/MediaExperience.framework/Versions/A/MediaExperience) = 121
+findSymbolPtrSection (/System/Library/PrivateFrameworks/MediaExperience.framework/Versions/A/MediaExperience) = 24
+loadSymbols (/System/Library/PrivateFrameworks/MediaExperience.framework/Versions/A/MediaExperience) = 292738
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/MediaExperience.framework/Versions/A/MediaExperience) total = 468406
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/Tightbeam.framework/Versions/A/Tightbeam) = 98
+findSymbolPtrSection (/System/Library/PrivateFrameworks/Tightbeam.framework/Versions/A/Tightbeam) = 32
+loadSymbols (/System/Library/PrivateFrameworks/Tightbeam.framework/Versions/A/Tightbeam) = 74883
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/Tightbeam.framework/Versions/A/Tightbeam) total = 122680
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/AFKUser.framework/Versions/A/AFKUser) = 93
+findSymbolPtrSection (/System/Library/PrivateFrameworks/AFKUser.framework/Versions/A/AFKUser) = 29
+loadSymbols (/System/Library/PrivateFrameworks/AFKUser.framework/Versions/A/AFKUser) = 29547
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/AFKUser.framework/Versions/A/AFKUser) total = 53392
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/AppServerSupport.framework/Versions/A/AppServerSupport) = 98
+findSymbolPtrSection (/System/Library/PrivateFrameworks/AppServerSupport.framework/Versions/A/AppServerSupport) = 23
+loadSymbols (/System/Library/PrivateFrameworks/AppServerSupport.framework/Versions/A/AppServerSupport) = 28821
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/AppServerSupport.framework/Versions/A/AppServerSupport) total = 50733
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/perfdata.framework/Versions/A/perfdata) = 94
+findSymbolPtrSection (/System/Library/PrivateFrameworks/perfdata.framework/Versions/A/perfdata) = 38
+loadSymbols (/System/Library/PrivateFrameworks/perfdata.framework/Versions/A/perfdata) = 59650
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/perfdata.framework/Versions/A/perfdata) total = 112796
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/SystemPolicy.framework/Versions/A/SystemPolicy) = 112
+findSymbolPtrSection (/System/Library/PrivateFrameworks/SystemPolicy.framework/Versions/A/SystemPolicy) = 23
+loadSymbols (/System/Library/PrivateFrameworks/SystemPolicy.framework/Versions/A/SystemPolicy) = 108228
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/SystemPolicy.framework/Versions/A/SystemPolicy) total = 170281
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/libSMC.dylib) = 65
+findSymbolPtrSection (/usr/lib/libSMC.dylib) = 37
+loadSymbols (/usr/lib/libSMC.dylib) = 18029
+Symbols::parseLibraries (/usr/lib/libSMC.dylib) total = 39815
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/libAudioToolboxUtility.dylib) = 42
+findSymbolPtrSection (/usr/lib/libAudioToolboxUtility.dylib) = 36
+loadSymbols (/usr/lib/libAudioToolboxUtility.dylib) = 138927
+Symbols::parseLibraries (/usr/lib/libAudioToolboxUtility.dylib) total = 223076
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/libperfcheck.dylib) = 89
+findSymbolPtrSection (/usr/lib/libperfcheck.dylib) = 31
+loadSymbols (/usr/lib/libperfcheck.dylib) = 12911
+Symbols::parseLibraries (/usr/lib/libperfcheck.dylib) total = 31893
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/AudioAnalytics.framework/Versions/A/AudioAnalytics) = 100
+findSymbolPtrSection (/System/Library/PrivateFrameworks/AudioAnalytics.framework/Versions/A/AudioAnalytics) = 40
+loadSymbols (/System/Library/PrivateFrameworks/AudioAnalytics.framework/Versions/A/AudioAnalytics) = 36946
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/AudioAnalytics.framework/Versions/A/AudioAnalytics) total = 65323
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/FeatureFlags.framework/Versions/A/FeatureFlags) = 30
+loadSymbols (/System/Library/PrivateFrameworks/FeatureFlags.framework/Versions/A/FeatureFlags) = 2392
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/FeatureFlags.framework/Versions/A/FeatureFlags) total = 21812
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/OSLog.framework/Versions/A/OSLog) = 100
+findSymbolPtrSection (/System/Library/Frameworks/OSLog.framework/Versions/A/OSLog) = 45
+loadSymbols (/System/Library/Frameworks/OSLog.framework/Versions/A/OSLog) = 41923
+Symbols::parseLibraries (/System/Library/Frameworks/OSLog.framework/Versions/A/OSLog) total = 74265
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/libbz2.1.0.dylib) = 33
+findSymbolPtrSection (/usr/lib/libbz2.1.0.dylib) = 28
+loadSymbols (/usr/lib/libbz2.1.0.dylib) = 2946
+Symbols::parseLibraries (/usr/lib/libbz2.1.0.dylib) total = 15399
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/libmis.dylib) = 127
+findSymbolPtrSection (/usr/lib/libmis.dylib) = 37
+loadSymbols (/usr/lib/libmis.dylib) = 35294
+Symbols::parseLibraries (/usr/lib/libmis.dylib) total = 66709
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/AudioSession.framework/libSessionUtility.dylib) = 105
+findSymbolPtrSection (/System/Library/PrivateFrameworks/AudioSession.framework/libSessionUtility.dylib) = 29
+loadSymbols (/System/Library/PrivateFrameworks/AudioSession.framework/libSessionUtility.dylib) = 177754
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/AudioSession.framework/libSessionUtility.dylib) total = 278519
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/CMCaptureCore.framework/Versions/A/CMCaptureCore) = 82
+findSymbolPtrSection (/System/Library/PrivateFrameworks/CMCaptureCore.framework/Versions/A/CMCaptureCore) = 28
+loadSymbols (/System/Library/PrivateFrameworks/CMCaptureCore.framework/Versions/A/CMCaptureCore) = 214375
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/CMCaptureCore.framework/Versions/A/CMCaptureCore) total = 366786
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/libspindump.dylib) = 171
+findSymbolPtrSection (/usr/lib/libspindump.dylib) = 26
+loadSymbols (/usr/lib/libspindump.dylib) = 9966
+Symbols::parseLibraries (/usr/lib/libspindump.dylib) total = 27139
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/ExtensionFoundation.framework/Versions/A/ExtensionFoundation) = 116
+findSymbolPtrSection (/System/Library/Frameworks/ExtensionFoundation.framework/Versions/A/ExtensionFoundation) = 45
+loadSymbols (/System/Library/Frameworks/ExtensionFoundation.framework/Versions/A/ExtensionFoundation) = 345783
+Symbols::parseLibraries (/System/Library/Frameworks/ExtensionFoundation.framework/Versions/A/ExtensionFoundation) total = 519652
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/CoreTime.framework/Versions/A/CoreTime) = 99
+findSymbolPtrSection (/System/Library/PrivateFrameworks/CoreTime.framework/Versions/A/CoreTime) = 32
+loadSymbols (/System/Library/PrivateFrameworks/CoreTime.framework/Versions/A/CoreTime) = 26516
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/CoreTime.framework/Versions/A/CoreTime) total = 53967
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/PlugInKit.framework/Versions/A/PlugInKit) = 124
+findSymbolPtrSection (/System/Library/PrivateFrameworks/PlugInKit.framework/Versions/A/PlugInKit) = 39
+loadSymbols (/System/Library/PrivateFrameworks/PlugInKit.framework/Versions/A/PlugInKit) = 15890
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/PlugInKit.framework/Versions/A/PlugInKit) total = 40111
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/PowerLog.framework/Versions/A/PowerLog) = 111
+findSymbolPtrSection (/System/Library/PrivateFrameworks/PowerLog.framework/Versions/A/PowerLog) = 42
+loadSymbols (/System/Library/PrivateFrameworks/PowerLog.framework/Versions/A/PowerLog) = 113192
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/PowerLog.framework/Versions/A/PowerLog) total = 182599
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/CoreBluetooth.framework/Versions/A/CoreBluetooth) = 101
+findSymbolPtrSection (/System/Library/Frameworks/CoreBluetooth.framework/Versions/A/CoreBluetooth) = 37
+loadSymbols (/System/Library/Frameworks/CoreBluetooth.framework/Versions/A/CoreBluetooth) = 512016
+Symbols::parseLibraries (/System/Library/Frameworks/CoreBluetooth.framework/Versions/A/CoreBluetooth) total = 761882
+---------------------------------------------------
+loadSymbols (/System/Library/Frameworks/AudioUnit.framework/Versions/A/AudioUnit) = 269
+Symbols::parseLibraries (/System/Library/Frameworks/AudioUnit.framework/Versions/A/AudioUnit) total = 6057
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/CoreUtils.framework/Versions/A/CoreUtils) = 104
+findSymbolPtrSection (/System/Library/PrivateFrameworks/CoreUtils.framework/Versions/A/CoreUtils) = 28
+loadSymbols (/System/Library/PrivateFrameworks/CoreUtils.framework/Versions/A/CoreUtils) = 877117
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/CoreUtils.framework/Versions/A/CoreUtils) total = 1291221
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/CoreUtilsExtras.framework/Versions/A/CoreUtilsExtras) = 70
+loadSymbols (/System/Library/PrivateFrameworks/CoreUtilsExtras.framework/Versions/A/CoreUtilsExtras) = 5707
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/CoreUtilsExtras.framework/Versions/A/CoreUtilsExtras) total = 19284
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/MediaAccessibility.framework/Versions/A/MediaAccessibility) = 136
+findSymbolPtrSection (/System/Library/Frameworks/MediaAccessibility.framework/Versions/A/MediaAccessibility) = 33
+loadSymbols (/System/Library/Frameworks/MediaAccessibility.framework/Versions/A/MediaAccessibility) = 53936
+Symbols::parseLibraries (/System/Library/Frameworks/MediaAccessibility.framework/Versions/A/MediaAccessibility) total = 97434
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/AttributeGraph.framework/Versions/A/AttributeGraph) = 95
+findSymbolPtrSection (/System/Library/PrivateFrameworks/AttributeGraph.framework/Versions/A/AttributeGraph) = 32
+loadSymbols (/System/Library/PrivateFrameworks/AttributeGraph.framework/Versions/A/AttributeGraph) = 138325
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/AttributeGraph.framework/Versions/A/AttributeGraph) total = 202902
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/libAXSafeCategoryBundle.dylib) = 88
+findSymbolPtrSection (/usr/lib/libAXSafeCategoryBundle.dylib) = 33
+loadSymbols (/usr/lib/libAXSafeCategoryBundle.dylib) = 3491
+Symbols::parseLibraries (/usr/lib/libAXSafeCategoryBundle.dylib) total = 16539
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/libAccessibility.dylib) = 95
+findSymbolPtrSection (/usr/lib/libAccessibility.dylib) = 31
+loadSymbols (/usr/lib/libAccessibility.dylib) = 228680
+Symbols::parseLibraries (/usr/lib/libAccessibility.dylib) total = 382191
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libvDSP.dylib) = 32
+findSymbolPtrSection (/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libvDSP.dylib) = 29
+loadSymbols (/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libvDSP.dylib) = 25522
+Symbols::parseLibraries (/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libvDSP.dylib) total = 64302
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib) = 30
+findSymbolPtrSection (/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib) = 30
+loadSymbols (/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib) = 562193
+Symbols::parseLibraries (/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib) total = 1196376
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libLinearAlgebra.dylib) = 93
+findSymbolPtrSection (/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libLinearAlgebra.dylib) = 33
+loadSymbols (/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libLinearAlgebra.dylib) = 14848
+Symbols::parseLibraries (/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libLinearAlgebra.dylib) total = 36128
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libSparseBLAS.dylib) = 31
+findSymbolPtrSection (/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libSparseBLAS.dylib) = 27
+loadSymbols (/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libSparseBLAS.dylib) = 18116
+Symbols::parseLibraries (/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libSparseBLAS.dylib) total = 38292
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libQuadrature.dylib) = 29
+loadSymbols (/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libQuadrature.dylib) = 2906
+Symbols::parseLibraries (/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libQuadrature.dylib) total = 13856
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBNNS.dylib) = 84
+findSymbolPtrSection (/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBNNS.dylib) = 28
+loadSymbols (/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBNNS.dylib) = 21951
+Symbols::parseLibraries (/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBNNS.dylib) total = 51778
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libSparse.dylib) = 23
+findSymbolPtrSection (/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libSparse.dylib) = 34
+loadSymbols (/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libSparse.dylib) = 20839
+Symbols::parseLibraries (/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libSparse.dylib) total = 43383
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/MIL.framework/Versions/A/MIL) = 33
+findSymbolPtrSection (/System/Library/PrivateFrameworks/MIL.framework/Versions/A/MIL) = 96
+loadSymbols (/System/Library/PrivateFrameworks/MIL.framework/Versions/A/MIL) = 4949223
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/MIL.framework/Versions/A/MIL) total = 6465493
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/GPUWrangler.framework/Versions/A/GPUWrangler) = 96
+findSymbolPtrSection (/System/Library/PrivateFrameworks/GPUWrangler.framework/Versions/A/GPUWrangler) = 80
+loadSymbols (/System/Library/PrivateFrameworks/GPUWrangler.framework/Versions/A/GPUWrangler) = 2959
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/GPUWrangler.framework/Versions/A/GPUWrangler) total = 20317
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/IOPresentment.framework/Versions/A/IOPresentment) = 442
+findSymbolPtrSection (/System/Library/PrivateFrameworks/IOPresentment.framework/Versions/A/IOPresentment) = 24
+loadSymbols (/System/Library/PrivateFrameworks/IOPresentment.framework/Versions/A/IOPresentment) = 86788
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/IOPresentment.framework/Versions/A/IOPresentment) total = 141523
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/DSExternalDisplay.framework/Versions/A/DSExternalDisplay) = 41
+loadSymbols (/System/Library/PrivateFrameworks/DSExternalDisplay.framework/Versions/A/DSExternalDisplay) = 8829
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/DSExternalDisplay.framework/Versions/A/DSExternalDisplay) total = 20231
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/HIDDisplay.framework/Versions/A/HIDDisplay) = 101
+findSymbolPtrSection (/System/Library/PrivateFrameworks/HIDDisplay.framework/Versions/A/HIDDisplay) = 41
+loadSymbols (/System/Library/PrivateFrameworks/HIDDisplay.framework/Versions/A/HIDDisplay) = 27271
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/HIDDisplay.framework/Versions/A/HIDDisplay) total = 48544
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/HID.framework/Versions/A/HID) = 109
+findSymbolPtrSection (/System/Library/PrivateFrameworks/HID.framework/Versions/A/HID) = 31
+loadSymbols (/System/Library/PrivateFrameworks/HID.framework/Versions/A/HID) = 74028
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/HID.framework/Versions/A/HID) total = 101551
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/VideoToolboxParavirtualizationSupport.framework/Versions/A/VideoToolboxParavirtualizationSupport) = 29
+findSymbolPtrSection (/System/Library/PrivateFrameworks/VideoToolboxParavirtualizationSupport.framework/Versions/A/VideoToolboxParavirtualizationSupport) = 33
+loadSymbols (/System/Library/PrivateFrameworks/VideoToolboxParavirtualizationSupport.framework/Versions/A/VideoToolboxParavirtualizationSupport) = 2265
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/VideoToolboxParavirtualizationSupport.framework/Versions/A/VideoToolboxParavirtualizationSupport) total = 14720
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/AppleVA.framework/Versions/A/AppleVA) = 40
+findSymbolPtrSection (/System/Library/PrivateFrameworks/AppleVA.framework/Versions/A/AppleVA) = 23
+loadSymbols (/System/Library/PrivateFrameworks/AppleVA.framework/Versions/A/AppleVA) = 7280
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/AppleVA.framework/Versions/A/AppleVA) total = 23111
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/GraphicsServices.framework/Versions/A/GraphicsServices) = 50
+findSymbolPtrSection (/System/Library/PrivateFrameworks/GraphicsServices.framework/Versions/A/GraphicsServices) = 29
+loadSymbols (/System/Library/PrivateFrameworks/GraphicsServices.framework/Versions/A/GraphicsServices) = 36359
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/GraphicsServices.framework/Versions/A/GraphicsServices) total = 68388
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/CoreData.framework/Versions/A/CoreData) = 104
+findSymbolPtrSection (/System/Library/Frameworks/CoreData.framework/Versions/A/CoreData) = 43
+loadSymbols (/System/Library/Frameworks/CoreData.framework/Versions/A/CoreData) = 1537279
+Symbols::parseLibraries (/System/Library/Frameworks/CoreData.framework/Versions/A/CoreData) total = 2273227
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/CorePhoneNumbers.framework/Versions/A/CorePhoneNumbers) = 34
+findSymbolPtrSection (/System/Library/PrivateFrameworks/CorePhoneNumbers.framework/Versions/A/CorePhoneNumbers) = 29
+loadSymbols (/System/Library/PrivateFrameworks/CorePhoneNumbers.framework/Versions/A/CorePhoneNumbers) = 12044
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/CorePhoneNumbers.framework/Versions/A/CorePhoneNumbers) total = 36306
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/MediaKit.framework/Versions/A/MediaKit) = 38
+findSymbolPtrSection (/System/Library/PrivateFrameworks/MediaKit.framework/Versions/A/MediaKit) = 28
+loadSymbols (/System/Library/PrivateFrameworks/MediaKit.framework/Versions/A/MediaKit) = 47153
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/MediaKit.framework/Versions/A/MediaKit) total = 87992
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/DiscRecording.framework/Versions/A/DiscRecording) = 126
+findSymbolPtrSection (/System/Library/Frameworks/DiscRecording.framework/Versions/A/DiscRecording) = 44
+loadSymbols (/System/Library/Frameworks/DiscRecording.framework/Versions/A/DiscRecording) = 367283
+loadImports (/System/Library/Frameworks/DiscRecording.framework/Versions/A/DiscRecording) = 1728
+loadImports (/System/Library/Frameworks/DiscRecording.framework/Versions/A/DiscRecording) = 7166
+Symbols::parseLibraries (/System/Library/Frameworks/DiscRecording.framework/Versions/A/DiscRecording) total = 631853
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/CoreTransferable.framework/Versions/A/CoreTransferable) = 72
+findSymbolPtrSection (/System/Library/Frameworks/CoreTransferable.framework/Versions/A/CoreTransferable) = 46
+loadSymbols (/System/Library/Frameworks/CoreTransferable.framework/Versions/A/CoreTransferable) = 232598
+Symbols::parseLibraries (/System/Library/Frameworks/CoreTransferable.framework/Versions/A/CoreTransferable) total = 343112
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/NetAuth.framework/Versions/A/NetAuth) = 38
+findSymbolPtrSection (/System/Library/PrivateFrameworks/NetAuth.framework/Versions/A/NetAuth) = 30
+loadSymbols (/System/Library/PrivateFrameworks/NetAuth.framework/Versions/A/NetAuth) = 27415
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/NetAuth.framework/Versions/A/NetAuth) total = 55769
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/IconServices.framework/Versions/A/IconServices) = 142
+findSymbolPtrSection (/System/Library/PrivateFrameworks/IconServices.framework/Versions/A/IconServices) = 39
+loadSymbols (/System/Library/PrivateFrameworks/IconServices.framework/Versions/A/IconServices) = 395395
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/IconServices.framework/Versions/A/IconServices) total = 609902
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/login.framework/Versions/A/Frameworks/loginsupport.framework/Versions/A/loginsupport) = 85
+findSymbolPtrSection (/System/Library/PrivateFrameworks/login.framework/Versions/A/Frameworks/loginsupport.framework/Versions/A/loginsupport) = 29
+loadSymbols (/System/Library/PrivateFrameworks/login.framework/Versions/A/Frameworks/loginsupport.framework/Versions/A/loginsupport) = 3392
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/login.framework/Versions/A/Frameworks/loginsupport.framework/Versions/A/loginsupport) total = 17601
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/swift/libswiftCoreImage.dylib) = 30
+findSymbolPtrSection (/usr/lib/swift/libswiftCoreImage.dylib) = 31
+loadSymbols (/usr/lib/swift/libswiftCoreImage.dylib) = 1771
+Symbols::parseLibraries (/usr/lib/swift/libswiftCoreImage.dylib) total = 24429
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/IconFoundation.framework/Versions/A/IconFoundation) = 118
+findSymbolPtrSection (/System/Library/PrivateFrameworks/IconFoundation.framework/Versions/A/IconFoundation) = 45
+loadSymbols (/System/Library/PrivateFrameworks/IconFoundation.framework/Versions/A/IconFoundation) = 181460
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/IconFoundation.framework/Versions/A/IconFoundation) total = 287791
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/CoreUI.framework/Versions/A/CoreUI) = 117
+findSymbolPtrSection (/System/Library/PrivateFrameworks/CoreUI.framework/Versions/A/CoreUI) = 45
+loadSymbols (/System/Library/PrivateFrameworks/CoreUI.framework/Versions/A/CoreUI) = 901420
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/CoreUI.framework/Versions/A/CoreUI) total = 1326064
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/TextureIO.framework/Versions/A/TextureIO) = 166
+findSymbolPtrSection (/System/Library/PrivateFrameworks/TextureIO.framework/Versions/A/TextureIO) = 33
+loadSymbols (/System/Library/PrivateFrameworks/TextureIO.framework/Versions/A/TextureIO) = 54808
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/TextureIO.framework/Versions/A/TextureIO) total = 84267
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/CoreSVG.framework/Versions/A/CoreSVG) = 78
+findSymbolPtrSection (/System/Library/PrivateFrameworks/CoreSVG.framework/Versions/A/CoreSVG) = 31
+loadSymbols (/System/Library/PrivateFrameworks/CoreSVG.framework/Versions/A/CoreSVG) = 157997
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/CoreSVG.framework/Versions/A/CoreSVG) total = 246672
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/swift/libswiftAccelerate.dylib) = 84
+findSymbolPtrSection (/usr/lib/swift/libswiftAccelerate.dylib) = 23
+loadSymbols (/usr/lib/swift/libswiftAccelerate.dylib) = 1127073
+Symbols::parseLibraries (/usr/lib/swift/libswiftAccelerate.dylib) total = 1681858
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/libIOReport.dylib) = 55
+findSymbolPtrSection (/usr/lib/libIOReport.dylib) = 30
+loadSymbols (/usr/lib/libIOReport.dylib) = 13418
+Symbols::parseLibraries (/usr/lib/libIOReport.dylib) total = 33145
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/AppleMobileFileIntegrity.framework/Versions/A/AppleMobileFileIntegrity) = 111
+findSymbolPtrSection (/System/Library/PrivateFrameworks/AppleMobileFileIntegrity.framework/Versions/A/AppleMobileFileIntegrity) = 51
+loadSymbols (/System/Library/PrivateFrameworks/AppleMobileFileIntegrity.framework/Versions/A/AppleMobileFileIntegrity) = 53107
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/AppleMobileFileIntegrity.framework/Versions/A/AppleMobileFileIntegrity) total = 89459
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/libTLE.dylib) = 92
+findSymbolPtrSection (/usr/lib/libTLE.dylib) = 38
+loadSymbols (/usr/lib/libTLE.dylib) = 28361
+Symbols::parseLibraries (/usr/lib/libTLE.dylib) total = 54312
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/ConfigProfileHelper.framework/Versions/A/ConfigProfileHelper) = 79
+findSymbolPtrSection (/System/Library/PrivateFrameworks/ConfigProfileHelper.framework/Versions/A/ConfigProfileHelper) = 31
+loadSymbols (/System/Library/PrivateFrameworks/ConfigProfileHelper.framework/Versions/A/ConfigProfileHelper) = 5107
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/ConfigProfileHelper.framework/Versions/A/ConfigProfileHelper) total = 18977
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/libmecab.dylib) = 41
+findSymbolPtrSection (/usr/lib/libmecab.dylib) = 35
+loadSymbols (/usr/lib/libmecab.dylib) = 141584
+Symbols::parseLibraries (/usr/lib/libmecab.dylib) total = 205513
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/libCRFSuite.dylib) = 34
+findSymbolPtrSection (/usr/lib/libCRFSuite.dylib) = 33
+loadSymbols (/usr/lib/libCRFSuite.dylib) = 117643
+Symbols::parseLibraries (/usr/lib/libCRFSuite.dylib) total = 171344
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/CoreNLP.framework/Versions/A/CoreNLP) = 111
+findSymbolPtrSection (/System/Library/PrivateFrameworks/CoreNLP.framework/Versions/A/CoreNLP) = 50
+loadSymbols (/System/Library/PrivateFrameworks/CoreNLP.framework/Versions/A/CoreNLP) = 828525
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/CoreNLP.framework/Versions/A/CoreNLP) total = 1136649
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/libgermantok.dylib) = 41
+findSymbolPtrSection (/usr/lib/libgermantok.dylib) = 27
+loadSymbols (/usr/lib/libgermantok.dylib) = 1222
+Symbols::parseLibraries (/usr/lib/libgermantok.dylib) total = 14016
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/libThaiTokenizer.dylib) = 34
+loadSymbols (/usr/lib/libThaiTokenizer.dylib) = 17980
+Symbols::parseLibraries (/usr/lib/libThaiTokenizer.dylib) total = 31990
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/DataDetectorsCore.framework/Versions/A/DataDetectorsCore) = 127
+findSymbolPtrSection (/System/Library/PrivateFrameworks/DataDetectorsCore.framework/Versions/A/DataDetectorsCore) = 45
+loadSymbols (/System/Library/PrivateFrameworks/DataDetectorsCore.framework/Versions/A/DataDetectorsCore) = 115640
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/DataDetectorsCore.framework/Versions/A/DataDetectorsCore) total = 193702
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/UIFoundation.framework/Versions/A/UIFoundation) = 92
+findSymbolPtrSection (/System/Library/PrivateFrameworks/UIFoundation.framework/Versions/A/UIFoundation) = 25
+loadSymbols (/System/Library/PrivateFrameworks/UIFoundation.framework/Versions/A/UIFoundation) = 1033518
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/UIFoundation.framework/Versions/A/UIFoundation) total = 1539674
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/libCheckFix.dylib) = 38
+loadSymbols (/usr/lib/libCheckFix.dylib) = 1273
+Symbols::parseLibraries (/usr/lib/libCheckFix.dylib) total = 10724
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/MetadataUtilities.framework/Versions/A/MetadataUtilities) = 91
+findSymbolPtrSection (/System/Library/PrivateFrameworks/MetadataUtilities.framework/Versions/A/MetadataUtilities) = 24
+loadSymbols (/System/Library/PrivateFrameworks/MetadataUtilities.framework/Versions/A/MetadataUtilities) = 133199
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/MetadataUtilities.framework/Versions/A/MetadataUtilities) total = 221170
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/InstalledContentLibrary.framework/Versions/A/InstalledContentLibrary) = 102
+findSymbolPtrSection (/System/Library/PrivateFrameworks/InstalledContentLibrary.framework/Versions/A/InstalledContentLibrary) = 37
+loadSymbols (/System/Library/PrivateFrameworks/InstalledContentLibrary.framework/Versions/A/InstalledContentLibrary) = 241383
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/InstalledContentLibrary.framework/Versions/A/InstalledContentLibrary) total = 375324
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/CoreServicesStore.framework/Versions/A/CoreServicesStore) = 123
+findSymbolPtrSection (/System/Library/PrivateFrameworks/CoreServicesStore.framework/Versions/A/CoreServicesStore) = 37
+loadSymbols (/System/Library/PrivateFrameworks/CoreServicesStore.framework/Versions/A/CoreServicesStore) = 112548
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/CoreServicesStore.framework/Versions/A/CoreServicesStore) total = 194299
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/libapp_launch_measurement.dylib) = 36
+findSymbolPtrSection (/usr/lib/libapp_launch_measurement.dylib) = 36
+loadSymbols (/usr/lib/libapp_launch_measurement.dylib) = 8476
+Symbols::parseLibraries (/usr/lib/libapp_launch_measurement.dylib) total = 23230
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/MobileSystemServices.framework/Versions/A/MobileSystemServices) = 103
+findSymbolPtrSection (/System/Library/PrivateFrameworks/MobileSystemServices.framework/Versions/A/MobileSystemServices) = 40
+loadSymbols (/System/Library/PrivateFrameworks/MobileSystemServices.framework/Versions/A/MobileSystemServices) = 9763
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/MobileSystemServices.framework/Versions/A/MobileSystemServices) total = 24972
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/libxslt.1.dylib) = 28
+findSymbolPtrSection (/usr/lib/libxslt.1.dylib) = 36
+loadSymbols (/usr/lib/libxslt.1.dylib) = 37345
+Symbols::parseLibraries (/usr/lib/libxslt.1.dylib) total = 72211
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/BackgroundTaskManagement.framework/Versions/A/BackgroundTaskManagement) = 103
+findSymbolPtrSection (/System/Library/PrivateFrameworks/BackgroundTaskManagement.framework/Versions/A/BackgroundTaskManagement) = 43
+loadSymbols (/System/Library/PrivateFrameworks/BackgroundTaskManagement.framework/Versions/A/BackgroundTaskManagement) = 117617
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/BackgroundTaskManagement.framework/Versions/A/BackgroundTaskManagement) total = 195504
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/libcurl.4.dylib) = 40
+findSymbolPtrSection (/usr/lib/libcurl.4.dylib) = 29
+loadSymbols (/usr/lib/libcurl.4.dylib) = 97688
+Symbols::parseLibraries (/usr/lib/libcurl.4.dylib) total = 167694
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/libcrypto.46.dylib) = 30
+findSymbolPtrSection (/usr/lib/libcrypto.46.dylib) = 28
+loadSymbols (/usr/lib/libcrypto.46.dylib) = 460799
+Symbols::parseLibraries (/usr/lib/libcrypto.46.dylib) total = 840259
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/libssl.48.dylib) = 22
+findSymbolPtrSection (/usr/lib/libssl.48.dylib) = 69
+loadSymbols (/usr/lib/libssl.48.dylib) = 71764
+Symbols::parseLibraries (/usr/lib/libssl.48.dylib) total = 130576
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/LDAP.framework/Versions/A/LDAP) = 74
+findSymbolPtrSection (/System/Library/Frameworks/LDAP.framework/Versions/A/LDAP) = 24
+loadSymbols (/System/Library/Frameworks/LDAP.framework/Versions/A/LDAP) = 18379
+Symbols::parseLibraries (/System/Library/Frameworks/LDAP.framework/Versions/A/LDAP) total = 43261
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/TrustEvaluationAgent.framework/Versions/A/TrustEvaluationAgent) = 23
+loadSymbols (/System/Library/PrivateFrameworks/TrustEvaluationAgent.framework/Versions/A/TrustEvaluationAgent) = 1754
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/TrustEvaluationAgent.framework/Versions/A/TrustEvaluationAgent) total = 16127
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/libsasl2.2.dylib) = 266
+findSymbolPtrSection (/usr/lib/libsasl2.2.dylib) = 25
+loadSymbols (/usr/lib/libsasl2.2.dylib) = 15178
+Symbols::parseLibraries (/usr/lib/libsasl2.2.dylib) total = 36887
+---------------------------------------------------
+loadSymbols (/System/Library/Frameworks/Cocoa.framework/Versions/A/Cocoa) = 1959
+Symbols::parseLibraries (/System/Library/Frameworks/Cocoa.framework/Versions/A/Cocoa) total = 7825
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit) = 138
+findSymbolPtrSection (/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit) = 334
+loadSymbols (/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit) = 13567446
+Symbols::parseLibraries (/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit) total = 19525483
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/CollectionViewCore.framework/Versions/A/CollectionViewCore) = 122
+findSymbolPtrSection (/System/Library/PrivateFrameworks/CollectionViewCore.framework/Versions/A/CollectionViewCore) = 45
+loadSymbols (/System/Library/PrivateFrameworks/CollectionViewCore.framework/Versions/A/CollectionViewCore) = 86856
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/CollectionViewCore.framework/Versions/A/CollectionViewCore) total = 134333
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/RemoteViewServices.framework/Versions/A/RemoteViewServices) = 101
+findSymbolPtrSection (/System/Library/PrivateFrameworks/RemoteViewServices.framework/Versions/A/RemoteViewServices) = 43
+loadSymbols (/System/Library/PrivateFrameworks/RemoteViewServices.framework/Versions/A/RemoteViewServices) = 97686
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/RemoteViewServices.framework/Versions/A/RemoteViewServices) total = 157084
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/XCTTargetBootstrap.framework/Versions/A/XCTTargetBootstrap) = 107
+findSymbolPtrSection (/System/Library/PrivateFrameworks/XCTTargetBootstrap.framework/Versions/A/XCTTargetBootstrap) = 79
+loadSymbols (/System/Library/PrivateFrameworks/XCTTargetBootstrap.framework/Versions/A/XCTTargetBootstrap) = 12565
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/XCTTargetBootstrap.framework/Versions/A/XCTTargetBootstrap) total = 30166
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/UserActivity.framework/Versions/A/UserActivity) = 110
+findSymbolPtrSection (/System/Library/PrivateFrameworks/UserActivity.framework/Versions/A/UserActivity) = 31
+loadSymbols (/System/Library/PrivateFrameworks/UserActivity.framework/Versions/A/UserActivity) = 522417
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/UserActivity.framework/Versions/A/UserActivity) total = 639018
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/UIIntelligenceSupport.framework/Versions/A/UIIntelligenceSupport) = 82
+findSymbolPtrSection (/System/Library/PrivateFrameworks/UIIntelligenceSupport.framework/Versions/A/UIIntelligenceSupport) = 45
+loadSymbols (/System/Library/PrivateFrameworks/UIIntelligenceSupport.framework/Versions/A/UIIntelligenceSupport) = 189583
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/UIIntelligenceSupport.framework/Versions/A/UIIntelligenceSupport) total = 249333
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/SwiftUICore.framework/Versions/A/SwiftUICore) = 101
+findSymbolPtrSection (/System/Library/Frameworks/SwiftUICore.framework/Versions/A/SwiftUICore) = 41
+loadSymbols (/System/Library/Frameworks/SwiftUICore.framework/Versions/A/SwiftUICore) = 18954
+Symbols::parseLibraries (/System/Library/Frameworks/SwiftUICore.framework/Versions/A/SwiftUICore) total = 44583
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/WritingTools.framework/Versions/A/WritingTools) = 341
+findSymbolPtrSection (/System/Library/PrivateFrameworks/WritingTools.framework/Versions/A/WritingTools) = 33
+loadSymbols (/System/Library/PrivateFrameworks/WritingTools.framework/Versions/A/WritingTools) = 16733
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/WritingTools.framework/Versions/A/WritingTools) total = 48199
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/WindowManagement.framework/Versions/A/WindowManagement) = 99
+findSymbolPtrSection (/System/Library/PrivateFrameworks/WindowManagement.framework/Versions/A/WindowManagement) = 34
+loadSymbols (/System/Library/PrivateFrameworks/WindowManagement.framework/Versions/A/WindowManagement) = 115483
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/WindowManagement.framework/Versions/A/WindowManagement) total = 187819
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/DFRFoundation.framework/Versions/A/DFRFoundation) = 94
+findSymbolPtrSection (/System/Library/PrivateFrameworks/DFRFoundation.framework/Versions/A/DFRFoundation) = 28
+loadSymbols (/System/Library/PrivateFrameworks/DFRFoundation.framework/Versions/A/DFRFoundation) = 50505
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/DFRFoundation.framework/Versions/A/DFRFoundation) total = 90109
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/TextInput.framework/Versions/A/TextInput) = 99
+findSymbolPtrSection (/System/Library/PrivateFrameworks/TextInput.framework/Versions/A/TextInput) = 28
+loadSymbols (/System/Library/PrivateFrameworks/TextInput.framework/Versions/A/TextInput) = 587010
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/TextInput.framework/Versions/A/TextInput) total = 918531
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/HIToolbox) = 108
+findSymbolPtrSection (/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/HIToolbox) = 89
+loadSymbols (/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/HIToolbox) = 1326868
+Symbols::parseLibraries (/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/HIToolbox) total = 2080247
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/SpeechRecognition.framework/Versions/A/SpeechRecognition) = 80
+findSymbolPtrSection (/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/SpeechRecognition.framework/Versions/A/SpeechRecognition) = 32
+loadSymbols (/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/SpeechRecognition.framework/Versions/A/SpeechRecognition) = 16544
+Symbols::parseLibraries (/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/SpeechRecognition.framework/Versions/A/SpeechRecognition) total = 37690
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/RenderBox.framework/Versions/A/RenderBox) = 93
+findSymbolPtrSection (/System/Library/PrivateFrameworks/RenderBox.framework/Versions/A/RenderBox) = 32
+loadSymbols (/System/Library/PrivateFrameworks/RenderBox.framework/Versions/A/RenderBox) = 938444
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/RenderBox.framework/Versions/A/RenderBox) total = 1286084
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/PerformanceAnalysis.framework/Versions/A/PerformanceAnalysis) = 95
+findSymbolPtrSection (/System/Library/PrivateFrameworks/PerformanceAnalysis.framework/Versions/A/PerformanceAnalysis) = 32
+loadSymbols (/System/Library/PrivateFrameworks/PerformanceAnalysis.framework/Versions/A/PerformanceAnalysis) = 30007
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/PerformanceAnalysis.framework/Versions/A/PerformanceAnalysis) total = 57105
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/Accessibility.framework/Versions/A/Accessibility) = 94
+findSymbolPtrSection (/System/Library/Frameworks/Accessibility.framework/Versions/A/Accessibility) = 40
+loadSymbols (/System/Library/Frameworks/Accessibility.framework/Versions/A/Accessibility) = 99040
+Symbols::parseLibraries (/System/Library/Frameworks/Accessibility.framework/Versions/A/Accessibility) total = 164735
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/DeveloperToolsSupport.framework/Versions/A/DeveloperToolsSupport) = 100
+findSymbolPtrSection (/System/Library/Frameworks/DeveloperToolsSupport.framework/Versions/A/DeveloperToolsSupport) = 37
+loadSymbols (/System/Library/Frameworks/DeveloperToolsSupport.framework/Versions/A/DeveloperToolsSupport) = 17338
+Symbols::parseLibraries (/System/Library/Frameworks/DeveloperToolsSupport.framework/Versions/A/DeveloperToolsSupport) total = 35524
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/Frameworks/Symbols.framework/Versions/A/Symbols) = 118
+findSymbolPtrSection (/System/Library/Frameworks/Symbols.framework/Versions/A/Symbols) = 32
+loadSymbols (/System/Library/Frameworks/Symbols.framework/Versions/A/Symbols) = 45868
+Symbols::parseLibraries (/System/Library/Frameworks/Symbols.framework/Versions/A/Symbols) total = 66982
+---------------------------------------------------
+loadSymbols (/usr/lib/swift/libswiftCoreGraphics.dylib) = 38
+Symbols::parseLibraries (/usr/lib/swift/libswiftCoreGraphics.dylib) total = 5332
+---------------------------------------------------
+loadSymbols (/usr/lib/swift/libswiftFoundation.dylib) = 1937
+Symbols::parseLibraries (/usr/lib/swift/libswiftFoundation.dylib) total = 6893
+---------------------------------------------------
+findSymbolPtrSection (/usr/lib/swift/libswiftSwiftOnoneSupport.dylib) = 37
+findSymbolPtrSection (/usr/lib/swift/libswiftSwiftOnoneSupport.dylib) = 34
+loadSymbols (/usr/lib/swift/libswiftSwiftOnoneSupport.dylib) = 208688
+Symbols::parseLibraries (/usr/lib/swift/libswiftSwiftOnoneSupport.dylib) total = 321566
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/CoreMaterial.framework/Versions/A/CoreMaterial) = 120
+findSymbolPtrSection (/System/Library/PrivateFrameworks/CoreMaterial.framework/Versions/A/CoreMaterial) = 41
+loadSymbols (/System/Library/PrivateFrameworks/CoreMaterial.framework/Versions/A/CoreMaterial) = 96837
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/CoreMaterial.framework/Versions/A/CoreMaterial) total = 157182
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/SFSymbols.framework/Versions/A/SFSymbols) = 101
+findSymbolPtrSection (/System/Library/PrivateFrameworks/SFSymbols.framework/Versions/A/SFSymbols) = 33
+loadSymbols (/System/Library/PrivateFrameworks/SFSymbols.framework/Versions/A/SFSymbols) = 34376
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/SFSymbols.framework/Versions/A/SFSymbols) total = 58104
+---------------------------------------------------
+findSymbolPtrSection (/System/Library/PrivateFrameworks/SpeechRecognitionCore.framework/Versions/A/SpeechRecognitionCore) = 35
+findSymbolPtrSection (/System/Library/PrivateFrameworks/SpeechRecognitionCore.framework/Versions/A/SpeechRecognitionCore) = 29
+loadSymbols (/System/Library/PrivateFrameworks/SpeechRecognitionCore.framework/Versions/A/SpeechRecognitionCore) = 52218
+Symbols::parseLibraries (/System/Library/PrivateFrameworks/SpeechRecognitionCore.framework/Versions/A/SpeechRecognitionCore) total = 88606
+---------------------------------------------------
+findSymbolPtrSection (/Users/ec2-user/.sdkman/candidates/java/21.0.6-amzn/lib/server/libjvm.dylib) = 144
+loadSymbols (/Users/ec2-user/.sdkman/candidates/java/21.0.6-amzn/lib/server/libjvm.dylib) = 6863510
+loadImports (/Users/ec2-user/.sdkman/candidates/java/21.0.6-amzn/lib/server/libjvm.dylib) = 673
+loadImports (/Users/ec2-user/.sdkman/candidates/java/21.0.6-amzn/lib/server/libjvm.dylib) = 3278
+Symbols::parseLibraries (/Users/ec2-user/.sdkman/candidates/java/21.0.6-amzn/lib/server/libjvm.dylib) total = 8815267
+---------------------------------------------------
+findSymbolPtrSection (/Users/ec2-user/.sdkman/candidates/java/21.0.6-amzn/lib/libjimage.dylib) = 131
+loadSymbols (/Users/ec2-user/.sdkman/candidates/java/21.0.6-amzn/lib/libjimage.dylib) = 14061
+loadImports (/Users/ec2-user/.sdkman/candidates/java/21.0.6-amzn/lib/libjimage.dylib) = 212
+loadImports (/Users/ec2-user/.sdkman/candidates/java/21.0.6-amzn/lib/libjimage.dylib) = 649
+Symbols::parseLibraries (/Users/ec2-user/.sdkman/candidates/java/21.0.6-amzn/lib/libjimage.dylib) total = 149473
+---------------------------------------------------
+findSymbolPtrSection (/Users/ec2-user/.sdkman/candidates/java/21.0.6-amzn/lib/libjava.dylib) = 75
+loadSymbols (/Users/ec2-user/.sdkman/candidates/java/21.0.6-amzn/lib/libjava.dylib) = 37152
+loadImports (/Users/ec2-user/.sdkman/candidates/java/21.0.6-amzn/lib/libjava.dylib) = 1609
+loadImports (/Users/ec2-user/.sdkman/candidates/java/21.0.6-amzn/lib/libjava.dylib) = 1436
+Symbols::parseLibraries (/Users/ec2-user/.sdkman/candidates/java/21.0.6-amzn/lib/libjava.dylib) total = 129250
+---------------------------------------------------
+findSymbolPtrSection (/Users/ec2-user/.sdkman/candidates/java/21.0.6-amzn/lib/libnio.dylib) = 56
+loadSymbols (/Users/ec2-user/.sdkman/candidates/java/21.0.6-amzn/lib/libnio.dylib) = 29476
+loadImports (/Users/ec2-user/.sdkman/candidates/java/21.0.6-amzn/lib/libnio.dylib) = 164
+loadImports (/Users/ec2-user/.sdkman/candidates/java/21.0.6-amzn/lib/libnio.dylib) = 1283
+Symbols::parseLibraries (/Users/ec2-user/.sdkman/candidates/java/21.0.6-amzn/lib/libnio.dylib) total = 110049
+---------------------------------------------------
+findSymbolPtrSection (/Users/ec2-user/.sdkman/candidates/java/21.0.6-amzn/lib/libnet.dylib) = 63
+loadSymbols (/Users/ec2-user/.sdkman/candidates/java/21.0.6-amzn/lib/libnet.dylib) = 12430
+loadImports (/Users/ec2-user/.sdkman/candidates/java/21.0.6-amzn/lib/libnet.dylib) = 181
+loadImports (/Users/ec2-user/.sdkman/candidates/java/21.0.6-amzn/lib/libnet.dylib) = 580
+Symbols::parseLibraries (/Users/ec2-user/.sdkman/candidates/java/21.0.6-amzn/lib/libnet.dylib) total = 88634
+---------------------------------------------------
+findSymbolPtrSection (/Users/ec2-user/.sdkman/candidates/java/21.0.6-amzn/lib/libzip.dylib) = 46
+loadSymbols (/Users/ec2-user/.sdkman/candidates/java/21.0.6-amzn/lib/libzip.dylib) = 7513
+loadImports (/Users/ec2-user/.sdkman/candidates/java/21.0.6-amzn/lib/libzip.dylib) = 152
+loadImports (/Users/ec2-user/.sdkman/candidates/java/21.0.6-amzn/lib/libzip.dylib) = 561
+Symbols::parseLibraries (/Users/ec2-user/.sdkman/candidates/java/21.0.6-amzn/lib/libzip.dylib) total = 76122
+---------------------------------------------------
+findSymbolPtrSection (/Users/ec2-user/async-profiler/build/lib/libasyncProfiler.dylib) = 57
+findSymbolPtrSection (/Users/ec2-user/async-profiler/build/lib/libasyncProfiler.dylib) = 47
+loadSymbols (/Users/ec2-user/async-profiler/build/lib/libasyncProfiler.dylib) = 110181
+loadImports (/Users/ec2-user/async-profiler/build/lib/libasyncProfiler.dylib) = 2223
+Symbols::parseLibraries (/Users/ec2-user/async-profiler/build/lib/libasyncProfiler.dylib) total = 228430
+---------------------------------------------------
+ZINIT TOTAL = 178608457
