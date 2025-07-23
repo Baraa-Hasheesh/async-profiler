@@ -31,7 +31,7 @@ class LateInitializer {
             }
         }
 
-        fprintf(stderr, "ZINIT TIME = %llu\n", (OS::nanotime() - start) / 1000000);
+        fprintf(stderr, "ZINIT TOTAL = %llu\n", OS::nanotime() - start);
     }
 
   private:

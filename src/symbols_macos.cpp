@@ -38,6 +38,7 @@ class MachOParser {
     }
 
     void findSymbolPtrSection(const segment_command_64* sc, const section_64** section_ptr) {
+        u64 start = OS::nanotime();
         const section_64* section = (const section_64*)add(sc, sizeof(segment_command_64));
         for (uint32_t i = 0; i < sc->nsects; i++) {
             uint32_t section_type = section->flags & SECTION_TYPE;
@@ -48,9 +49,12 @@ class MachOParser {
             }
             section++;
         }
+        fprintf(stderr, "findSymbolPtrSection (%s) = %llu\n", this->_cc->name(), OS::nanotime() - start);
     }
 
     void loadSymbols(const symtab_command* symtab, const char* link_base) {
+        u64 start = OS::nanotime();
+
         const nlist_64* sym = (const nlist_64*)add(link_base, symtab->symoff);
         const char* str_table = add(link_base, symtab->stroff);
         bool debug_symbols = false;
@@ -67,10 +71,13 @@ class MachOParser {
         }
 
         _cc->setDebugSymbols(debug_symbols);
+
+        fprintf(stderr, "loadSymbols (%s) = %llu\n", this->_cc->name(), OS::nanotime() - start);
     }
 
     void loadImports(const symtab_command* symtab, const dysymtab_command* dysymtab,
                      const section_64* symbol_ptr_section, const char* link_base) {
+        u64 start = OS::nanotime();
         const nlist_64* sym = (const nlist_64*)add(link_base, symtab->symoff);
         const char* str_table = add(link_base, symtab->stroff);
 
@@ -85,6 +92,8 @@ class MachOParser {
                 _cc->addImport(&slot[i], name);
             }
         }
+
+        fprintf(stderr, "loadImports (%s) = %llu\n", this->_cc->name(), OS::nanotime() - start);
     }
 
   public:
@@ -182,7 +191,7 @@ void Symbols::parseLibraries(CodeCacheArray* array, bool kernel_symbols) {
             delete cc;
         }
 
-        fprintf(stderr, "PARSE TIME = %llu - %s\n", (OS::nanotime() - start) / 1000000, path);
+        fprintf(stderr, "Symbols::parseLibraries (%s) total = %llu\n---------------------------------------------------\n", path, OS::nanotime() - start);
     }
 }
 

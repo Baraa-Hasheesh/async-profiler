@@ -18,7 +18,7 @@ import java.util.List;
 
 public class AllocTests {
 
-    @Test(mainClass = MapReader.class, jvmArgs = "-XX:+UseG1GC -Xmx1g -Xms1g", jvm = Jvm.HOTSPOT)
+    @Test(mainClass = MapReader.class, debugNonSafepoints=true, jvmArgs = "-Xlog:safepoint*=debug:file=%safepoint.log -XX:+UseG1GC -Xmx1g -Xms1g", jvm = Jvm.HOTSPOT, output = true, error = true)
     public void alloc(TestProcess p) throws Exception {
         Output out = p.profile("-e cpu -d 3 -o collapsed");
         assert out.contains("G1RemSet::");
