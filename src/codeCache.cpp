@@ -92,6 +92,10 @@ void CodeCache::add(const void* start, int length, const char* name, bool update
     _blobs[_count]._name = name_copy;
     _count++;
 
+    if (strstr(this->name(), "jninativestacks")) {
+        fprintf(stderr, "Method %s, start = %p, end = %p, length=%d\n", name_copy, start, end, length);
+    }
+
     if (update_bounds) {
         updateBounds(start, end);
     }

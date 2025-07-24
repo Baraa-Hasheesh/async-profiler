@@ -257,6 +257,7 @@ int StackWalker::walkVM(void* ucontext, ASGCT_CallFrame* frames, int max_depth,
         }
     }
 
+
     // Walk until the bottom of the stack or until the first Java frame
     while (depth < max_depth) {
         if (CodeHeap::contains(pc)) {
@@ -382,7 +383,14 @@ int StackWalker::walkVM(void* ucontext, ASGCT_CallFrame* frames, int max_depth,
                 }
             }
         } else {
-            fillFrame(frames[depth++], BCI_NATIVE_FRAME, profiler->findNativeMethod(pc));
+            const char* method_name = profiler->findNativeMethod(pc);
+            if (method_name != NULL && strcmp(method_name, "Java_test_stackwalker_StackGenerator_leafFrame") == 0) {
+                fprintf(stderr, "1. INFO => DEPTH = %d, PC = %p \n", depth, pc);
+                /*pc = (void*) frame.link();
+                method_name = profiler->findNativeMethod(pc);
+                fprintf(stderr, "2. INFO => DEPTH = %d, PC = %p, name = %s \n", depth, pc, method_name);*/
+            }
+            fillFrame(frames[depth++], BCI_NATIVE_FRAME, method_name);
         }
 
         uintptr_t prev_sp = sp;

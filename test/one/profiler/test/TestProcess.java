@@ -148,6 +148,7 @@ public class TestProcess implements Closeable {
             }
             cmd.add(test.mainClass().getName());
             addArgs(cmd, test.args());
+            System.out.println(cmd);
         }
 
         return cmd;

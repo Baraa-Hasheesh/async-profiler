@@ -17,21 +17,24 @@ public class StackGenerator {
         System.loadLibrary("jninativestacks");
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         if (args.length != 1) {
             System.err.println("Usage: java StackGenerator <largeFrame|deepFrame|leafFrame>");
             System.exit(1);
         }
 
-        if (args[0].equals("largeFrame")) {
-            largeFrame();
-        } else if (args[0].equals("deepFrame")) {
-            deepFrame();
-        } else if (args[0].equals("leafFrame")) {
-            leafFrame();
-        } else {
-            System.err.println("Unknown test: " + args[0]);
-            System.exit(1);
-        }
+        //while (true) {
+            if (args[0].equals("largeFrame")) {
+                largeFrame();
+            } else if (args[0].equals("deepFrame")) {
+                deepFrame();
+            } else if (args[0].equals("leafFrame")) {
+                leafFrame();
+            } else {
+                System.err.println("Unknown test: " + args[0]);
+                System.exit(1);
+            }
+           // Thread.sleep(1000);
+        //}
     }
 }

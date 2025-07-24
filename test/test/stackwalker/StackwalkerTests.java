@@ -15,13 +15,13 @@ public class StackwalkerTests {
     private static final String OPTIONAL_FRAME = FRAME + "?";
 
     @Test(mainClass = StackGenerator.class, jvmArgs = "-Xss5m", args = "largeFrame",
-            agentArgs = "start,event=cpu,cstack=vmx,file=%f.jfr", nameSuffix = "VMX")
+            agentArgs = "start,event=cpu,cstack=vmx,collapsed,file=%f", nameSuffix = "VMX")
     @Test(mainClass = StackGenerator.class, jvmArgs = "-Xss5m", args = "largeFrame",
-            agentArgs = "start,event=cpu,cstack=vm,file=%f.jfr", nameSuffix = "VM")
+            agentArgs = "start,event=cpu,cstack=vm,collapsed,file=%f", nameSuffix = "VM")
     public void largeFrame(TestProcess p) throws Exception {
         p.waitForExit();
         assert p.exitCode() == 0;
-        Output output = Output.convertJfrToCollapsed(p.getFilePath("%f"));
+        Output output = p.readFile("%f");
         assert output.contains("^Java_test_stackwalker_StackGenerator_largeFrame;" +
                 "doCpuTask");
 
@@ -30,13 +30,13 @@ public class StackwalkerTests {
     }
 
     @Test(mainClass = StackGenerator.class, jvmArgs = "-Xss5m", args = "deepFrame",
-            agentArgs = "start,event=cpu,cstack=vmx,file=%f.jfr", nameSuffix = "VMX")
+            agentArgs = "start,event=cpu,cstack=vmx,collapsed,file=%f", nameSuffix = "VMX")
     @Test(mainClass = StackGenerator.class, jvmArgs = "-Xss5m", args = "deepFrame",
-            agentArgs = "start,event=cpu,cstack=vm,file=%f.jfr", nameSuffix = "VM")
+            agentArgs = "start,event=cpu,cstack=vm,collapsed,file=%f", nameSuffix = "VM")
     public void deepStack(TestProcess p) throws Exception {
         p.waitForExit();
         assert p.exitCode() == 0;
-        Output output = Output.convertJfrToCollapsed(p.getFilePath("%f"));
+        Output output = p.readFile("%f");
         assert output.contains("^Java_test_stackwalker_StackGenerator_deepFrame;" +
                 "generateDeepStack[^;]*;" +
                 "generateDeepStack[^;]*;" +
