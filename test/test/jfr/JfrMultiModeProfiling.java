@@ -51,13 +51,13 @@ public class JfrMultiModeProfiling {
     }
 
     private static long cpuIntensiveIncrement() {
-        System.err.println("=>" + Thread.currentThread().getName() + " @ " + System.nanoTime());
+        System.err.println("Enter =>" + Thread.currentThread().getName() + " @ " + System.nanoTime());
         for (int i = 0; i < 100_000; i++) {
             synchronized (lock) {
                 count += System.getProperties().hashCode();
             }
         }
-        System.err.println("=>" + Thread.currentThread().getName() + " @ " + System.nanoTime());
+        System.err.println("Exit =>" + Thread.currentThread().getName() + " @ " + System.nanoTime());
 
         return System.nanoTime();
     }
