@@ -19,7 +19,7 @@ public class WallTests {
         Assert.isGreater(out.ratio("test/wall/BusyClient.run"), 0.25);
         Assert.isLess(out.ratio("test/wall/IdleClient.run"), 0.05);
 
-        out = p.profile("-e wall -d 3 -o collapsed");
+        out = p.profile("-e wall -d 3 -o collapsed --threads");
         long s1 = out.samples("test/wall/SocketTest.main");
         long s2 = out.samples("test/wall/BusyClient.run");
         long s3 = out.samples("test/wall/IdleClient.run");
