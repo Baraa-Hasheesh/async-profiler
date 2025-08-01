@@ -9,6 +9,8 @@ import jdk.jfr.Recording;
 
 import java.io.File;
 import java.io.IOException;
+import java.lang.management.ManagementFactory;
+import java.lang.management.ThreadMXBean;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Date;
@@ -29,6 +31,9 @@ public class JfrMultiModeProfiling {
     private static volatile Object sink;
     private static int count = 0;
     private static final List<byte[]> holder = new ArrayList<>();
+
+    private static ThreadMXBean tmx = ManagementFactory.getThreadMXBean();
+
 
     public static void main(String[] args) throws InterruptedException, IOException {
         Recording recording = new Recording();
@@ -58,6 +63,8 @@ public class JfrMultiModeProfiling {
             }
         }
         System.err.println("Exit =>" + Thread.currentThread().getName() + " @ " + System.nanoTime());
+
+        System.err.println("Total lock time for (" + Thread.currentThread().getName() + ") = " + tmx.getThreadInfo(Thread.currentThread().threadId()).getBlockedTime());
 
         return System.nanoTime();
     }
