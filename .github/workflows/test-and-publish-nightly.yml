@@ -10,7 +10,7 @@ concurrency:
 
 env:
   java_default_distribution: corretto
-  java_default_version: 11
+  java_default_version: 21
 
 jobs:
   build-jars:
