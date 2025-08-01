@@ -61,7 +61,7 @@ public class JfrTests {
      * @param p The test process to profile with.
      * @throws Exception Any exception thrown during profiling JFR output parsing.
      */
-    @Test(mainClass = JfrMultiModeProfiling.class, agentArgs = "start,event=cpu,alloc,lock,quiet,jfr,file=%f", output = true)
+    @Test(mainClass = JfrMultiModeProfiling.class, agentArgs = "start,event=cpu,alloc,lock,quiet,jfr,file=%f", output = true, args = "%jfr")
     public void parseMultiModeRecording(TestProcess p) throws Exception {
         Output output = p.waitForExit(TestProcess.STDOUT);
         assert p.exitCode() == 0;
@@ -80,6 +80,22 @@ public class JfrTests {
                 eventsCount.put(eventName, eventsCount.getOrDefault(eventName, 0) + 1);
             }
         }
+
+        double jfrTotalLockDurationNanos = 0;
+        try (RecordingFile recordingFile = new RecordingFile(p.getFile("%jfr").toPath())) {
+            while (recordingFile.hasMoreEvents()) {
+                RecordedEvent event = recordingFile.readEvent();
+                String eventName = event.getEventType().getName();
+                if (eventName.equals("jdk.JavaMonitorEnter")) {
+                    jfrTotalLockDurationNanos += event.getDuration().toNanos();
+                }
+            }
+        }
+
+        System.out.println(lockJobDurationMillis);
+        System.out.println(totalLockDurationNanos / 1000.0 / 1000.0);
+        System.out.println(jfrTotalLockDurationNanos / 1000.0 / 1000.0);
+        System.out.println(Math.abs(jfrTotalLockDurationNanos - totalLockDurationNanos) / 1000.0 / 1000.0);
 
         Assert.isGreater(eventsCount.get("jdk.ExecutionSample"), 50);
         Assert.isGreater(eventsCount.get("jdk.JavaMonitorEnter"), 10);

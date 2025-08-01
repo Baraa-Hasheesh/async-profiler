@@ -5,6 +5,11 @@
 
 package test.jfr;
 
+import jdk.jfr.Recording;
+
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -13,6 +18,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadLocalRandom;
+
 
 /**
  * Process to simulate lock contention and allocate objects.
@@ -24,17 +30,24 @@ public class JfrMultiModeProfiling {
     private static int count = 0;
     private static final List<byte[]> holder = new ArrayList<>();
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) throws InterruptedException, IOException {
+        Recording recording = new Recording();
+        recording.setName("lockrec");
+
+        recording.enable("jdk.JavaMonitorEnter");
+        recording.start();
+
         ExecutorService executor = Executors.newFixedThreadPool(2);
         List<CompletableFuture<Long>> completableFutures = new ArrayList<>();
         long startTime = System.nanoTime();
         for (int i = 0; i < 10; i++) {
             completableFutures.add(CompletableFuture.supplyAsync(JfrMultiModeProfiling::cpuIntensiveIncrement, executor));
         }
+        allocate();
         long endTime = completableFutures.stream().map(CompletableFuture::join).max(Long::compareTo).get();
         System.out.println(endTime - startTime);
+        recording.dump(Path.of(args[0]));
         executor.shutdown();
-        allocate();
     }
 
     private static long cpuIntensiveIncrement() {

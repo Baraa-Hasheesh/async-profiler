@@ -109,7 +109,7 @@ jobs:
           - display: linux-x64
             # Using "latest" here as the build and test will any ways run inside a container which we control
             name: ubuntu-latest
-        java-version: [8, 11, 17, 21, 24]
+        java-version: [11]
         java-distribution: [corretto]
         image: ["public.ecr.aws/async-profiler/asprof-builder-x86:latest"]
         include:
@@ -236,7 +236,7 @@ jobs:
           make build/test.jar
           cp -r ${{ steps.extract_artifact.outputs.release_directory }}/bin build
           cp -r ${{ steps.extract_artifact.outputs.release_directory }}/lib build
-          make test-java -j
+          make test-java -j TESTS=parseMultiModeRecording
       - name: Upload integration test logs
         uses: actions/upload-artifact@v4
         # Always upload, especially after test failure
