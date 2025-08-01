@@ -148,13 +148,6 @@ jobs:
             java-distribution: corretto
             image: public.ecr.aws/async-profiler/asprof-builder-arm:latest
           - runson:
-              display: alpine
-              name: ubuntu-latest
-            java-version: 21
-            java-distribution: corretto
-            asprof-binaries-job: linux-x64
-            image: public.ecr.aws/async-profiler/asprof-builder-alpine:corretto-11
-          - runson:
               display: amazonlinux2
               name: ubuntu-latest
             java-version: 21
