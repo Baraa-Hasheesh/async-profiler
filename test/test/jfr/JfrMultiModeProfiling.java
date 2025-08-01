@@ -36,6 +36,8 @@ public class JfrMultiModeProfiling {
 
 
     public static void main(String[] args) throws InterruptedException, IOException {
+        tmx.setThreadContentionMonitoringEnabled(true);
+
         Recording recording = new Recording();
         recording.setName("lockrec");
 
