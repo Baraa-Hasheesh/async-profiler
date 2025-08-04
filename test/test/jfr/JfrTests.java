@@ -16,6 +16,7 @@ import one.profiler.test.TestProcess;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class JfrTests {
 
@@ -74,7 +75,7 @@ public class JfrTests {
         Output output = p.waitForExit(TestProcess.STDOUT);
         assert p.exitCode() == 0;
 
-        List<String> standardOutput = output.stream().toList();
+        List<String> standardOutput = output.stream().collect(Collectors.toList());
         long totalLockDurationMillis = Long.parseLong(standardOutput.get(0));
         int totalNumberOfLocks = Integer.parseInt(standardOutput.get(1));
 
