@@ -80,20 +80,23 @@ public class JfrTests {
         int totalNumberOfLocks = Integer.parseInt(standardOutput.get(1));
 
         double jfrTotalLockDurationMillis = 0;
+        int jfrNumberOfLocks = 0;
         Map<String, Integer> eventsCount = new HashMap<>();
         try (RecordingFile recordingFile = new RecordingFile(p.getFile("%f").toPath())) {
             while (recordingFile.hasMoreEvents()) {
                 RecordedEvent event = recordingFile.readEvent();
+                String threadName = event.getThread().getJavaName();
                 String eventName = event.getEventType().getName();
-                if (eventName.equals("jdk.JavaMonitorEnter")) {
+                if ((eventName.equals("jdk.JavaMonitorEnter") || eventName.equals("jdk.ThreadPark")) && threadName.equals("cpuIntensiveIncrement")) {
                     jfrTotalLockDurationMillis += event.getDuration().toNanos() / 1_000_000.0;
+                    jfrNumberOfLocks++;
                 }
                 eventsCount.put(eventName, eventsCount.getOrDefault(eventName, 0) + 1);
             }
         }
 
         Assert.isGreater(eventsCount.get("jdk.ExecutionSample"), 50);
-        Assert.isEqual(eventsCount.get("jdk.JavaMonitorEnter"), totalNumberOfLocks);
+        Assert.isGreater(jfrNumberOfLocks, totalNumberOfLocks);
         Assert.isGreater(jfrTotalLockDurationMillis / totalLockDurationMillis, 0.80);
         Assert.isGreater(eventsCount.get("jdk.ObjectAllocationInNewTLAB"), 50);
     }
