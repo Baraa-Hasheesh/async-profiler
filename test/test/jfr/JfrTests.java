@@ -85,7 +85,7 @@ public class JfrTests {
         try (RecordingFile recordingFile = new RecordingFile(p.getFile("%f").toPath())) {
             while (recordingFile.hasMoreEvents()) {
                 RecordedEvent event = recordingFile.readEvent();
-                String threadName = event.getThread().getJavaName();
+                String threadName = event.getThread() != null ? event.getThread().getJavaName() : "";
                 String eventName = event.getEventType().getName();
                 if ((eventName.equals("jdk.JavaMonitorEnter") || eventName.equals("jdk.ThreadPark")) && threadName.equals("cpuIntensiveIncrement")) {
                     jfrTotalLockDurationMillis += event.getDuration().toNanos() / 1_000_000.0;
