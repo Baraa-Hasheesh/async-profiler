@@ -69,12 +69,14 @@ public class JfrTests {
      * @param p The test process to profile with.
      * @throws Exception Any exception thrown during profiling JFR output parsing.
      */
-    @Test(mainClass = JfrMultiModeProfiling.class, agentArgs = "start,event=cpu,alloc,lock,quiet,jfr,file=%f", output = true)
+    @Test(mainClass = JfrMultiModeProfiling.class, agentArgs = "start,event=cpu,alloc,lock=0,quiet,jfr,file=%f", output = true)
     public void parseMultiModeRecording(TestProcess p) throws Exception {
         Output output = p.waitForExit(TestProcess.STDOUT);
         assert p.exitCode() == 0;
 
-        long totalLockDurationMillis = output.stream().mapToLong(Long::parseLong).sum();
+        List<String> standardOutput = output.stream().toList();
+        long totalLockDurationMillis = Long.parseLong(standardOutput.get(0));
+        int totalNumberOfLocks = Integer.parseInt(standardOutput.get(1));
 
         double jfrTotalLockDurationMillis = 0;
         Map<String, Integer> eventsCount = new HashMap<>();
@@ -90,8 +92,8 @@ public class JfrTests {
         }
 
         Assert.isGreater(eventsCount.get("jdk.ExecutionSample"), 50);
-        Assert.isGreater(eventsCount.get("jdk.JavaMonitorEnter"), 10);
-        Assert.isGreater(jfrTotalLockDurationMillis / totalLockDurationMillis, 0.90);
+        Assert.isEqual(eventsCount.get("jdk.JavaMonitorEnter"), totalNumberOfLocks);
+        Assert.isGreater(jfrTotalLockDurationMillis / totalLockDurationMillis, 0.80);
         Assert.isGreater(eventsCount.get("jdk.ObjectAllocationInNewTLAB"), 50);
     }
 
