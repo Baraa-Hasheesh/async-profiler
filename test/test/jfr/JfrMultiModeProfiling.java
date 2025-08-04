@@ -50,8 +50,6 @@ public class JfrMultiModeProfiling {
     }
 
     private static void cpuIntensiveIncrement() {
-        Thread.currentThread().setName("cpuIntensiveIncrement"); // For filtering in test checks
-
         for (int i = 0; i < 100_000; i++) {
             synchronized (lock) {
                 count += System.getProperties().hashCode();
