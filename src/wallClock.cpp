@@ -206,6 +206,11 @@ void WallClock::timerLoop() {
                 continue;
             }
 
+            char thread_name[64];
+            if (OS::threadName(thread_id, thread_name, sizeof(thread_name))) {
+                fprintf(stderr, "%d => %s\n", thread_id, thread_name);
+            }
+
             if (mode == CPU_ONLY) {
                 if (!enabled || OS::threadState(thread_id) == THREAD_SLEEPING) {
                     continue;
@@ -245,6 +250,7 @@ void WallClock::timerLoop() {
             }
             OS::sleep(sleep_time);
             thread_list->update();
+            fprintf(stderr, "====================================================\n");
         }
 
         // Sync thread CPU times updated since the previous iteration
