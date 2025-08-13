@@ -185,6 +185,8 @@ ThreadState OS::threadState(int thread_id) {
     return info.run_state == TH_STATE_RUNNING ? THREAD_RUNNING : THREAD_SLEEPING;
 }
 
+#include <stdio.h>
+
 u64 OS::threadCpuTime(int thread_id) {
     if (thread_id == 0) thread_id = threadId();
 
