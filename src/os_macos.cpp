@@ -190,7 +190,9 @@ u64 OS::threadCpuTime(int thread_id) {
 
     struct thread_basic_info info;
     mach_msg_type_number_t size = sizeof(info);
-    if (thread_info((thread_act_t)thread_id, THREAD_BASIC_INFO, (thread_info_t)&info, &size) != 0) {
+    int result = thread_info((thread_act_t)thread_id, THREAD_BASIC_INFO, (thread_info_t)&info, &size);
+    if (result != 0) {
+        fprintf(stderr, "Failed on Thread id = %d with result = %d\n", thread_id, result);
         return 0;
     }
     return u64(info.user_time.seconds + info.system_time.seconds) * 1000000000 +
