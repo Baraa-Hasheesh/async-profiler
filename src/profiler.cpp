@@ -621,6 +621,9 @@ u64 Profiler::recordSample(void* ucontext, u64 counter, EventType event_type, Ev
             // Need to reset PerfEvents ring buffer, even though we discard the collected trace
             PerfEvents::resetBuffer(tid);
         }
+
+        fprintf(stderr, "SKIPPED SAMPLE %d\n", event_type);
+
         return 0;
     }
 
