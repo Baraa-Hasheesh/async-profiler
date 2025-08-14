@@ -51,13 +51,13 @@ public class JfrMultiModeProfiling {
         System.err.println("Count => " + threadLockCount.values().stream().reduce(Long::sum).get());
     }
 
-    private synchronized static void cpuIntensiveIncrement() {
+    private static void cpuIntensiveIncrement() {
         Thread.currentThread().setName("cpuIntensiveIncrement");
 
-        try {
-            Thread.sleep(100);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
+        for (int i = 0; i < 100_000; i++) {
+            synchronized (lock) {
+                count += System.getProperties().hashCode();
+            }
         }
 
         long threadId = Thread.currentThread().getId();
