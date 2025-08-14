@@ -77,6 +77,8 @@ public class JfrTests {
         long totalLockDurationMillis = output.stream().mapToLong(Long::parseLong).sum();
 
         double jfrTotalLockDurationMillis = 0;
+        double jfrTotalParkDurationMillis = 0;
+
         Map<String, Integer> eventsCount = new HashMap<>();
         try (RecordingFile recordingFile = new RecordingFile(p.getFile("%f").toPath())) {
             while (recordingFile.hasMoreEvents()) {
@@ -85,14 +87,19 @@ public class JfrTests {
                 if (eventName.equals("jdk.JavaMonitorEnter") && event.getThread().getJavaName().equals("cpuIntensiveIncrement")) {
                     jfrTotalLockDurationMillis += event.getDuration().toNanos() / 1_000_000.0;
                 }
+                if (eventName.equals("jdk.ThreadPark") && event.getThread().getJavaName().equals("cpuIntensiveIncrement")) {
+                    jfrTotalParkDurationMillis += event.getDuration().toNanos() / 1_000_000.0;
+                }
                 eventsCount.put(eventName, eventsCount.getOrDefault(eventName, 0) + 1);
             }
         }
 
-        System.out.println(jfrTotalLockDurationMillis / totalLockDurationMillis);
+        System.out.println((jfrTotalLockDurationMillis + jfrTotalParkDurationMillis) / totalLockDurationMillis);
         System.out.println(jfrTotalLockDurationMillis);
+        System.out.println(jfrTotalParkDurationMillis);
         System.out.println(totalLockDurationMillis);
         System.out.println(eventsCount.get("jdk.JavaMonitorEnter"));
+        System.out.println(eventsCount.get("jdk.ThreadPark"));
 
         Assert.isGreater(eventsCount.get("jdk.ExecutionSample"), 50);
         //Assert.isGreater(eventsCount.get("jdk.JavaMonitorEnter"), 10);
