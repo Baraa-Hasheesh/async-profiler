@@ -31,6 +31,7 @@ public class JfrMultiModeProfiling {
     private static final ThreadMXBean tmx = ManagementFactory.getThreadMXBean();
     private static final Map<Long, Long> threadLockTimes = new ConcurrentHashMap<>();
     private static final Map<Long, Long> threadLockCount = new ConcurrentHashMap<>();
+    private static final Map<Long, Long> threadWaitTimes = new ConcurrentHashMap<>();
 
 
     static {
@@ -49,6 +50,7 @@ public class JfrMultiModeProfiling {
         threadLockTimes.values().forEach(System.out::println);
 
         System.err.println("Count => " + threadLockCount.values().stream().reduce(Long::sum).get());
+        System.err.println("Wait => " + threadWaitTimes.values().stream().reduce(Long::sum).get());
     }
 
     private static void cpuIntensiveIncrement() {
@@ -63,6 +65,7 @@ public class JfrMultiModeProfiling {
         long threadId = Thread.currentThread().getId();
         threadLockTimes.put(threadId, tmx.getThreadInfo(threadId).getBlockedTime());
         threadLockCount.put(threadId, tmx.getThreadInfo(threadId).getBlockedCount());
+        threadWaitTimes.put(threadId, tmx.getThreadInfo(threadId).getWaitedTime());
     }
 
     private static void allocate() {

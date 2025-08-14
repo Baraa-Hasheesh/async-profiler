@@ -94,12 +94,13 @@ public class JfrTests {
             }
         }
 
-        System.out.println((jfrTotalLockDurationMillis + jfrTotalParkDurationMillis) / totalLockDurationMillis);
-        System.out.println(jfrTotalLockDurationMillis);
-        System.out.println(jfrTotalParkDurationMillis);
-        System.out.println(totalLockDurationMillis);
-        System.out.println(eventsCount.get("jdk.JavaMonitorEnter"));
-        System.out.println(eventsCount.get("jdk.ThreadPark"));
+        System.out.println("TOTAL % " + (jfrTotalLockDurationMillis + jfrTotalParkDurationMillis) / totalLockDurationMillis);
+        System.out.println("% " + jfrTotalLockDurationMillis / totalLockDurationMillis);
+        System.out.println("JFR LOCK " + jfrTotalLockDurationMillis);
+        System.out.println("JFR PARK " + jfrTotalParkDurationMillis);
+        System.out.println("JDK LOCK " + totalLockDurationMillis);
+        System.out.println("LOCK COUNT JFR " + eventsCount.get("jdk.JavaMonitorEnter"));
+        System.out.println("PARK COUNT JFR " + eventsCount.get("jdk.ThreadPark"));
 
         Assert.isGreater(eventsCount.get("jdk.ExecutionSample"), 50);
         //Assert.isGreater(eventsCount.get("jdk.JavaMonitorEnter"), 10);
