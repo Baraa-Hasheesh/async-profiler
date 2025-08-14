@@ -161,6 +161,8 @@ void JNICALL LockTracer::MonitorContendedEnter(jvmtiEnv* jvmti, JNIEnv* env, jth
     }
 }
 
+#include <stdio.h>
+
 void JNICALL LockTracer::MonitorContendedEntered(jvmtiEnv* jvmti, JNIEnv* env, jthread thread, jobject object) {
     if (!_enabled) return;
 
@@ -181,6 +183,7 @@ void JNICALL LockTracer::MonitorContendedEntered(jvmtiEnv* jvmti, JNIEnv* env, j
     const u64 duration = entered_time - enter_time;
     if (updateCounter(_total_duration, duration, _interval)) {
         char* lock_name = getLockName(jvmti, env, object);
+        fprintf(stderr, "LOCK %s\n", lock_name);
         recordContendedLock(LOCK_SAMPLE, enter_time, entered_time, lock_name, object, 0);
         jvmti->Deallocate((unsigned char*)lock_name);
     }
