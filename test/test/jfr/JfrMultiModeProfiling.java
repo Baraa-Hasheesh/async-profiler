@@ -30,13 +30,15 @@ public class JfrMultiModeProfiling {
 
     private static final ThreadMXBean tmx = ManagementFactory.getThreadMXBean();
     private static final Map<Long, Long> threadLockTimes = new ConcurrentHashMap<>();
+    private static final Map<Long, Long> threadLockCount = new ConcurrentHashMap<>();
+
 
     static {
         tmx.setThreadContentionMonitoringEnabled(true);
     }
 
     public static void main(String[] args) throws InterruptedException {
-        ExecutorService executor = Executors.newFixedThreadPool(2);
+        ExecutorService executor = Executors.newFixedThreadPool(10);
         for (int i = 0; i < 10; i++) {
             executor.submit(JfrMultiModeProfiling::cpuIntensiveIncrement);
         }
@@ -45,17 +47,22 @@ public class JfrMultiModeProfiling {
         executor.awaitTermination(10, TimeUnit.SECONDS);
 
         threadLockTimes.values().forEach(System.out::println);
+
+        System.err.println("Count => " + threadLockCount.values().stream().reduce(Long::sum).get());
     }
 
-    private static void cpuIntensiveIncrement() {
-        for (int i = 0; i < 100_000; i++) {
-            synchronized (lock) {
-                count += System.getProperties().hashCode();
-            }
+    private synchronized static void cpuIntensiveIncrement() {
+        Thread.currentThread().setName("cpuIntensiveIncrement");
+
+        try {
+            Thread.sleep(100);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
         }
 
         long threadId = Thread.currentThread().getId();
         threadLockTimes.put(threadId, tmx.getThreadInfo(threadId).getBlockedTime());
+        threadLockCount.put(threadId, tmx.getThreadInfo(threadId).getBlockedCount());
     }
 
     private static void allocate() {
