@@ -38,7 +38,7 @@ public class JfrMultiModeProfiling {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        ExecutorService executor = Executors.newFixedThreadPool(10);
+        ExecutorService executor = Executors.newFixedThreadPool(2);
         for (int i = 0; i < 10; i++) {
             executor.submit(JfrMultiModeProfiling::cpuIntensiveIncrement);
         }
