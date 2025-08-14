@@ -89,6 +89,8 @@ public class JfrTests {
             }
         }
 
+        System.out.println(jfrTotalLockDurationMillis / totalLockDurationMillis);
+
         Assert.isGreater(eventsCount.get("jdk.ExecutionSample"), 50);
         Assert.isGreater(eventsCount.get("jdk.JavaMonitorEnter"), 10);
         Assert.isGreater(jfrTotalLockDurationMillis / totalLockDurationMillis, 0.80);
