@@ -133,6 +133,21 @@ bool VM::hasJvmThreads() {
     return threads_found == 3;
 }
 
+
+#include <stdio.h>
+
+void waitedJVM(jvmtiEnv *jvmti_env,
+     JNIEnv* jni_env,
+     jthread thread,
+     jobject object,
+     jboolean timed_out) {
+
+    char thread_name[64];
+    if (OS::threadName(OS::threadId(), thread_name, sizeof(thread_name)) && strcmp(thread_name, "cpuIntensiveIncrement")) {
+        fprintf(stderr, "JVM WAIT <==========\n");
+    }
+}
+
 bool VM::init(JavaVM* vm, bool attach) {
     if (_jvmti != NULL) return true;
 
@@ -256,6 +271,7 @@ bool VM::init(JavaVM* vm, bool attach) {
     callbacks.ThreadEnd = Profiler::ThreadEnd;
     callbacks.MonitorContendedEnter = LockTracer::MonitorContendedEnter;
     callbacks.MonitorContendedEntered = LockTracer::MonitorContendedEntered;
+    callbacks.MonitorWaited = waitedJVM;
     callbacks.VMObjectAlloc = J9ObjectSampler::VMObjectAlloc;
     callbacks.SampledObjectAlloc = ObjectSampler::SampledObjectAlloc;
     callbacks.GarbageCollectionStart = ObjectSampler::GarbageCollectionStart;
