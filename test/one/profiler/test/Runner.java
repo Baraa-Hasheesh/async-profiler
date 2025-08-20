@@ -121,7 +121,7 @@ public class Runner {
         try (TestProcess p = new TestProcess(rt.test(), currentOs, testLogDir)) {
             Object holder = (rt.method().getModifiers() & Modifier.STATIC) == 0 ?
                     rt.method().getDeclaringClass().getDeclaredConstructor().newInstance() : null;
-            rt.method().invoke(holder, p);
+            for (int i = 0; i < 100; i++) rt.method().invoke(holder, p);
         } catch (InvocationTargetException e) {
             if (e.getTargetException() instanceof NoClassDefFoundError) {
                 return TestResult.skipMissingJar();
