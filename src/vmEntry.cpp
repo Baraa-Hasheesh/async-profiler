@@ -18,6 +18,7 @@
 #include "instrument.h"
 #include "lockTracer.h"
 #include "log.h"
+#include "tsc.h"
 #include "vmStructs.h"
 
 
@@ -131,6 +132,21 @@ bool VM::hasJvmThreads() {
     }
 
     return threads_found == 3;
+}
+
+void waited(jvmtiEnv *jvmti_env,
+     JNIEnv* jni_env,
+     jthread thread,
+     jobject object,
+     jboolean timed_out)
+{
+
+    MallocEvent event;
+    event._start_time = TSC::ticks();
+    event._address = (uintptr_t)waited;
+    event._size = 1000;
+
+    Profiler::instance()->recordSample(NULL, 1000, MALLOC_SAMPLE, &event);
 }
 
 bool VM::init(JavaVM* vm, bool attach) {
@@ -256,6 +272,7 @@ bool VM::init(JavaVM* vm, bool attach) {
     callbacks.ThreadEnd = Profiler::ThreadEnd;
     callbacks.MonitorContendedEnter = LockTracer::MonitorContendedEnter;
     callbacks.MonitorContendedEntered = LockTracer::MonitorContendedEntered;
+    callbacks.MonitorWaited = waited;
     callbacks.VMObjectAlloc = J9ObjectSampler::VMObjectAlloc;
     callbacks.SampledObjectAlloc = ObjectSampler::SampledObjectAlloc;
     callbacks.GarbageCollectionStart = ObjectSampler::GarbageCollectionStart;
