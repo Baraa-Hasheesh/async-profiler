@@ -28,7 +28,12 @@ public class JfrMultiModeProfiling {
     private static int count = 0;
     private static final List<byte[]> holder = new ArrayList<>();
 
+    private static final ThreadMXBean tmx = ManagementFactory.getThreadMXBean();
     private static final Map<Long, Long> threadLockTimes = new ConcurrentHashMap<>();
+
+    static {
+        tmx.setThreadContentionMonitoringEnabled(true);
+    }
 
     public static void main(String[] args) throws InterruptedException {
         ExecutorService executor = Executors.newFixedThreadPool(2);
@@ -47,9 +52,9 @@ public class JfrMultiModeProfiling {
         long totalBlockedTime = threadLockTimes.getOrDefault(threadId, 0L);
 
         for (int i = 0; i < 100_000; i++) {
-            long timeBeforeLock = System.currentTimeMillis();
+            long previousBlockedTime = tmx.getThreadInfo(threadId).getBlockedTime();
             synchronized (lock) {
-                totalBlockedTime += System.currentTimeMillis() - timeBeforeLock;
+                totalBlockedTime += tmx.getThreadInfo(threadId).getBlockedTime() - previousBlockedTime;
                 count += System.getProperties().hashCode();
             }
         }
