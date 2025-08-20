@@ -49,15 +49,17 @@ public class JfrMultiModeProfiling {
 
     private static void cpuIntensiveIncrement() {
         long threadId = Thread.currentThread().getId();
-        long startBlockedTime = tmx.getThreadInfo(threadId).getBlockedTime();
+        long totalBlockedTime = threadLockTimes.getOrDefault(threadId, 0L);
 
         for (int i = 0; i < 100_000; i++) {
+            long enterLockTime = tmx.getThreadInfo(threadId).getBlockedTime();
             synchronized (lock) {
+                totalBlockedTime += tmx.getThreadInfo(threadId).getBlockedTime() - enterLockTime;
                 count += System.getProperties().hashCode();
             }
         }
 
-        threadLockTimes.put(threadId, threadLockTimes.getOrDefault(threadId, 0L) + tmx.getThreadInfo(threadId).getBlockedTime() - startBlockedTime);
+        threadLockTimes.put(threadId, totalBlockedTime);
     }
 
     private static void allocate() {
