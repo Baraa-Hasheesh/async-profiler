@@ -69,7 +69,7 @@ public class JfrTests {
      * @param p The test process to profile with.
      * @throws Exception Any exception thrown during profiling JFR output parsing.
      */
-    @Test(mainClass = JfrMultiModeProfiling.class, agentArgs = "start,threads,event=cpu,alloc,lock=0,quiet,cstack=vmx,jfr,file=%f", output = true)
+    @Test(mainClass = JfrMultiModeProfiling.class, agentArgs = "start,threads,event=cpu,interval=1us,alloc,lock=0,quiet,cstack=vmx,jfr,file=%f", output = true)
     public void parseMultiModeRecording(TestProcess p) throws Exception {
         Output output = p.waitForExit(TestProcess.STDOUT);
         assert p.exitCode() == 0;
