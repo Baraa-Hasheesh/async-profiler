@@ -155,7 +155,7 @@ void LockTracer::setEntry0(JNIEnv* env, jclass cls, jlong entry) {
 }
 
 void JNICALL LockTracer::MonitorContendedEnter(jvmtiEnv* jvmti, JNIEnv* env, jthread thread, jobject object) {
-    const u64 enter_time = OS::nanotime();
+    const u64 enter_time = TSC::ticks();
     if (CAN_USE_TLS && lock_tracer_tls) {
         pthread_setspecific(lock_tracer_tls, (void*)enter_time);
     } else {
@@ -166,7 +166,7 @@ void JNICALL LockTracer::MonitorContendedEnter(jvmtiEnv* jvmti, JNIEnv* env, jth
 void JNICALL LockTracer::MonitorContendedEntered(jvmtiEnv* jvmti, JNIEnv* env, jthread thread, jobject object) {
     if (!_enabled) return;
 
-    const u64 entered_time = OS::nanotime();
+    const u64 entered_time = TSC::ticks();
     u64 enter_time = 0;
     if (CAN_USE_TLS && lock_tracer_tls) {
         enter_time = (u64)pthread_getspecific(lock_tracer_tls);

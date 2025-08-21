@@ -838,19 +838,20 @@ void Profiler::trapHandler(int signo, siginfo_t* siginfo, void* ucontext) {
     StackFrame frame(ucontext);
 
     if (_begin_trap.covers(frame.pc())) {
-        fprintf(stderr, "BEGIN TRAP\n");
         WallClockEvent event;
         event._start_time = TSC::ticks();
         event._samples = 1;
+        event._thread_state = THREAD_RUNNING;
         Profiler::instance()->recordSample(ucontext, 1000000, WALL_CLOCK_SAMPLE, &event);
+        frame.ret();
     } else if (_end_trap.covers(frame.pc())) {
-        fprintf(stderr, "END TRAP\n");
         WallClockEvent event;
         event._start_time = TSC::ticks();
         event._samples = 1;
+        event._thread_state = THREAD_RUNNING;
         Profiler::instance()->recordSample(ucontext, 2000000, WALL_CLOCK_SAMPLE, &event);
+        frame.ret();
     } else if (orig_trapHandler != NULL) {
-        fprintf(stderr, "GENERAL TRAP\n");
         orig_trapHandler(signo, siginfo, ucontext);
     }
 }
