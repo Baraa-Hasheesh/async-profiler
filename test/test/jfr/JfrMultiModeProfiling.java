@@ -52,11 +52,9 @@ public class JfrMultiModeProfiling {
         long totalBlockedTime = threadLockTimes.getOrDefault(threadId, 0L);
         long previousBlockedTime = tmx.getThreadInfo(threadId).getBlockedTime();
 
-        for (int i = 0; i < 10_000; i++) {
+        for (int i = 0; i < 100_000; i++) {
             synchronized (lock) {
-                for (int j = 0; j < 10; j++) {
-                    count += System.getProperties().hashCode();
-                }
+                count += System.getProperties().hashCode();
             }
         }
 

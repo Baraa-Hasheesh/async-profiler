@@ -814,11 +814,13 @@ Error Profiler::installTraps(const char* begin, const char* end, bool nostop) {
     _end_trap.assign(end_addr);
     _nostop = nostop;
 
+    fprintf(stderr, "%p => %p\n", begin_addr, end_addr);
+
     if (_begin_trap.entry() == 0) {
         _engine->enableEvents(true);
     } else {
-        _engine->enableEvents(nostop);
-        if (!_begin_trap.install()) {
+        _engine->enableEvents(true);
+        if (!_begin_trap.install() || !_end_trap.install()) {
             return Error("Cannot install begin breakpoint");
         }
     }
@@ -836,19 +838,19 @@ void Profiler::trapHandler(int signo, siginfo_t* siginfo, void* ucontext) {
     StackFrame frame(ucontext);
 
     if (_begin_trap.covers(frame.pc())) {
-        profiling_window._start_time = TSC::ticks();
-        _engine->enableEvents(true);
-        _begin_trap.uninstall();
-        _end_trap.install();
-        frame.pc() = _begin_trap.entry();
+        fprintf(stderr, "BEGIN TRAP\n");
+        WallClockEvent event;
+        event._start_time = TSC::ticks();
+        event._samples = 1;
+        Profiler::instance()->recordSample(ucontext, 1000000, WALL_CLOCK_SAMPLE, &event);
     } else if (_end_trap.covers(frame.pc())) {
-        _engine->enableEvents(_nostop);
-        _end_trap.uninstall();
-        profiling_window._end_time = TSC::ticks();
-        recordEventOnly(PROFILING_WINDOW, &profiling_window);
-        _begin_trap.install();
-        frame.pc() = _end_trap.entry();
+        fprintf(stderr, "END TRAP\n");
+        WallClockEvent event;
+        event._start_time = TSC::ticks();
+        event._samples = 1;
+        Profiler::instance()->recordSample(ucontext, 2000000, WALL_CLOCK_SAMPLE, &event);
     } else if (orig_trapHandler != NULL) {
+        fprintf(stderr, "GENERAL TRAP\n");
         orig_trapHandler(signo, siginfo, ucontext);
     }
 }

@@ -118,7 +118,7 @@ public class Runner {
         log.log(Level.INFO, "Running " + rt.testInfo() + "...");
 
         String testLogDir = logDir.isEmpty() ? null : logDir + '/' + rt.testName();
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 1; i++) {
             try (TestProcess p = new TestProcess(rt.test(), currentOs, testLogDir)) {
                 Object holder = (rt.method().getModifiers() & Modifier.STATIC) == 0 ?
                         rt.method().getDeclaringClass().getDeclaredConstructor().newInstance() : null;
