@@ -5,17 +5,15 @@
 
 package test.jfr;
 
-import java.lang.management.ManagementFactory;
-import java.lang.management.ThreadInfo;
-import java.lang.management.ThreadMXBean;
+import jdk.jfr.Recording;
+
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Path;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
-import java.util.Map;
 import java.util.Random;
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadLocalRandom;
@@ -31,32 +29,30 @@ public class JfrMultiModeProfiling {
     private static int count = 0;
     private static final List<byte[]> holder = new ArrayList<>();
 
-    private static final ThreadMXBean tmx = ManagementFactory.getThreadMXBean();
-    private static final Map<Long, Boolean> threadIds = new ConcurrentHashMap<>();
+    public static void main(String[] args) throws InterruptedException, IOException {
+        Recording recording = null;
+        if (args.length > 0) {
+            recording =new Recording();
+            recording.enable("jdk.JavaMonitorEnter").with("threshold", "0 ms");
+            recording.setDestination(new File(args[0]).toPath());
+            recording.start();
+        }
 
-    static {
-        tmx.setThreadContentionMonitoringEnabled(true);
-    }
-
-    public static void main(String[] args) throws InterruptedException {
         ExecutorService executor = Executors.newFixedThreadPool(2);
-        List<CompletableFuture<Void>> futures = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
-            futures.add(CompletableFuture.runAsync(JfrMultiModeProfiling::cpuIntensiveIncrement, executor));
+            executor.submit(JfrMultiModeProfiling::cpuIntensiveIncrement);
         }
         allocate();
-        futures.forEach(CompletableFuture::join);
-
-        long[] ids = threadIds.keySet().stream().mapToLong(Long::longValue).toArray();
-        ThreadInfo[] threadInfo = tmx.getThreadInfo(ids);
-        Arrays.stream(threadInfo).mapToLong(ThreadInfo::getBlockedTime).forEach(System.out::println);
-
         executor.shutdown();
+        executor.awaitTermination(10, TimeUnit.SECONDS);
+
+        if (recording != null) {
+            recording.stop();
+            recording.close();
+        }
     }
 
     private static void cpuIntensiveIncrement() {
-        threadIds.put(Thread.currentThread().getId(), true);
-
         for (int i = 0; i < 100_000; i++) {
             synchronized (lock) {
                 count += System.getProperties().hashCode();

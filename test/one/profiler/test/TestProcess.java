@@ -148,7 +148,7 @@ public class TestProcess implements Closeable {
                         substituteFiles(test.agentArgs()));
             }
             cmd.add(test.mainClass().getName());
-            addArgs(cmd, test.args());
+            addArgs(cmd, substituteFiles(test.args()));
         }
 
         return cmd;

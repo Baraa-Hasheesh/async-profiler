@@ -69,31 +69,38 @@ public class JfrTests {
      * @param p The test process to profile with.
      * @throws Exception Any exception thrown during profiling JFR output parsing.
      */
-    @Test(mainClass = JfrMultiModeProfiling.class, agentArgs = "start,threads,event=cpu,alloc,lock=0,quiet,cstack=vmx,jfr,file=%f",
-            output = true, jvmVer = {8, 15}, jvmArgs = "-XX:-UseBiasedLocking")
+    @Test(mainClass = JfrMultiModeProfiling.class, agentArgs = "start,event=cpu,alloc,lock=0,quiet,jfr,file=%profiler", args = "%flight_recorder")
     public void parseMultiModeRecording(TestProcess p) throws Exception {
-        Output output = p.waitForExit(TestProcess.STDOUT);
+        p.waitForExit();
         assert p.exitCode() == 0;
 
-        long totalLockDurationMillis = output.stream().mapToLong(Long::parseLong).sum();
-
-        double jfrTotalLockDurationMillis = 0;
+        double profilerTotalLockDurationNanos = 0;
         Map<String, Integer> eventsCount = new HashMap<>();
-        try (RecordingFile recordingFile = new RecordingFile(p.getFile("%f").toPath())) {
+        try (RecordingFile recordingFile = new RecordingFile(p.getFile("%profiler").toPath())) {
             while (recordingFile.hasMoreEvents()) {
                 RecordedEvent event = recordingFile.readEvent();
                 String eventName = event.getEventType().getName();
                 if (eventName.equals("jdk.JavaMonitorEnter")) {
-                    jfrTotalLockDurationMillis += event.getDuration().toNanos() / 1_000_000.0;
+                    profilerTotalLockDurationNanos += event.getDuration().toNanos();
                 }
                 eventsCount.put(eventName, eventsCount.getOrDefault(eventName, 0) + 1);
             }
         }
 
+        long flightRecorderLockDurationNanos = 0;
+        try (RecordingFile recordingFile = new RecordingFile(p.getFile("%flight_recorder").toPath())) {
+            while (recordingFile.hasMoreEvents()) {
+                RecordedEvent event = recordingFile.readEvent();
+                if (event.getEventType().getName().equals("jdk.JavaMonitorEnter")) {
+                    flightRecorderLockDurationNanos += event.getDuration().toNanos();;
+                }
+            }
+        }
+
         Assert.isGreater(eventsCount.get("jdk.ExecutionSample"), 50);
         Assert.isGreater(eventsCount.get("jdk.JavaMonitorEnter"), 10);
-        System.out.println(jfrTotalLockDurationMillis / totalLockDurationMillis);
-        Assert.isGreater(jfrTotalLockDurationMillis / totalLockDurationMillis, 0.80);
+        System.out.println(profilerTotalLockDurationNanos / flightRecorderLockDurationNanos);
+        Assert.isGreater(profilerTotalLockDurationNanos / flightRecorderLockDurationNanos, 0.80);
         Assert.isGreater(eventsCount.get("jdk.ObjectAllocationInNewTLAB"), 50);
     }
 
