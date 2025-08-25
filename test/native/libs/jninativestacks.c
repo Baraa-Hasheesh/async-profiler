@@ -5,6 +5,12 @@
 
 #include <jni.h>
 #include <math.h>
+#include <dlfcn.h>
+#include <errno.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include "asprof.h"
 
 JNIEXPORT double doCpuTask() {
     int i = 0;
@@ -46,4 +52,19 @@ JNIEXPORT jdouble JNICALL Java_test_stackwalker_StackGenerator_deepFrame(JNIEnv*
 
 JNIEXPORT jdouble JNICALL Java_test_stackwalker_StackGenerator_leafFrame(JNIEnv* env, jclass cls) {
     return doCpuTask();
+}
+
+#include <stdio.h>
+
+int main() {
+    void* lib = dlopen("/Volumes/workplace/async-profiler/build/lib/libasyncProfiler.dylib", RTLD_NOW);
+    asprof_init_t asprof_init = dlsym(lib, "asprof_init");
+    asprof_init();
+
+    asprof_execute_t asprof_execute = dlsym(lib, "asprof_execute");
+    asprof_error_t err = asprof_execute("start,event=cpu,collapsed,file=output", NULL);
+
+    fprintf(stderr, "%.02f\n", doCpuTask());
+
+    err = asprof_execute("stop", NULL);
 }
