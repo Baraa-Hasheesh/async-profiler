@@ -81,14 +81,14 @@ void DwarfParser::parseUnwindOpcode(u64 location, u32 opcode, const char* eh_fra
         utsname sysinfo;
         if (uname(&sysinfo) == 0) {
             if (strstr(sysinfo.machine, "x86")) {
-                arch = 1;
-            } else {
                 arch = 2;
+            } else {
+                arch = 1;
             }
         }
     }
 
-    u32 opcode_kind = opcode & 0x0f000000;
+    u32 opcode_kind = (opcode & 0x0f000000) >> 24;
     u32 opcode_data = opcode & 0x00ffffff;
 
     if (arch == 1) {
