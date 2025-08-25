@@ -80,23 +80,23 @@ void DwarfParser::parseUnwindOpcode(u64 location, u32 opcode, const char* eh_fra
 #ifdef __aarch64__
     if (opcode_kind == 2) {
         addRecord(location - (u64)_image_base, DW_REG_SP, opcode_data * 16, DW_SAME_FP, 0);// TODO: This is wrong, Dwarf is a big asshole on RA
-    } else if (opcode == 3) { // Dwarf
+    } else if (opcode_kind == 3) { // Dwarf
         _ptr = eh_frame + opcode_data;
         parseFde();
-    } else if (opcode == 4) { // Frame pointer
+    } else if (opcode_kind == 4) { // Frame pointer
         addRecord(location - (u64)_image_base, DW_REG_FP, LINKED_FRAME_SIZE, -LINKED_FRAME_SIZE, -LINKED_FRAME_SIZE + DW_STACK_SLOT);
     }
 #else
     if (opcode_kind == 1) { // Frame pointer
         addRecord(location - (u64)_image_base, DW_REG_FP, LINKED_FRAME_SIZE, -LINKED_FRAME_SIZE, -LINKED_FRAME_SIZE + DW_STACK_SLOT);
-    } else if (opkind_kind == 2) { // Frameless (Stack-Immediate)
-        addRecord(location - (u64)_image_base, DW_REG_SP, opcode_data * sizeof(void*), DW_SAME_FP, -1 * sizeof(void*));// TODO: This is wrong, Dwarf is a big asshole on RA
-    } else if (opkind_kind == 3) { // TODO: Find actual example on this & check byte code
+    } else if (opcode_kind == 2) { // Frameless (Stack-Immediate)
+        addRecord(location - (u64)_image_base, DW_REG_SP, opcode_data * sizeof(void*), DW_SAME_FP, -1 * sizeof(void*));
+    } else if (opcode_kind == 3) { // TODO: Find actual example on this & check byte code
        /* u32 instruction_offset = (opcode_data & 0x00f00000) >> 20;
         u32 stack_adjust = (opcode_data & 0x000E0000) >> 17;
-        addRecord(location - (u64)_image_base, DW_REG_SP, + (stack_adjust * sizeof(void*)), DW_SAME_FP, -1 * sizeof(void*));// TODO: This is wrong, Dwarf is a big asshole on RA
+        addRecord(location - (u64)_image_base, DW_REG_SP, + (stack_adjust * sizeof(void*)), DW_SAME_FP, -1 * sizeof(void*));
         */
-    } else if (opkind_kind == 4) {
+    } else if (opcode_kind == 4) {
         _ptr = eh_frame + opcode_data;
         parseFde();
     }
