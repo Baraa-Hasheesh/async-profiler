@@ -5,6 +5,7 @@
 
 #include <algorithm>
 #include <stdlib.h>
+#include <sys/utsname.h>
 #include "dwarf.h"
 #include "log.h"
 
@@ -74,33 +75,46 @@ DwarfParser::DwarfParser(const char* name, const char* image_base) {
 }
 
 void DwarfParser::parseUnwindOpcode(u64 location, u32 opcode, const char* eh_frame) {
+    static int arch = 0;
+
+    if (arch == 0) {
+        utsname sysinfo;
+        if (uname(&sysinfo) == 0) {
+            if (strstr(sysinfo.machine, "x86")) {
+                arch = 1;
+            } else {
+                arch = 2;
+            }
+        }
+    }
+
     u32 opcode_kind = opcode & 0x0f000000;
     u32 opcode_data = opcode & 0x00ffffff;
 
-#ifdef __aarch64__
-    if (opcode_kind == 2) {
-        addRecord(location - (u64)_image_base, DW_REG_SP, opcode_data * 16, DW_SAME_FP, 0);// TODO: This is wrong, Dwarf is a big asshole on RA
-    } else if (opcode_kind == 3) { // Dwarf
-        _ptr = eh_frame + opcode_data;
-        parseFde();
-    } else if (opcode_kind == 4) { // Frame pointer
-        addRecord(location - (u64)_image_base, DW_REG_FP, LINKED_FRAME_SIZE, -LINKED_FRAME_SIZE, -LINKED_FRAME_SIZE + DW_STACK_SLOT);
+    if (arch == 1) {
+        if (opcode_kind == 2) {
+            addRecord(location - (u64)_image_base, DW_REG_SP, opcode_data * 16, DW_SAME_FP, 0);// TODO: This is wrong, Dwarf is a big asshole on RA
+        } else if (opcode_kind == 3) { // Dwarf
+            _ptr = eh_frame + opcode_data;
+            parseFde();
+        } else if (opcode_kind == 4) { // Frame pointer
+            addRecord(location - (u64)_image_base, DW_REG_FP, LINKED_FRAME_SIZE, -LINKED_FRAME_SIZE, -LINKED_FRAME_SIZE + DW_STACK_SLOT);
+        }
+    } else {
+        if (opcode_kind == 1) { // Frame pointer
+            addRecord(location - (u64)_image_base, DW_REG_FP, LINKED_FRAME_SIZE, -LINKED_FRAME_SIZE, -LINKED_FRAME_SIZE + DW_STACK_SLOT);
+        } else if (opcode_kind == 2) { // Frameless (Stack-Immediate)
+            addRecord(location - (u64)_image_base, DW_REG_SP, opcode_data * sizeof(void*), DW_SAME_FP, -1 * (int)sizeof(void*));
+        } else if (opcode_kind == 3) { // TODO: Find actual example on this & check byte code
+            /* u32 instruction_offset = (opcode_data & 0x00f00000) >> 20;
+             u32 stack_adjust = (opcode_data & 0x000E0000) >> 17;
+             addRecord(location - (u64)_image_base, DW_REG_SP, + (stack_adjust * sizeof(void*)), DW_SAME_FP, -1 * sizeof(void*));
+             */
+        } else if (opcode_kind == 4) { // Dwarf
+            _ptr = eh_frame + opcode_data;
+            parseFde();
+        }
     }
-#else
-    if (opcode_kind == 1) { // Frame pointer
-        addRecord(location - (u64)_image_base, DW_REG_FP, LINKED_FRAME_SIZE, -LINKED_FRAME_SIZE, -LINKED_FRAME_SIZE + DW_STACK_SLOT);
-    } else if (opcode_kind == 2) { // Frameless (Stack-Immediate)
-        addRecord(location - (u64)_image_base, DW_REG_SP, opcode_data * sizeof(void*), DW_SAME_FP, -1 * sizeof(void*));
-    } else if (opcode_kind == 3) { // TODO: Find actual example on this & check byte code
-       /* u32 instruction_offset = (opcode_data & 0x00f00000) >> 20;
-        u32 stack_adjust = (opcode_data & 0x000E0000) >> 17;
-        addRecord(location - (u64)_image_base, DW_REG_SP, + (stack_adjust * sizeof(void*)), DW_SAME_FP, -1 * sizeof(void*));
-        */
-    } else if (opcode_kind == 4) {
-        _ptr = eh_frame + opcode_data;
-        parseFde();
-    }
-#endif
 }
 
 void DwarfParser::parseUnwindPage(const char* page, u32 address, const char* eh_frame, u32* global_opcodes, u32 global_opcodes_len) {
