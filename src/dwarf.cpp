@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+#include <algorithm>
 #include <stdlib.h>
 #include "dwarf.h"
 #include "log.h"
@@ -59,7 +60,7 @@ FrameDesc FrameDesc::empty_frame = {0, DW_REG_SP | EMPTY_FRAME_SIZE << 8, DW_SAM
 FrameDesc FrameDesc::default_frame = {0, DW_REG_FP | LINKED_FRAME_SIZE << 8, -LINKED_FRAME_SIZE, -LINKED_FRAME_SIZE + DW_STACK_SLOT};
 
 
-DwarfParser::DwarfParser(const char* name, const char* image_base, const char* eh_frame_hdr) {
+DwarfParser::DwarfParser(const char* name, const char* image_base) {
     _name = name;
     _image_base = image_base;
 
@@ -70,11 +71,124 @@ DwarfParser::DwarfParser(const char* name, const char* image_base, const char* e
 
     _code_align = sizeof(instruction_t);
     _data_align = -(int)sizeof(void*);
-
-    parse(eh_frame_hdr);
 }
 
-void DwarfParser::parse(const char* eh_frame_hdr) {
+void DwarfParser::parseUnwindOpcode(u64 location, u32 opcode, const char* eh_frame) {
+    u32 opcode_kind = opcode & 0x0f000000;
+    u32 opcode_data = opcode & 0x00ffffff;
+
+#ifdef __aarch64__
+    if (opcode_kind == 2) {
+        addRecord(location - (u64)_image_base, DW_REG_SP, opcode_data * 16, DW_SAME_FP, 0);// TODO: This is wrong, Dwarf is a big asshole on RA
+    } else if (opcode == 3) { // Dwarf
+        _ptr = eh_frame + opcode_data;
+        parseFde();
+    } else if (opcode == 4) { // Frame pointer
+        addRecord(location - (u64)_image_base, DW_REG_FP, LINKED_FRAME_SIZE, -LINKED_FRAME_SIZE, -LINKED_FRAME_SIZE + DW_STACK_SLOT);
+    }
+#else
+    if (opcode_kind == 1) { // Frame pointer
+        addRecord(location - (u64)_image_base, DW_REG_FP, LINKED_FRAME_SIZE, -LINKED_FRAME_SIZE, -LINKED_FRAME_SIZE + DW_STACK_SLOT);
+    } else if (opkind_kind == 2) { // Frameless (Stack-Immediate)
+        addRecord(location - (u64)_image_base, DW_REG_SP, opcode_data * sizeof(void*), DW_SAME_FP, -1 * sizeof(void*));// TODO: This is wrong, Dwarf is a big asshole on RA
+    } else if (opkind_kind == 3) { // TODO: Find actual example on this & check byte code
+       /* u32 instruction_offset = (opcode_data & 0x00f00000) >> 20;
+        u32 stack_adjust = (opcode_data & 0x000E0000) >> 17;
+        addRecord(location - (u64)_image_base, DW_REG_SP, + (stack_adjust * sizeof(void*)), DW_SAME_FP, -1 * sizeof(void*));// TODO: This is wrong, Dwarf is a big asshole on RA
+        */
+    } else if (opkind_kind == 4) {
+        _ptr = eh_frame + opcode_data;
+        parseFde();
+    }
+#endif
+}
+
+void DwarfParser::parseUnwindPage(const char* page, u32 address, const char* eh_frame, u32* global_opcodes, u32 global_opcodes_len) {
+    _ptr = page;
+
+    u32 kind = get32();
+    if (kind != 2 && kind != 3) { // can happen on last page
+        return;
+    }
+
+    u16 entries_offset = get16();
+    u16 entries_len = get16();
+
+    if (kind == 2) {
+        _ptr = page + entries_offset;
+        for (u16 i = 0; i < entries_len; i++) {
+            u32 location = get32();
+            u32 opcode = get32();
+
+            const char* ptr = _ptr;
+            parseUnwindOpcode(location, opcode, eh_frame);
+            _ptr = ptr;
+        }
+    }
+
+    if (kind == 3) {
+        u16 local_opcodes_offset = get16();
+        get16(); // local opcode length
+        u32* local_opcodes = (u32*)(page + local_opcodes_offset);
+
+        _ptr = page + entries_offset;
+        for (int i = 0; i < entries_len; ++i) {
+            u32 data = get32();
+            u32 opcode_index = (0xf0000000 & data) > 24;
+            u64 location = (0x0fffffff & data) + address + (u64)_image_base;
+            u32 opcode = opcode_index < global_opcodes_len ? global_opcodes[opcode_index] : local_opcodes[opcode_index - global_opcodes_len];
+
+            const char* ptr = _ptr;
+            parseUnwindOpcode(location, opcode, eh_frame);
+            _ptr = ptr;
+        }
+    }
+}
+
+void DwarfParser::parseUnwindInfo(const char* unwind_info, const char* eh_frame, const char* stubs_address) {
+    _ptr = unwind_info;
+
+    u32 version = get32();
+    if (version != 1) { // only version 1 is supported
+        return;
+    }
+
+    u32 global_opcodes_offset = get32();
+    u32 global_opcodes_len = get32();
+    u32* global_opcodes = (u32*)(unwind_info + global_opcodes_offset);
+
+    // personalities_offset & personalities_Len
+    get32();
+    get32();
+
+    u32 pages_offset = get32();
+    u32 pages_len = get32();
+
+    // prepare to parse the pages
+    _ptr = unwind_info + pages_offset;
+
+    for (int i = 0; i < pages_len; ++i) {
+        u32 first_address = get32();
+        u32 second_level_page_offset = get32();
+
+        // lsda_index_offset
+        get32();
+
+        const char* ptr = _ptr;
+        parseUnwindPage(unwind_info + second_level_page_offset, first_address, eh_frame, global_opcodes, global_opcodes_len);
+        _ptr = ptr;
+    }
+
+    if (stubs_address) {
+        addRecord(stubs_address - _image_base, DW_REG_SP, EMPTY_FRAME_SIZE << 8, DW_SAME_FP, -EMPTY_FRAME_SIZE);
+    }
+
+    std::sort(_table, _table + _count, [](const FrameDesc& a, const FrameDesc& b) {
+        return a.loc < b.loc;
+    });
+}
+
+void DwarfParser::parseEhFrameHdr(const char* eh_frame_hdr) {
     u8 version = eh_frame_hdr[0];
     u8 eh_frame_ptr_enc = eh_frame_hdr[1];
     u8 fde_count_enc = eh_frame_hdr[2];

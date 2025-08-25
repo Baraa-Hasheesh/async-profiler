@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+#include "dwarf.h"
 #ifdef __APPLE__
 
 #include <unordered_set>
@@ -136,6 +137,8 @@ class MachOParser {
         const symtab_command* symtab = NULL;
         const dysymtab_command* dysymtab = NULL;
         const section_64* stubs_section = NULL;
+        const section_64* unwind_info_section = NULL;
+        const section_64* eh_frame = NULL;
 
         for (uint32_t i = 0; i < header->ncmds; i++) {
             if (lc->cmd == LC_SEGMENT_64) {
@@ -143,6 +146,8 @@ class MachOParser {
                 if (strcmp(sc->segname, "__TEXT") == 0) {
                     _cc->updateBounds(_image_base, add(_image_base, sc->vmsize));
                     stubs_section = findSection(sc, "__stubs");
+                    unwind_info_section = findSection(sc, "__unwind_info");
+                    eh_frame = findSection(sc, "__eh_frame");
                 } else if (strcmp(sc->segname, "__LINKEDIT") == 0) {
                     link_base = _vmaddr_slide + sc->vmaddr - sc->fileoff;
                 } else if (strcmp(sc->segname, "__DATA") == 0 || strcmp(sc->segname, "__DATA_CONST") == 0) {
@@ -154,6 +159,13 @@ class MachOParser {
                 dysymtab = (const dysymtab_command*)lc;
             }
             lc = (const load_command*)add(lc, lc->cmdsize);
+        }
+
+        if (unwind_info_section) {
+            DwarfParser dwarf_parser(this->_cc->name(), this->_vmaddr_slide);
+            dwarf_parser.parseUnwindInfo(_vmaddr_slide + unwind_info_section->addr, eh_frame ? _vmaddr_slide + eh_frame->addr : NULL,
+                stubs_section ? _vmaddr_slide + stubs_section->addr : NULL);
+            _cc->setDwarfTable(dwarf_parser.table(), dwarf_parser.count());
         }
 
         if (symtab != NULL && link_base != NULL) {

@@ -144,7 +144,8 @@ class DwarfParser {
         return ptr + *(int*)add(4);
     }
 
-    void parse(const char* eh_frame_hdr);
+    void parseUnwindOpcode(u64 location, u32 opcode, const char* eh_frame);
+    void parseUnwindPage(const char* page, u32 address, const char* eh_frame, u32* global_opcodes, u32 global_opcodes_len);
     void parseCie();
     void parseFde();
     void parseInstructions(u32 loc, const char* end);
@@ -154,7 +155,10 @@ class DwarfParser {
     FrameDesc* addRecordRaw(u32 loc, int cfa, int fp_off, int pc_off);
 
   public:
-    DwarfParser(const char* name, const char* image_base, const char* eh_frame_hdr);
+    DwarfParser(const char* name, const char* image_base);
+
+    void parseUnwindInfo(const char* unwind_info, const char* eh_frame, const char* stubs_address);
+    void parseEhFrameHdr(const char* eh_frame_hdr);
 
     FrameDesc* table() const {
         return _table;
