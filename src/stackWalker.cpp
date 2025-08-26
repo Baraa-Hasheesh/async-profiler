@@ -389,6 +389,64 @@ int StackWalker::walkVM(void* ucontext, ASGCT_CallFrame* frames, int max_depth,
         CodeCache* cc = profiler->findLibraryByAddress(pc);
         FrameDesc* f = cc != NULL ? cc->findFrameDesc(pc) : &FrameDesc::default_frame;
 
+        if (cc && strstr(cc->name(), "libsystem_m.dylib")) {
+            fprintf(stderr, "PC = %p => %s\n", pc, profiler->findNativeMethod(pc));
+        }
+
+
+        //0x19f624f80
+        /**
+        PC = 0x19f6250dc => powl
+        PC = 0x19f62509c => powl
+        PC = 0x19f6250e4 => powl
+        PC = 0x19f62504c => powl
+        PC = 0x19f625000 => powl
+        PC = 0x19f625060 => powl
+        PC = 0x19f62508c => powl
+        PC = 0x19f625084 => powl
+        PC = 0x19f6250b0 => powl
+        PC = 0x19f6250b0 => powl
+        PC = 0x19f62506c => powl
+        PC = 0x19f6250f4 => powl
+        PC = 0x19f625050 => powl
+        PC = 0x19f6250b0 => powl
+        PC = 0x19f625034 => powl
+        PC = 0x19f624f94 => powl
+        PC = 0x19f6250f4 => powl
+        PC = 0x19f62509c => powl
+        PC = 0x19f6250cc => powl
+        PC = 0x19f6250f4 => powl
+        PC = 0x19f62508c => powl
+        PC = 0x19f62508c => powl
+        PC = 0x19f6250b0 => powl
+        PC = 0x19f625000 => powl
+        PC = 0x19f6250b0 => powl
+        PC = 0x19f625084 => powl
+        PC = 0x19f6250b0 => powl
+        PC = 0x19f62508c => powl
+        PC = 0x19f624fac => powl
+        PC = 0x19f625068 => powl
+        PC = 0x19f625360 => powl
+        PC = 0x19f6250e0 => powl
+        PC = 0x19f6250cc => powl
+        PC = 0x19f6250b0 => powl
+        PC = 0x19f624f94 => powl
+        PC = 0x19f6250cc => powl
+        PC = 0x19f624f94 => powl
+        PC = 0x19f625050 => powl
+        PC = 0x19f6250cc => powl
+        PC = 0x19f6250d8 => powl
+        PC = 0x19f625034 => powl
+        PC = 0x19f624f94 => powl
+        PC = 0x19f6250a0 => powl
+        PC = 0x19f624f94 => powl
+        PC = 0x19f625054 => powl
+        PC = 0x19f6250dc => powl
+        PC = 0x19f6250b0 => powl
+        PC = 0x19f6250dc => powl
+        PC = 0x19f6250f4 => powl
+        **/
+
         u8 cfa_reg = (u8)f->cfa;
         int cfa_off = f->cfa >> 8;
         if (cfa_reg == DW_REG_SP) {

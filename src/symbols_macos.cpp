@@ -73,6 +73,10 @@ class MachOParser {
                 if (name[0] == '_') name++;
                 _cc->add(addr, 0, name);
                 debug_symbols = true;
+
+                if (strstr(_cc->name(), "libsystem_m.dylib") || strstr(_cc->name(), "main.o")) {
+                    fprintf(stderr, "# %s = %p\n", name, addr);
+                }
             }
             sym++;
         }
@@ -97,6 +101,10 @@ class MachOParser {
                 char stub_name[256];
                 snprintf(stub_name, sizeof(stub_name), "stub:%s", name);
                 _cc->add(stubs_start + i * stubs_section->reserved2, stubs_section->reserved2, stub_name);
+
+                if (strstr(_cc->name(), "libsystem_m.dylib") || strstr(_cc->name(), "main.o")) {
+                    fprintf(stderr, "# %s = %p\n", name, stubs_start + i * stubs_section->reserved2);
+                }
             }
         }
     }
@@ -143,6 +151,104 @@ class MachOParser {
                 if (strcmp(sc->segname, "__TEXT") == 0) {
                     _cc->updateBounds(_image_base, add(_image_base, sc->vmsize));
                     stubs_section = findSection(sc, "__stubs");
+
+                    if (strstr(_cc->name(), "libsystem_m.dylib") || strstr(_cc->name(), "main.o")) {
+                        const section_64* section = findSection(sc, "__unwind_info");
+                        u32* data = (u32*)(_vmaddr_slide + section->addr);
+
+                        u32 version = *(data++);
+                        u32 global_opcodes_offset = *(data++);
+                        u32 global_opcodes_len = *(data++);
+
+                        u32 personalities_offset = *(data++);
+                        u32 personalities_len = *(data++);
+
+                        u32 pages_offset = *(data++);
+                        u32 pages_len = *(data++);
+
+                        fprintf(stderr, "===================================\n");
+                        fprintf(stderr, "version = %u\n", version);
+                        fprintf(stderr, "global_opcodes_offset = %u\n", global_opcodes_offset);
+                        fprintf(stderr, "global_opcodes_len = %u\n", global_opcodes_len);
+                        fprintf(stderr, "personalities_offset = %u\n", personalities_offset);
+                        fprintf(stderr, "personalities_len = %u\n", personalities_len);
+                        fprintf(stderr, "pages_offset = %u\n", pages_offset);
+                        fprintf(stderr, "pages_len = %u\n", pages_len);
+
+                        u32* global_opcodes = (u32*)((u64)_vmaddr_slide + section->addr + global_opcodes_offset);
+                        for (int j = 0; j < global_opcodes_len; j++) {
+                            u8 opcode_kind = (global_opcodes[j] & 0x0f000000) >> 24;
+                            fprintf(stderr, "global_opcodes @ %d = %x, Kind %d\n", j, global_opcodes[j], opcode_kind);
+                        }
+
+                        fprintf(stderr, "===================================\n");
+
+                        u32* pages = (u32*)(((u64)_vmaddr_slide + section->addr) + pages_offset);
+
+                        for (int j = 0; j < pages_len; j++) {
+                            u32 first_address = *(pages++);
+                            u32 second_level_page_offset = *(pages++);
+                            u32 lsda_index_offset = *(pages++);
+
+                            fprintf(stderr, "first_address = 0x%llx\n", (u64)_vmaddr_slide + section->addr + first_address);
+                            fprintf(stderr, "second_level_page_offset = %u\n", second_level_page_offset);
+                            fprintf(stderr, "lsda_index_offset = %u\n", lsda_index_offset);
+
+                            u32* second_page = (u32*)(((u64)_vmaddr_slide + section->addr) + second_level_page_offset);
+                            u32 kind = *(second_page++);
+                            fprintf(stderr, "kind = %u\n", kind);
+
+                            if (kind == 3) {
+                                u16* compressed_second_level_page = (u16*)second_page;
+
+                                u16 entries_offset = *(compressed_second_level_page++);
+                                u16 entries_len = *(compressed_second_level_page++);
+
+                                u16 local_opcodes_offset = *(compressed_second_level_page++);
+                                u16 local_opcodes_len = *(compressed_second_level_page++);
+
+                                fprintf(stderr, "entries_offset = %u\n", entries_offset);
+                                fprintf(stderr, "entries_len = %u\n", entries_len);
+                                fprintf(stderr, "local_opcodes_offset = %u\n", local_opcodes_offset);
+                                fprintf(stderr, "local_opcodes_len = %u\n", local_opcodes_len);
+
+                                u32* second_page_entries = (u32*)((u64)_vmaddr_slide + section->addr + second_level_page_offset + entries_offset);
+                                for (int k = 0; k < entries_len; k++) {
+                                    u32 entry = second_page_entries[k];
+                                    u8 entry_opcode_index = entry >> 24;
+                                    u32 entry_address = entry & 0x00ffffff; // 0x19f624f80
+
+                                    fprintf(stderr, "==> entry_opcode_index = %d\n", entry_opcode_index);
+                                    fprintf(stderr, "==> entry_address = 0x%llx\n", (u64)_vmaddr_slide + section->addr + first_address + entry_address);
+                                }
+
+                                u32* second_page_opcodes = (u32*)((u64)_vmaddr_slide + section->addr + second_level_page_offset + local_opcodes_offset);
+                                for (int k = 0; k < local_opcodes_len; k++) {
+                                    u8 opcode_kind = (second_page_opcodes[k] & 0x0f000000) >> 24;
+                                    fprintf(stderr, "==> local_opcodes @ %d = %x, Kind %d\n", k, second_page_opcodes[k], opcode_kind);
+                                }
+                            }
+
+                            if (kind == 2) {
+                                u16* regular_second_level_page = (u16*)second_page;
+                                u16 entries_offset = *(regular_second_level_page++);
+                                u16 entries_len = *(regular_second_level_page++);
+
+                                u32* second_page_entries = (u32*)((u64)_vmaddr_slide + section->addr + second_level_page_offset + entries_offset);
+                                for (int k = 0; k < entries_len; k++) {
+                                    u32 instruction_address = *(second_page_entries++);
+                                    u32 opcode = *(second_page_entries++);
+                                    u8 opcode_kind = (opcode & 0x0f000000) >> 24;
+
+                                    fprintf(stderr, "opcode = %x, Kind %d => Address 0x%x\n", opcode, opcode_kind, instruction_address);
+                                }
+                            }
+
+
+                            fprintf(stderr, "===================================\n");
+                        }
+                    }
+
                 } else if (strcmp(sc->segname, "__LINKEDIT") == 0) {
                     link_base = _vmaddr_slide + sc->vmaddr - sc->fileoff;
                 } else if (strcmp(sc->segname, "__DATA") == 0 || strcmp(sc->segname, "__DATA_CONST") == 0) {
