@@ -814,8 +814,6 @@ Error Profiler::installTraps(const char* begin, const char* end, bool nostop) {
     _end_trap.assign(end_addr);
     _nostop = nostop;
 
-    fprintf(stderr, "%p => %p\n", begin_addr, end_addr);
-
     if (_begin_trap.entry() == 0) {
         _engine->enableEvents(true);
     } else {
