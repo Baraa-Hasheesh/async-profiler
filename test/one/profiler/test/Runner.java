@@ -118,17 +118,19 @@ public class Runner {
         log.log(Level.INFO, "Running " + rt.testInfo() + "...");
 
         String testLogDir = logDir.isEmpty() ? null : logDir + '/' + rt.testName();
-        try (TestProcess p = new TestProcess(rt.test(), currentOs, testLogDir)) {
+        for (int i = 0; i < 100; i++) {
+            try (TestProcess p = new TestProcess(rt.test(), currentOs, testLogDir)) {
             Object holder = (rt.method().getModifiers() & Modifier.STATIC) == 0 ?
                     rt.method().getDeclaringClass().getDeclaredConstructor().newInstance() : null;
             rt.method().invoke(holder, p);
-        } catch (InvocationTargetException e) {
-            if (e.getTargetException() instanceof NoClassDefFoundError) {
-                return TestResult.skipMissingJar();
+            } catch (InvocationTargetException e) {
+                if (e.getTargetException() instanceof NoClassDefFoundError) {
+                    return TestResult.skipMissingJar();
+                }
+                return TestResult.fail(e.getTargetException());
+            } catch (Throwable e) {
+                return TestResult.fail(e);
             }
-            return TestResult.fail(e.getTargetException());
-        } catch (Throwable e) {
-            return TestResult.fail(e);
         }
 
         return TestResult.pass();
