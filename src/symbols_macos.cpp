@@ -162,9 +162,9 @@ class MachOParser {
             loadSymbols(symtab, link_base);
 
             if (dysymtab != NULL) {
-                if (symbol_ptr[0] != NULL) loadImports(symtab, dysymtab, symbol_ptr[0], link_base);
-                if (symbol_ptr[1] != NULL) loadImports(symtab, dysymtab, symbol_ptr[1], link_base);
-                if (stubs_section != NULL) loadStubSymbols(symtab, dysymtab, stubs_section, link_base);
+                //if (symbol_ptr[0] != NULL) loadImports(symtab, dysymtab, symbol_ptr[0], link_base);
+                //if (symbol_ptr[1] != NULL) loadImports(symtab, dysymtab, symbol_ptr[1], link_base);
+                //if (stubs_section != NULL) loadStubSymbols(symtab, dysymtab, stubs_section, link_base);
             }
         }
 
