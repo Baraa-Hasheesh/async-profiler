@@ -14,15 +14,17 @@ public class VmstructsTests {
 
     @Test(mainClass = Alloc.class, jvmArgs = "-XX:StartFlightRecording=filename=%f.jfr,settings=profile")
     public void jnienv(TestProcess p) throws Exception {
-        Output out = p.profile("-d 2 --wall 50ms -F jnienv -o collapsed");
+        Output out = p.profile("-d 2 --wall 50ms -F jnienv -o collapsed --threads");
+        System.out.println(out);
         assert out.contains("Alloc.allocate");
     }
 
     @Test(mainClass = Alloc.class, jvmArgs = "-XX:StartFlightRecording=filename=%f.jfr,settings=profile",
-            agentArgs = "start,wall=50ms,features=jnienv")
+            agentArgs = "start,wall=50ms,features=jnienv,threads")
     public void jnienvAgent(TestProcess p) throws Exception {
         Thread.sleep(2000);
-        Output out = p.profile("stop -o collapsed");
+        Output out = p.profile("stop -o collapsed --threads");
+        System.out.println(out);
         assert out.contains("Alloc.allocate");
     }
 }
