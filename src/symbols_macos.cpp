@@ -148,12 +148,14 @@ class MachOParser {
             base_index++;
         }
 
+        // initialize unwind table with unwinding of empty frames
         FrameDesc* unwind_table = (FrameDesc*)calloc(table_size, sizeof(FrameDesc));
         for (int i = 0; i < table_size; i++) {
             memcpy(&unwind_table[i], &FrameDesc::empty_frame, sizeof(FrameDesc));
         }
 
-        for (int i = 0; i < pages_len; ++i) {
+        // set all symbols that have unwind information to be unwinded using frame pointers
+        for (int i = 0; i < pages_len - 1; ++i) {
             memcpy(&unwind_table[i + base_index], &FrameDesc::default_frame, sizeof(FrameDesc));
             unwind_table[i + base_index].loc = *pages;
 
@@ -161,6 +163,7 @@ class MachOParser {
             pages++; // second_level_page_offset
             pages++; // lsda_index_offset
         }
+        unwind_table[pages_len + base_index - 1].loc = *pages; // set information of last unwinding
 
         _cc->setDwarfTable(unwind_table, table_size);
     }
