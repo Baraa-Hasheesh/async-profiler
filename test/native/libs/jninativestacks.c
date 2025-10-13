@@ -67,3 +67,8 @@ JNIEXPORT jdouble JNICALL Java_test_stackwalker_StackGenerator_largeInnerFrame(J
     }
     return result;
 }
+
+int main() {
+    doCpuTask();
+    return 0;
+}

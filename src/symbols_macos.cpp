@@ -138,12 +138,14 @@ class MachOParser {
         const symtab_command* symtab = NULL;
         const dysymtab_command* dysymtab = NULL;
         const section_64* stubs_section = NULL;
+        const section_64* unwind_info_section = NULL;
 
         for (uint32_t i = 0; i < header->ncmds; i++) {
             if (lc->cmd == LC_SEGMENT_64) {
                 const segment_command_64* sc = (const segment_command_64*)lc;
                 if (strcmp(sc->segname, "__TEXT") == 0) {
                     _cc->updateBounds(_image_base, add(_image_base, sc->vmsize));
+                    unwind_info_section = findSection(sc, "__unwind_info");
                     stubs_section = findSection(sc, "__stubs");
                 } else if (strcmp(sc->segname, "__LINKEDIT") == 0) {
                     link_base = _vmaddr_slide + sc->vmaddr - sc->fileoff;
@@ -156,6 +158,33 @@ class MachOParser {
                 dysymtab = (const dysymtab_command*)lc;
             }
             lc = (const load_command*)add(lc, lc->cmdsize);
+        }
+
+        if (unwind_info_section) {
+            fprintf(stderr, "====================================================================\n");
+            fprintf(stderr, "UNWIND INFO => %s\n", _cc->name());
+
+            u32* unwind_info = (u32*)(_vmaddr_slide + unwind_info_section->addr);
+            fprintf(stderr, "VERSION = %d\n", *(unwind_info++));
+
+            // global_opcodes && personalities
+            unwind_info++;
+            unwind_info++;
+            unwind_info++;
+            unwind_info++;
+
+            u32 pages_offset = *(unwind_info++);
+            u32 pages_len = *(unwind_info++);
+
+            u32* pages = (u32*)(pages_offset + _vmaddr_slide + unwind_info_section->addr);
+            for (int i = 0; i < pages_len; i++) {
+                fprintf(stderr, "PAGE = %d, ADDR = 0x%llx\n", i, (u64)_vmaddr_slide + *pages);
+                pages++; // address
+                pages++; // second_level_page_offset
+                pages++; // lsda_index_offset
+            }
+
+            fprintf(stderr, "====================================================================\n");
         }
 
         if (symtab != NULL && link_base != NULL) {
