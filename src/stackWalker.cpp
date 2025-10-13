@@ -405,7 +405,11 @@ int StackWalker::walkVM(void* ucontext, ASGCT_CallFrame* frames, int max_depth,
                 }
             }
         } else {
-            fillFrame(frames[depth++], BCI_NATIVE_FRAME, profiler->findNativeMethod(pc));
+            const char* native_method = profiler->findNativeMethod(pc);
+            if (native_method && (strcmp(native_method, "stub:pow") == 0 || strcmp(native_method, "_simd_cbrt_d8") == 0)) {
+                fprintf(stderr, "native_method: %s\n", native_method);
+            }
+            fillFrame(frames[depth++], BCI_NATIVE_FRAME, native_method);
         }
 
         uintptr_t prev_sp = sp;
