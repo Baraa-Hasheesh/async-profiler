@@ -178,7 +178,7 @@ class MachOParser {
 
             u32* pages = (u32*)(pages_offset + _vmaddr_slide + unwind_info_section->addr);
             for (int i = 0; i < pages_len; i++) {
-                fprintf(stderr, "PAGE = %d, ADDR = 0x%llx\n", i, (u64)_vmaddr_slide + *pages);
+                fprintf(stderr, "PAGE = %d, ADDR = 0x%x\n", i, *pages);
                 pages++; // address
                 pages++; // second_level_page_offset
                 pages++; // lsda_index_offset
