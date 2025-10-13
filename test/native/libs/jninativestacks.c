@@ -62,10 +62,10 @@ int main() {
     asprof_init();
 
     asprof_execute_t asprof_execute = dlsym(lib, "asprof_execute");
-    asprof_error_t err = asprof_execute("start,event=cpu,collapsed,file=output", NULL);
+    asprof_error_t err = asprof_execute("start,event=cpu,collapsed,file=output.collapsed", NULL);
 
     fprintf(stderr, "%.02f\n", doCpuTask());
 
-    err = asprof_execute("stop", NULL);
+    err = asprof_execute("stop,collapsed,file=output.collapsed", NULL);
     return 0;
 }

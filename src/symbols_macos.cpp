@@ -160,7 +160,7 @@ class MachOParser {
             lc = (const load_command*)add(lc, lc->cmdsize);
         }
 
-        if (unwind_info_section) {
+        if (unwind_info_section && strstr(_cc->name(), "libsystem_m.dylib")) {
             fprintf(stderr, "====================================================================\n");
             fprintf(stderr, "UNWIND INFO => %s\n", _cc->name());
 
