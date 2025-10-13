@@ -11,6 +11,8 @@
 #include <mach-o/dyld.h>
 #include <mach-o/loader.h>
 #include <mach-o/nlist.h>
+
+#include "dwarf.h"
 #include "symbols.h"
 #include "log.h"
 
@@ -121,6 +123,48 @@ class MachOParser {
         }
     }
 
+    void fillBasicUnwindInfo(const section_64* unwind_section) {
+        u32* unwind_info = (u32*)(_vmaddr_slide + unwind_section->addr);
+
+        if (*unwind_info != 1) {
+            return;
+        }
+
+        unwind_info++; // version
+        unwind_info++; // global_opcodes_offset
+        unwind_info++; // global_opcodes_len
+        unwind_info++; // personalities_offset
+        unwind_info++; // personalities_len
+
+        u32 pages_offset = *(unwind_info++);
+        u32 pages_len = *(unwind_info++);
+
+        u32* pages = (u32*)(_vmaddr_slide + unwind_section->addr + pages_offset);
+        u32 table_size = pages_len;
+        u32 base_index = 0;
+
+        if (*pages) {
+            table_size++;
+            base_index++;
+        }
+
+        FrameDesc* unwind_table = (FrameDesc*)calloc(table_size, sizeof(FrameDesc));
+        for (int i = 0; i < table_size; i++) {
+            memcpy(&unwind_table[i], &FrameDesc::empty_frame, sizeof(FrameDesc));
+        }
+
+        for (int i = 0; i < pages_len; ++i) {
+            memcpy(&unwind_table[i + base_index], &FrameDesc::default_frame, sizeof(FrameDesc));
+            unwind_table[i + base_index].loc = *pages;
+
+            pages++; // address
+            pages++; // second_level_page_offset
+            pages++; // lsda_index_offset
+        }
+
+        _cc->setDwarfTable(unwind_table, table_size);
+    }
+
   public:
     MachOParser(CodeCache* cc, const mach_header* image_base, const char* vmaddr_slide) :
         _cc(cc), _image_base(image_base), _vmaddr_slide(vmaddr_slide) {}
@@ -138,6 +182,7 @@ class MachOParser {
         const symtab_command* symtab = NULL;
         const dysymtab_command* dysymtab = NULL;
         const section_64* stubs_section = NULL;
+        const section_64* unwind_info_section = NULL;
 
         for (uint32_t i = 0; i < header->ncmds; i++) {
             if (lc->cmd == LC_SEGMENT_64) {
@@ -145,6 +190,7 @@ class MachOParser {
                 if (strcmp(sc->segname, "__TEXT") == 0) {
                     _cc->updateBounds(_image_base, add(_image_base, sc->vmsize));
                     stubs_section = findSection(sc, "__stubs");
+                    unwind_info_section = findSection(sc, "__unwind_info");
                 } else if (strcmp(sc->segname, "__LINKEDIT") == 0) {
                     link_base = _vmaddr_slide + sc->vmaddr - sc->fileoff;
                 } else if (strcmp(sc->segname, "__DATA") == 0 || strcmp(sc->segname, "__DATA_CONST") == 0) {
@@ -156,6 +202,10 @@ class MachOParser {
                 dysymtab = (const dysymtab_command*)lc;
             }
             lc = (const load_command*)add(lc, lc->cmdsize);
+        }
+
+        if (unwind_info_section) {
+            fillBasicUnwindInfo(unwind_info_section);
         }
 
         if (symtab != NULL && link_base != NULL) {
