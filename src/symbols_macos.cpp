@@ -257,7 +257,7 @@ void Symbols::parseLibraries(CodeCacheArray* array, bool kernel_symbols) {
         const char* vmaddr_slide = (const char*)_dyld_get_image_vmaddr_slide(i);
 
         CodeCache* cc = new CodeCache(path, count);
-        cc->setTextBase(vmaddr_slide);
+        cc->setTextBase((char*)image_base);
 
         UnloadProtection handle(cc);
         if (handle.isValid()) {

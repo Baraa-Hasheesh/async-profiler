@@ -81,7 +81,7 @@ int main() {
     asprof_init();
 
     asprof_execute_t asprof_execute = dlsym(lib, "asprof_execute");
-    asprof_error_t err = asprof_execute("start,event=cpu,collapsed,file=output.collapsed,cstack=vm", NULL);
+    asprof_error_t err = asprof_execute("start,event=cpu,collapsed,file=output.collapsed,features=pcaddr,cstack=vm", NULL);
 
     fprintf(stderr, "%.02f\n", doCpuTask());
 
