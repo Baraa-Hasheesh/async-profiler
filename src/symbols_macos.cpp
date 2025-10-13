@@ -11,6 +11,8 @@
 #include <mach-o/dyld.h>
 #include <mach-o/loader.h>
 #include <mach-o/nlist.h>
+
+#include "dwarf.h"
 #include "symbols.h"
 #include "log.h"
 
@@ -176,9 +178,16 @@ class MachOParser {
             u32 pages_offset = *(unwind_info++);
             u32 pages_len = *(unwind_info++);
 
+            FrameDesc* frame_desc = (FrameDesc*)calloc(3, sizeof(FrameDesc));
+            memcpy(frame_desc, &FrameDesc::empty_frame, sizeof(FrameDesc));
+            memcpy(&frame_desc[1], &FrameDesc::default_frame, sizeof(FrameDesc));
+            memcpy(&frame_desc[2], &FrameDesc::empty_frame, sizeof(FrameDesc));
+            _cc->setDwarfTable(frame_desc, 3);
+
             u32* pages = (u32*)(pages_offset + _vmaddr_slide + unwind_info_section->addr);
             for (int i = 0; i < pages_len; i++) {
                 fprintf(stderr, "PAGE = %d, ADDR = 0x%x\n", i, *pages);
+                frame_desc[i + 1].loc =  *pages;
                 pages++; // address
                 pages++; // second_level_page_offset
                 pages++; // lsda_index_offset

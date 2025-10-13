@@ -77,6 +77,7 @@ public class StackwalkerTests {
         p.waitForExit();
         assert p.exitCode() == 0;
         Output output = Output.convertJfrToCollapsed(p.getFilePath("%f"));
+        System.out.println(output);
         assert output.contains("^test/stackwalker/StackGenerator.main_\\[0\\];" +
                 "test/stackwalker/StackGenerator.leafFrame_\\[0\\];" +
                 "Java_test_stackwalker_StackGenerator_leafFrame;" +
