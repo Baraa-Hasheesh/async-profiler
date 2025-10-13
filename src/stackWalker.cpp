@@ -416,6 +416,11 @@ int StackWalker::walkVM(void* ucontext, ASGCT_CallFrame* frames, int max_depth,
         CodeCache* cc = profiler->findLibraryByAddress(pc);
         FrameDesc* f = cc != NULL ? cc->findFrameDesc(pc) : &FrameDesc::default_frame;
 
+        const char* native_method = profiler->findNativeMethod(pc);
+        if (native_method && (strcmp(native_method, "stub:pow") == 0 || strstr(native_method, "_simd_cbrt_"))) {
+            f = &FrameDesc::empty_frame;
+        }
+
         u8 cfa_reg = (u8)f->cfa;
         int cfa_off = f->cfa >> 8;
         if (cfa_reg == DW_REG_SP) {
