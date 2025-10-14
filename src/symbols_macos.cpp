@@ -133,53 +133,77 @@ class MachOParser {
     void fillBasicUnwindInfo(const section_64* unwind_section) {
         u32* unwind_info = (u32*)(_vmaddr_slide + unwind_section->addr);
 
-        if (*unwind_info != 1) {
+        if (!strstr(_cc->name(), "libsystem_m.dylib") && !strstr(_cc->name(), "libjninativestacks.dylib")) {
             return;
         }
 
-        unwind_info++; // version
-        unwind_info++; // global_opcodes_offset
-        unwind_info++; // global_opcodes_len
-        unwind_info++; // personalities_offset
-        unwind_info++; // personalities_len
-
+        u32 version = *(unwind_info++);
+        u32 global_opcodes_offset = *(unwind_info++);
+        u32 global_opcodes_len = *(unwind_info++);
+        u32 personalities_offset = *(unwind_info++);
+        u32 personalities_len = *(unwind_info++);
         u32 pages_offset = *(unwind_info++);
         u32 pages_len = *(unwind_info++);
 
         u32* pages = (u32*)(_vmaddr_slide + unwind_section->addr + pages_offset);
         u32 table_size = pages_len;
-        u32 base_index = 0;
 
-        if (*pages) {
-            table_size++;
-            base_index++;
+        fprintf(stderr, "======================================================================\n");
+        fprintf(stderr, "Unwind info for %s\n", _cc->name());
+        fprintf(stderr, "Version: %u\n", version);
+
+        u32* global_opcodes = (u32*)(global_opcodes_offset + _vmaddr_slide + unwind_section->addr);
+        for (u32 i = 0; i < global_opcodes_len; i++) {
+            u32 global_opcode = global_opcodes[i];
+            u32 opcode_kind = (global_opcode & 0x0f000000) >> 24;
+            fprintf(stderr, "Global opcode %u: %u\n", i, opcode_kind);
         }
 
-        // initialize unwind table with unwinding of empty frames
-        FrameDesc* unwind_table = (FrameDesc*)calloc(table_size, sizeof(FrameDesc));
-        for (int i = 0; i < table_size; i++) {
-            memcpy(&unwind_table[i], &FrameDesc::empty_frame, sizeof(FrameDesc));
-        }
+        for (u32 i = 0; i < pages_len; i++) {
+            u32* page_root = pages;
 
-        // set all symbols that have unwind information to be unwinded using frame pointers
-        for (int i = 0; i < pages_len - 1; ++i) {
-            memcpy(&unwind_table[i + base_index], &FrameDesc::default_frame, sizeof(FrameDesc));
-            unwind_table[i + base_index].loc = *pages;
+            u32 first_address = *(pages++);
+            u32 second_level_page_offset = *(pages++);
+            u32 lsda_index_offset = *(pages++);
 
-            if (strstr(_cc->name(), "libsystem_m.dylib") || strstr(_cc->name(), "libjninativestacks.dylib")) {
-                fprintf(stderr, "%s ==> PAGE = %d, location = 0x%x\n", _cc->name(),  i, *pages);
+            fprintf(stderr, "Page %u: 0x%x\n", i, first_address);
+
+            u32* second_level_page = (u32*)(second_level_page_offset + _vmaddr_slide + unwind_section->addr);
+            u32 second_page_kind = *second_level_page;
+
+            fprintf(stderr, "Second level page kind: %d\n", second_page_kind);
+
+
+            if (second_page_kind == 3) { // compressed page
+                u16* data = (u16*)(second_level_page + 1);
+
+                u16 entries_offset = *data++;
+                u16 entries_len = *data++;
+
+                u16 local_opcodes_offset = *data++;
+                u16 local_opcodes_len = *data++;
+                u32* local_opcodes = (u32*)(local_opcodes_offset + (const char*)second_level_page);
+
+                fprintf(stderr, "Local Opcode Length = %u\n", local_opcodes_len);
+
+                for (u32 j = 0; j < local_opcodes_len; j++) {
+                    u32 local_opcode = local_opcodes[j];
+                    u32 local_opcode_kind = (local_opcode & 0x0f000000) >> 24;
+                    fprintf(stderr, "Local opcode %u: %u\n", j, local_opcode_kind);
+                }
+
+                u32* local_entries = (u32*)(entries_offset + (const char*)second_level_page);
+                for (u32 j = 0; j < entries_len; j++) {
+                    u32 entry = local_entries[j];
+                    u8 opcode_index = (entry & 0xff000000) >> 24;
+                    u32 instruction = entry & 0x00ffffff;
+
+                    fprintf(stderr, "Instruction 0x%x, Opcode %u\n", instruction + first_address, opcode_index);
+                }
             }
-
-            pages++; // address
-            pages++; // second_level_page_offset
-            pages++; // lsda_index_offset
-        } // 0x18e62df80
-        if (strstr(_cc->name(), "libsystem_m.dylib") || strstr(_cc->name(), "libjninativestacks.dylib")) {
-            fprintf(stderr, "%s ==> PAGE = %d, location = 0x%x\n", _cc->name(), pages_len - 1, *pages);
         }
-        unwind_table[pages_len + base_index - 1].loc = *pages; // set information of last unwinding
 
-        _cc->setDwarfTable(unwind_table, table_size);
+        fprintf(stderr, "======================================================================\n");
     }
 
   public:
