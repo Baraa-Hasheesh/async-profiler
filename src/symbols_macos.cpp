@@ -194,6 +194,7 @@ class MachOParser {
                     _cc->updateBounds(_image_base, add(_image_base, sc->vmsize));
                     stubs_section = findSection(sc, "__stubs");
                     unwind_info_section = findSection(sc, "__unwind_info");
+                    _cc->setTextBase(sc->vmaddr + _vmaddr_slide);
                 } else if (strcmp(sc->segname, "__LINKEDIT") == 0) {
                     link_base = _vmaddr_slide + sc->vmaddr - sc->fileoff;
                 } else if (strcmp(sc->segname, "__DATA") == 0 || strcmp(sc->segname, "__DATA_CONST") == 0) {
@@ -257,7 +258,6 @@ void Symbols::parseLibraries(CodeCacheArray* array, bool kernel_symbols) {
         const char* vmaddr_slide = (const char*)_dyld_get_image_vmaddr_slide(i);
 
         CodeCache* cc = new CodeCache(path, count);
-        cc->setTextBase((char*)image_base);
 
         UnloadProtection handle(cc);
         if (handle.isValid()) {
