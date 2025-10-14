@@ -72,7 +72,7 @@ public class StackwalkerTests {
     }
 
     @Test(mainClass = StackGenerator.class, jvmArgs = "-Xss5m", args = "leafFrame",
-            agentArgs = "start,event=cpu,cstack=vm,file=%f.jfr")
+            agentArgs = "start,event=cpu,cstack=vm,file=%f.jfr,features=pcaddr")
     public void normalStackVM(TestProcess p) throws Exception {
         p.waitForExit();
         assert p.exitCode() == 0;

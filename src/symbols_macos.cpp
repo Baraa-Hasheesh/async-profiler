@@ -74,6 +74,9 @@ class MachOParser {
                 const char* name = str_table + sym->n_un.n_strx;
                 if (name[0] == '_') name++;
                 _cc->add(addr, 0, name);
+                if (strstr(_cc->name(), "libsystem_m.dylib") || strstr(_cc->name(), "libjninativestacks.dylib")) {
+                    fprintf(stderr, "%s ==> %s => %p\n", _cc->name(), name, (void*)sym->n_value);
+                }
                 debug_symbols = true;
             }
             sym++;
@@ -99,6 +102,10 @@ class MachOParser {
                 char stub_name[256];
                 snprintf(stub_name, sizeof(stub_name), "stub:%s", name);
                 _cc->add(stubs_start + i * stubs_section->reserved2, stubs_section->reserved2, stub_name);
+
+                if (strstr(_cc->name(), "libsystem_m.dylib") || strstr(_cc->name(), "libjninativestacks.dylib")) {
+                    fprintf(stderr, "%s(stubs) ==> %s => %p\n", _cc->name(), name, (void*)(stubs_section->addr + i * stubs_section->reserved2));
+                }
             }
         }
 
@@ -159,9 +166,16 @@ class MachOParser {
             memcpy(&unwind_table[i + base_index], &FrameDesc::default_frame, sizeof(FrameDesc));
             unwind_table[i + base_index].loc = *pages;
 
+            if (strstr(_cc->name(), "libsystem_m.dylib") || strstr(_cc->name(), "libjninativestacks.dylib")) {
+                fprintf(stderr, "%s ==> PAGE = %d, location = 0x%x\n", _cc->name(),  i, *pages);
+            }
+
             pages++; // address
             pages++; // second_level_page_offset
             pages++; // lsda_index_offset
+        } // 0x18e62df80
+        if (strstr(_cc->name(), "libsystem_m.dylib") || strstr(_cc->name(), "libjninativestacks.dylib")) {
+            fprintf(stderr, "%s ==> PAGE = %d, location = 0x%x\n", _cc->name(), pages_len - 1, *pages);
         }
         unwind_table[pages_len + base_index - 1].loc = *pages; // set information of last unwinding
 
@@ -194,7 +208,6 @@ class MachOParser {
                     _cc->updateBounds(_image_base, add(_image_base, sc->vmsize));
                     stubs_section = findSection(sc, "__stubs");
                     unwind_info_section = findSection(sc, "__unwind_info");
-                    _cc->setTextBase(sc->vmaddr + _vmaddr_slide);
                 } else if (strcmp(sc->segname, "__LINKEDIT") == 0) {
                     link_base = _vmaddr_slide + sc->vmaddr - sc->fileoff;
                 } else if (strcmp(sc->segname, "__DATA") == 0 || strcmp(sc->segname, "__DATA_CONST") == 0) {
@@ -258,6 +271,11 @@ void Symbols::parseLibraries(CodeCacheArray* array, bool kernel_symbols) {
         const char* vmaddr_slide = (const char*)_dyld_get_image_vmaddr_slide(i);
 
         CodeCache* cc = new CodeCache(path, count);
+        cc->setTextBase((const char*)image_base);
+
+        if (strstr(path, "libsystem_m.dylib") || strstr(path, "libjninativestacks.dylib")){
+            fprintf(stderr, "SLIDE (%s) = %p, BASE = %p\n", path, (void*)vmaddr_slide, (void*)image_base);
+        }
 
         UnloadProtection handle(cc);
         if (handle.isValid()) {
