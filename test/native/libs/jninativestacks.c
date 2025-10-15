@@ -1,5 +1,5 @@
 /*
-* Copyright The async-profiler authors
+ * Copyright The async-profiler authors
  * SPDX-License-Identifier: Apache-2.0
  */
 
@@ -29,7 +29,7 @@ JNIEXPORT double doCpuTask() {
     while (i < 100000000) {
         i++;
         result += sqrt(i);
-        result += cos(i);
+        result += pow(i, sqrt(i));
     }
     return result;
 }
