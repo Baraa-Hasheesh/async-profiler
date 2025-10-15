@@ -156,7 +156,7 @@ class MachOParser {
         for (u32 i = 0; i < global_opcodes_len; i++) {
             u32 global_opcode = global_opcodes[i];
             u32 opcode_kind = (global_opcode & 0x0f000000) >> 24;
-            fprintf(stderr, "Global opcode %u: %u\n", i, opcode_kind);
+            fprintf(stderr, "Global opcode %u: %u 0x%x\n", i, opcode_kind, global_opcode);
         }
 
         for (u32 i = 0; i < pages_len; i++) {
@@ -236,6 +236,16 @@ class MachOParser {
                     link_base = _vmaddr_slide + sc->vmaddr - sc->fileoff;
                 } else if (strcmp(sc->segname, "__DATA") == 0 || strcmp(sc->segname, "__DATA_CONST") == 0) {
                     findSymbolPtrSection(sc, symbol_ptr);
+                }
+
+                if (strstr(_cc->name(), "libsystem_m.dylib") || strstr(_cc->name(), "libjninativestacks.dylib")) {
+                    fprintf(stderr, "Segment: %s\n", sc->segname);
+
+                    const section_64* section = (const section_64*)add(sc, sizeof(segment_command_64));
+                    for (uint32_t j = 0; j < sc->nsects; j++) {
+                        fprintf(stderr, "section: %s\n", section->sectname);
+                        section++;
+                    }
                 }
             } else if (lc->cmd == LC_SYMTAB) {
                 symtab = (const symtab_command*)lc;

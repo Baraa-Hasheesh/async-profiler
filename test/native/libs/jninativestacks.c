@@ -29,7 +29,7 @@ JNIEXPORT double doCpuTask() {
     while (i < 100000000) {
         i++;
         result += sqrt(i);
-        result += pow(i, sqrt(i));
+        result += cos(i);
     }
     return result;
 }
