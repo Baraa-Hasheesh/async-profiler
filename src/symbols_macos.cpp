@@ -34,6 +34,8 @@ class MachOParser {
     CodeCache* _cc;
     const mach_header* _image_base;
     const char* _vmaddr_slide;
+    std::vector<u32> lower_end;
+    std::vector<u32> upper_end;
 
     static const char* add(const void* base, uint64_t offset) {
         return (const char*)base + offset;
@@ -67,19 +69,33 @@ class MachOParser {
         const nlist_64* sym = (const nlist_64*)add(link_base, symtab->symoff);
         const char* str_table = add(link_base, symtab->stroff);
         bool debug_symbols = false;
+        u32 counter_unknown = 0;
+        u32 counter_total = 0;
 
         for (uint32_t i = 0; i < symtab->nsyms; i++) {
             if ((sym->n_type & 0xee) == 0x0e && sym->n_value != 0) {
+                counter_total++;
                 const char* addr = _vmaddr_slide + sym->n_value;
                 const char* name = str_table + sym->n_un.n_strx;
                 if (name[0] == '_') name++;
                 _cc->add(addr, 0, name);
-                if (strstr(_cc->name(), "libsystem_m.dylib") || strstr(_cc->name(), "libjninativestacks.dylib")) {
-                    fprintf(stderr, "%s ==> %s => %p\n", _cc->name(), name, (void*)sym->n_value);
+
+                u32 loc = (u32)(addr - (char*)_image_base); // get the location
+                for (int j = 0; j < std::min(upper_end.size(), lower_end.size()); j++) {
+                    if (loc >= lower_end[j] && loc < upper_end[j]) {
+                        fprintf(stderr, "%s ==> %s\n", _cc->name(), name);
+                        counter_unknown++;
+                        break;
+                    }
                 }
+
                 debug_symbols = true;
             }
             sym++;
+        }
+
+        if (counter_unknown > 0) {
+            fprintf(stderr, "%s => Found %d/%d unknown symbols\n", _cc->name(), counter_unknown, counter_total);
         }
 
         _cc->setDebugSymbols(debug_symbols);
@@ -199,9 +215,24 @@ class MachOParser {
                     u32 instruction = entry & 0x00ffffff;
 
                     fprintf(stderr, "Instruction 0x%x, Opcode %u\n", instruction + first_address, opcode_index);
+
+                    if (opcode_index < global_opcodes_len) {
+                        u32 global_opcode = global_opcodes[opcode_index];
+                        u32 opcode_kind = (global_opcode & 0x0f000000) >> 24;
+                        if (opcode_kind == 0 && lower_end.size() == upper_end.size()) {
+                            lower_end.push_back(instruction + first_address);
+                        } else if (opcode_kind != 0 && upper_end.size() < lower_end.size()){
+                            upper_end.push_back(instruction + first_address);
+                        }
+                    } else if (upper_end.size() < lower_end.size()) {
+                        upper_end.push_back(instruction + first_address);
+                    }
                 }
             }
         }
+
+        fprintf(stderr, "SIZES = %lu %lu\n", lower_end.size(), upper_end.size());
+
 
         fprintf(stderr, "======================================================================\n");
     }
