@@ -83,7 +83,7 @@ class MachOParser {
                 u32 loc = (u32)(addr - (char*)_image_base); // get the location
                 for (int j = 0; j < std::min(upper_end.size(), lower_end.size()); j++) {
                     if (loc >= lower_end[j] && loc < upper_end[j]) {
-                        fprintf(stderr, "%s ==> %s\n", _cc->name(), name);
+                        fprintf(stderr, "%s ==> %s ==> 0x%x\n", _cc->name(), name, loc);
                         counter_unknown++;
                         break;
                     }
