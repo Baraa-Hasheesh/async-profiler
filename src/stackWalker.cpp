@@ -405,7 +405,12 @@ int StackWalker::walkVM(void* ucontext, ASGCT_CallFrame* frames, int max_depth,
                 }
             }
         } else {
-            fillFrame(frames[depth++], BCI_NATIVE_FRAME, profiler->findNativeMethod(pc));
+            auto find_native_method = profiler->findNativeMethod(pc);
+            if (find_native_method && strstr(find_native_method, "_simd_"))
+            {
+                fprintf(stderr, "find_native_method: %s\n", find_native_method);
+            }
+            fillFrame(frames[depth++], BCI_NATIVE_FRAME, find_native_method);
         }
 
         uintptr_t prev_sp = sp;
