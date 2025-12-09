@@ -58,6 +58,12 @@ enum {
     HW_BREAKPOINT_X  = 4
 };
 
+struct perf_event_value {
+    uint64_t value;         // raw event count
+    uint64_t time_enabled;  // ns
+    uint64_t time_running;  // ns
+};
+
 static int fetchInt(const char* file_name) {
     int fd = open(file_name, O_RDONLY);
     if (fd == -1) {
@@ -551,6 +557,7 @@ bool PerfEvents::_kernel_stack;
 bool PerfEvents::_use_perf_mmap;
 bool PerfEvents::_record_cpu;
 int PerfEvents::_target_cpu;
+int PerfEvents::_read_format;
 
 int PerfEvents::createForThread(int tid) {
     if (tid >= _max_events) {
@@ -581,6 +588,8 @@ int PerfEvents::createForThread(int tid) {
     if (attr.type == PERF_TYPE_SOFTWARE) {
         attr.precise_ip = 2;
     }
+
+    attr.read_format = _read_format;
 
     attr.sample_period = _interval;
     attr.sample_type = PERF_SAMPLE_CALLCHAIN;
@@ -700,8 +709,21 @@ u64 PerfEvents::readCounter(siginfo_t* siginfo, void* ucontext) {
         case 3: return StackFrame(ucontext).arg2();
         case 4: return StackFrame(ucontext).arg3();
         default: {
-            u64 counter;
-            return read(siginfo->si_fd, &counter, sizeof(counter)) == sizeof(counter) ? counter : 1;
+            if (_event_type->type != PERF_TYPE_HARDWARE) {
+                u64 counter;
+                return read(siginfo->si_fd, &counter, sizeof(counter)) == sizeof(counter) ? counter : 1;
+            }
+
+            perf_event_value pref_event;
+
+            if (read(siginfo->si_fd, &pref_event, sizeof(perf_event_value)) != sizeof(perf_event_value)) {
+                return 1;
+            }
+
+            // defensive checks
+            if (pref_event.time_running >= pref_event.time_enabled || pref_event.time_running == 0) return pref_event.value;
+
+            return (u64)((double)pref_event.value * pref_event.time_enabled / pref_event.time_running);
         }
     }
 }
@@ -806,6 +828,11 @@ Error PerfEvents::start(Arguments& args) {
         _ioc_enable = PERF_EVENT_IOC_ENABLE;   // opt-in for manual enable/disable
     } else {
         _ioc_enable = PERF_EVENT_IOC_REFRESH;  // autodisable perf_event on counter overflow
+    }
+
+    _read_format = 0;
+    if (_event_type->type == PERF_TYPE_HARDWARE) {
+        _read_format = PERF_FORMAT_TOTAL_TIME_ENABLED | PERF_FORMAT_TOTAL_TIME_RUNNING;
     }
 
     adjustFDLimit();
