@@ -105,8 +105,7 @@ jobs:
         container-image: [arm:latest]
         include:
           - test-platform: linux-arm64-alpine
-            container-image: amazoncorretto:17-alpine
-            use-builtin-jdk: true
+            container-image: alpine:corretto-11
             java-distribution: corretto
             java-version: 17
     uses: ./.github/workflows/integ.yml
