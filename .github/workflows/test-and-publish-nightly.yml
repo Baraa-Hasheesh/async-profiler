@@ -105,7 +105,7 @@ jobs:
         container-image: [arm:latest]
         include:
           - test-platform: linux-arm64-alpine
-            container-image: alpine:corretto-17
+            container-image: amazoncorretto:17-alpine
             use-builtin-jdk: true
             java-distribution: corretto
             java-version: 17
