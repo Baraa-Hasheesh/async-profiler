@@ -160,6 +160,10 @@ class Error {
     operator bool() const {
         return _message != OKAY_MESSAGE && _message != TERMINATED_MESSAGE;
     }
+
+    bool isTerminatedError() const {
+        return _message == TERMINATED_MESSAGE;
+    }
 };
 
 

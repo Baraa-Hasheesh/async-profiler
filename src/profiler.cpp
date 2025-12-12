@@ -1920,14 +1920,14 @@ Error Profiler::runInternal(Arguments& args, Writer& out) {
                 break;
             }
 
-            if (error.message() == TERMINATED_MESSAGE) {
+            if (error.isTerminatedError()) {
                 break;
             }
             // Fall through
         }
         case ACTION_DUMP: {
             Error error = dump(out, args);
-            if (error.message() == TERMINATED_MESSAGE && args._action == ACTION_DUMP) {
+            if (error.isTerminatedError() && args._action == ACTION_DUMP) {
                 return Error("Unable to dump results after profiler termination");
             }
 
