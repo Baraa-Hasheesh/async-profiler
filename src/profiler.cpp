@@ -1924,7 +1924,7 @@ Error Profiler::runInternal(Arguments& args, Writer& out) {
                 break;
             }
 
-            if (error && error.message() == TERMINATED_MESSAGE) {
+            if (error.message() == TERMINATED_MESSAGE) {
                 break;
             }
             // Fall through
