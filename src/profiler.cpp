@@ -1919,10 +1919,6 @@ Error Profiler::runInternal(Arguments& args, Writer& out) {
                 }
                 break;
             }
-
-            if (error.isTerminatedError()) {
-                break;
-            }
             // Fall through
         }
         case ACTION_DUMP: {
