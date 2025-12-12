@@ -13,12 +13,12 @@
 #include "arguments.h"
 #include "os.h"
 
-
 // Arguments of the last start/resume command; reused for shutdown and restart
 Arguments _global_args;
 
 // Predefined value that denotes successful operation
-const Error Error::OK(NULL);
+const Error Error::OK(OKAY_MESSAGE);
+const Error Error::TERMINATED(TERMINATED_MESSAGE);
 
 // Extra buffer space for expanding file pattern
 const size_t EXTRA_BUF_SIZE = 512;

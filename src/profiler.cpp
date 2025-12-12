@@ -1306,6 +1306,11 @@ error1:
 
 Error Profiler::stop(bool restart) {
     MutexLocker ml(_state_lock);
+    if (_start_time == TERMINATED) {
+        Log::debug("Skipping stop action due to terminated profiler");
+        return Error::TERMINATED;
+    }
+
     if (_state != RUNNING) {
         return Error("Profiler is not active");
     }
@@ -1368,6 +1373,11 @@ Error Profiler::flushJfr() {
 
 Error Profiler::dump(Writer& out, Arguments& args) {
     MutexLocker ml(_state_lock);
+    if (_state == TERMINATED) {
+        Log::debug("Skipping dump action due to terminated profiler");
+        return Error::TERMINATED;
+    }
+
     if (_state != IDLE && _state != RUNNING) {
         return Error("Profiler has not started");
     }
@@ -1911,6 +1921,10 @@ Error Profiler::runInternal(Arguments& args, Writer& out) {
                 if (!args._quiet) {
                     out << "Profiling stopped after " << uptime() << " seconds. No dump options specified\n";
                 }
+                break;
+            }
+
+            if (error && error.message() == TERMINATED_MESSAGE) {
                 break;
             }
             // Fall through

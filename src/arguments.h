@@ -139,12 +139,16 @@ constexpr Multiplier BYTES[] = {{'b', 1}, {'k', 1024}, {'m', 1048576}, {'g', 107
 constexpr Multiplier SECONDS[] = {{'s', 1}, {'m', 60}, {'h', 3600}, {'d', 86400}, {0, 0}};
 constexpr Multiplier UNIVERSAL[] = {{'n', 1}, {'u', 1000}, {'m', 1000000}, {'s', 1000000000}, {'b', 1}, {'k', 1024}, {'g', 1073741824}, {0, 0}};
 
+const char* const TERMINATED_MESSAGE = (char*)-1;
+const char* const OKAY_MESSAGE = NULL;
+
 class Error {
   private:
     const char* _message;
 
   public:
     static const Error OK;
+    static const Error TERMINATED;
 
     explicit Error(const char* message) : _message(message) {
     }
@@ -153,8 +157,8 @@ class Error {
         return _message;
     }
 
-    operator bool() {
-        return _message != NULL;
+    operator bool() const {
+        return _message != OKAY_MESSAGE && _message != TERMINATED_MESSAGE;
     }
 };
 
