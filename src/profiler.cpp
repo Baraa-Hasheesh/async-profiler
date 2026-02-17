@@ -290,17 +290,19 @@ CodeBlob* Profiler::findRuntimeStub(const void* address) {
 
 int Profiler::getNativeTrace(void* ucontext, ASGCT_CallFrame* frames, EventType event_type, int tid, u64* cpu) {
     const void* callchain[MAX_NATIVE_FRAMES];
-    int native_frames;
+    int native_frames = 0;
 
     // Use PerfEvents stack walker for execution samples, or basic stack walker for other events
     if (event_type == PERF_SAMPLE) {
         native_frames = PerfEvents::walk(tid, ucontext, callchain, MAX_NATIVE_FRAMES, cpu);
-    } else if (_cstack == CSTACK_VM) {
-        return 0;
+    }
+
+    if (_cstack == CSTACK_VM) {
+        // no operation
     } else if (_cstack == CSTACK_DWARF) {
-        native_frames = StackWalker::walkDwarf(ucontext, callchain, MAX_NATIVE_FRAMES);
+        native_frames = StackWalker::walkDwarf(ucontext, callchain + native_frames, MAX_NATIVE_FRAMES - native_frames);
     } else {
-        native_frames = StackWalker::walkFP(ucontext, callchain, MAX_NATIVE_FRAMES);
+        native_frames = StackWalker::walkFP(ucontext, callchain + native_frames, MAX_NATIVE_FRAMES - native_frames);
     }
 
     return convertNativeTrace(native_frames, callchain, frames, event_type);
