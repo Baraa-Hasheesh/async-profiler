@@ -902,6 +902,10 @@ Error Profiler::start(Arguments& args, bool reset) {
             free(_calltrace_buffer[i]);
             _calltrace_buffer[i] = (CallTraceBuffer*)calloc(nelem, sizeof(CallTraceBuffer));
             if (_calltrace_buffer[i] == NULL) {
+                for (int j = i - 1; j >= 0; j--) {
+                    free(_calltrace_buffer[i]);
+                    _calltrace_buffer[i] = NULL;
+                }
                 _max_stack_depth = 0;
                 return Error("Not enough memory to allocate stack trace buffers (try smaller jstackdepth)");
             }
