@@ -699,11 +699,11 @@ bool OS::getDetailedProcessInfo(ProcessInfo* info) {
     return true;
 }
 
-static uintptr_t _pthread_setspecific_start_addr = 0;
-static uintptr_t _pthread_setspecific_end_addr = (uintptr_t)-1;
+static uintptr_t _pthread_setspecific_start_addr = -1ULL;
+static uintptr_t _pthread_setspecific_end_addr = 0ULL;
 
 void OS::init() {
-    if (musl || _pthread_setspecific_start_addr) {
+    if (musl || _pthread_setspecific_end_addr) {
         return;
     }
 
