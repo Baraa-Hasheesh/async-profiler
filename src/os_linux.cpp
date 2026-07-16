@@ -703,7 +703,7 @@ static uintptr_t _pthread_setspecific_start_addr = 0;
 static uintptr_t _pthread_setspecific_end_addr = (uintptr_t)-1;
 
 void OS::init() {
-    if (_pthread_setspecific_start_addr) { // already initialized
+    if (musl || _pthread_setspecific_start_addr) {
         return;
     }
 
