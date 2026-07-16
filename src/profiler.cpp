@@ -38,6 +38,7 @@
 #include "stackFrame.h"
 #include "stackWalker.h"
 #include "symbols.h"
+#include "threadLocalData.h"
 #include "tsc.h"
 #include "vmStructs.h"
 
@@ -337,10 +338,10 @@ int Profiler::convertNativeTrace(int native_frames, const void** callchain, ASGC
     return depth;
 }
 
-int Profiler::getJavaTraceAsync(void* ucontext, ASGCT_CallFrame* frames, int max_depth) {
+int Profiler::getJavaTraceAsync(void* ucontext, ASGCT_CallFrame* frames, int max_depth, bool vm_tls_safe) {
     // Workaround for JDK-8132510: it's not safe to call GetEnv() inside a signal handler
     // since JDK 9, so we do it only for threads already registered in ThreadLocalStorage
-    VMThread* vm_thread = VMThread::current();
+    VMThread* vm_thread = vm_tls_safe ? VMThread::current() : NULL;
     if (vm_thread == NULL) {
         return 0;
     }
@@ -433,20 +434,25 @@ u64 Profiler::recordSample(void* ucontext, u64 counter, EventType event_type, Ev
         }
     }
 
+    StackFrame stack_frame = StackFrame(ucontext);
+    bool tls_safe_sample = event_type > WALL_CLOCK_SAMPLE || OS::tlsSafeSample(stack_frame.pc());
+    bool vm_tls_safe = tls_safe_sample || stack_frame.arg0() != VMStructs::tlsIndex();
+    bool profiler_tls_safe = tls_safe_sample || stack_frame.arg0() != ThreadLocalData::getProfilerDataKey();
+
     if (_features.mixed) {
-        num_frames += StackWalker::walkVM(ucontext, frames + num_frames, _max_stack_depth, lock_index, _features, event_type);
+        num_frames += StackWalker::walkVM(ucontext, frames + num_frames, _max_stack_depth, lock_index, _features, event_type, vm_tls_safe);
     } else if (event_type <= MALLOC_SAMPLE) {
         if (_cstack == CSTACK_VM) {
-            num_frames += StackWalker::walkVM(ucontext, frames + num_frames, _max_stack_depth, lock_index, _features, event_type);
+            num_frames += StackWalker::walkVM(ucontext, frames + num_frames, _max_stack_depth, lock_index, _features, event_type, vm_tls_safe);
         } else {
-            num_frames += getJavaTraceAsync(ucontext, frames + num_frames, _max_stack_depth);
+            num_frames += getJavaTraceAsync(ucontext, frames + num_frames, _max_stack_depth, vm_tls_safe);
         }
     } else if (event_type >= ALLOC_SAMPLE && event_type <= ALLOC_OUTSIDE_TLAB && _alloc_engine == &alloc_tracer) {
         if (VMStructs::hasStackStructs()) {
             StackWalkFeatures no_features{};
-            num_frames += StackWalker::walkVM(ucontext, frames + num_frames, _max_stack_depth, lock_index, no_features, event_type);
+            num_frames += StackWalker::walkVM(ucontext, frames + num_frames, _max_stack_depth, lock_index, no_features, event_type, vm_tls_safe);
         } else {
-            num_frames += getJavaTraceAsync(ucontext, frames + num_frames, _max_stack_depth);
+            num_frames += getJavaTraceAsync(ucontext, frames + num_frames, _max_stack_depth, vm_tls_safe);
         }
     } else {
         // Lock events and instrumentation events can safely call synchronous JVM TI stack walker.
@@ -478,7 +484,7 @@ u64 Profiler::recordSample(void* ucontext, u64 counter, EventType event_type, Ev
     }
 
     u32 call_trace_id = _call_trace_storage.put(num_frames, frames, counter);
-    _jfr.recordEvent(lock_index, tid, call_trace_id, event_type, event);
+    _jfr.recordEvent(lock_index, tid, call_trace_id, event_type, event, profiler_tls_safe);
 
     _locks[lock_index].unlock();
     return (u64)tid << 32 | call_trace_id;
@@ -506,7 +512,7 @@ void Profiler::recordExternalSample(u64 counter, int tid, EventType event_type, 
         return;
     }
 
-    _jfr.recordEvent(lock_index, tid, call_trace_id, event_type, event);
+    _jfr.recordEvent(lock_index, tid, call_trace_id, event_type, event, true);
 
     _locks[lock_index].unlock();
 }
@@ -522,7 +528,7 @@ void Profiler::recordExternalSamples(u64 samples, u64 counter, int tid, u32 call
         return;
     }
 
-    _jfr.recordEvent(lock_index, tid, call_trace_id, event_type, event);
+    _jfr.recordEvent(lock_index, tid, call_trace_id, event_type, event, true);
 
     _locks[lock_index].unlock();
 }
@@ -541,7 +547,7 @@ void Profiler::recordEventOnly(EventType event_type, Event* event) {
         return;
     }
 
-    _jfr.recordEvent(lock_index, tid, 0, event_type, event);
+    _jfr.recordEvent(lock_index, tid, 0, event_type, event, true);
 
     _locks[lock_index].unlock();
 }
@@ -824,6 +830,9 @@ Error Profiler::start(Arguments& args, bool reset) {
     if (_state > IDLE) {
         return Error("Profiler already started");
     }
+
+    // OS specific initialization
+    OS::init();
 
     // If profiler is started from a native app, try to detect a running JVM and attach to it
     if (!VM::loaded()) {

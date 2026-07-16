@@ -204,7 +204,7 @@ int StackWalker::walkDwarf(void* ucontext, const void** callchain, int max_depth
 }
 
 int StackWalker::walkVM(void* ucontext, ASGCT_CallFrame* frames, int max_depth, int lock_index,
-                        StackWalkFeatures features, EventType event_type) {
+                        StackWalkFeatures features, EventType event_type, bool vm_tls_safe) {
     const void* pc;
     uintptr_t fp;
     uintptr_t sp;
@@ -242,7 +242,7 @@ int StackWalker::walkVM(void* ucontext, ASGCT_CallFrame* frames, int max_depth, 
     bool details = event_type <= MALLOC_SAMPLE || features.mixed;
 
     JavaFrameAnchor* anchor = NULL;
-    VMThread* vm_thread = VMThread::current();
+    VMThread* vm_thread = vm_tls_safe ? VMThread::current() : NULL;
     if (vm_thread != NULL && vm_thread->isJavaThread()) {
         // For simple stack traces (e.g. for allocation profiling)
         // jump directly to the first Java frame

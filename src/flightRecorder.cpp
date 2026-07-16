@@ -1450,11 +1450,11 @@ void FlightRecorder::stopMasterRecording() {
 }
 
 void FlightRecorder::recordEvent(int lock_index, int tid, u32 call_trace_id,
-                                 EventType event_type, Event* event) {
+                                 EventType event_type, Event* event, bool profiler_tls_safe) {
     if (_rec != NULL) {
         // Update per-thread monotonic counter with the last event timestamp
         if (event_type < PROFILING_WINDOW) {
-            asprof_thread_local_data* tld = ThreadLocalData::getIfPresent();
+            asprof_thread_local_data* tld = profiler_tls_safe ? ThreadLocalData::getIfPresent() : nullptr;
             if (tld != nullptr && event->_start_time > tld->sample_counter) {
                 tld->sample_counter = event->_start_time;
             }

@@ -34,6 +34,10 @@ class ThreadLocalData {
         return tld;
     }
 
+    static pthread_key_t getProfilerDataKey() {
+        return _profiler_data_key;
+    }
+
   private:
     static asprof_thread_local_data* initThreadLocalData(pthread_key_t profiler_data_key);
     static pthread_key_t _profiler_data_key;

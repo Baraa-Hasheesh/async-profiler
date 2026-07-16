@@ -12,6 +12,7 @@
 #include <errno.h>
 #include <fcntl.h>
 #include <link.h>
+#include <pthread.h>
 #include <sched.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -696,6 +697,29 @@ bool OS::getDetailedProcessInfo(ProcessInfo* info) {
     readProcessIO(info->pid, info);
     readProcessCmdline(info->pid, info);
     return true;
+}
+
+static uintptr_t _pthread_setspecific_start_addr = 0;
+static uintptr_t _pthread_setspecific_end_addr = (uintptr_t)-1;
+
+void OS::init() {
+    if (_pthread_setspecific_start_addr) { // already initialized
+        return;
+    }
+
+    Dl_info info;
+    void* extra;
+
+    // find address boundaries for pthread_setspecific
+    if (dladdr1((const void*)pthread_setspecific, &info, &extra, RTLD_DL_SYMENT)) {
+        const ElfW(Sym)* sym = (const ElfW(Sym)*)extra;
+        _pthread_setspecific_start_addr = (uintptr_t)info.dli_saddr;
+        _pthread_setspecific_end_addr = (uintptr_t)((char*)info.dli_saddr + sym->st_size);
+    }
+}
+
+bool OS::tlsSafeSample(uintptr_t pc) {
+    return musl || pc > _pthread_setspecific_end_addr || pc < _pthread_setspecific_start_addr;
 }
 
 #endif // __linux__

@@ -172,6 +172,10 @@ class VMStructs {
     static void init(CodeCache* libjvm);
     static void ready();
 
+    static int tlsIndex() {
+        return _tls_index;
+    }
+
     static CodeCache* libjvm() {
         return _libjvm;
     }

@@ -456,4 +456,12 @@ bool OS::getDetailedProcessInfo(ProcessInfo* info) {
     return false;
 }
 
+void OS::init() {
+    // Not needed
+}
+
+bool OS::tlsSafeSample(uintptr_t pc) {
+    return true;
+}
+
 #endif // __APPLE__

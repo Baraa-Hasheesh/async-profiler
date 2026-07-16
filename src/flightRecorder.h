@@ -37,7 +37,7 @@ class FlightRecorder {
     }
 
     void recordEvent(int lock_index, int tid, u32 call_trace_id,
-                     EventType event_type, Event* event);
+                     EventType event_type, Event* event, bool profiler_tls_safe);
 
     void recordLog(LogLevel level, const char* message, size_t len);
 

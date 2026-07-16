@@ -8,6 +8,7 @@
 
 #include <signal.h>
 #include <stddef.h>
+#include <stdint.h>
 #include <sys/types.h>
 #include "arch.h"
 
@@ -145,6 +146,9 @@ class OS {
     static int getProcessIds(int* pids, int max_pids);
     static bool getBasicProcessInfo(int pid, ProcessInfo* info);
     static bool getDetailedProcessInfo(ProcessInfo* info);
+
+    static void init();
+    static bool tlsSafeSample(uintptr_t pc);
 };
 
 #endif // _OS_H
