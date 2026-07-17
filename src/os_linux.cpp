@@ -701,17 +701,26 @@ bool OS::getDetailedProcessInfo(ProcessInfo* info) {
 
 static uintptr_t _pthread_setspecific_start_addr = -1ULL;
 static uintptr_t _pthread_setspecific_end_addr = 0ULL;
+static int (*_dladdr1)(const void*, Dl_info*, void**, int) = NULL;
 
 void OS::init() {
     if (musl || _pthread_setspecific_end_addr) {
         return;
     }
 
-    Dl_info info;
-    void* extra;
+    // dladdr1 function is a gnu extension & isn't available in MUSL
+    // calling dladdr1 in the code will cause loading problems for the async-profiler shared object
+    _dladdr1 = (decltype(_dladdr1))dlsym(RTLD_NEXT, "dladdr1");
+    if (!_dladdr1) {
+        dlerror();
+        return;
+    }
 
-    // find address boundaries for pthread_setspecific
-    if (dladdr1((const void*)pthread_setspecific, &info, &extra, RTLD_DL_SYMENT)) {
+    Dl_info info;
+    void* extra = NULL;
+
+    // find address boundaries for pthread_setspecific (RTLD_DL_SYMENT = 1)
+    if (_dladdr1((const void*)pthread_setspecific, &info, &extra, 1) && extra != NULL) {
         const ElfW(Sym)* sym = (const ElfW(Sym)*)extra;
         _pthread_setspecific_start_addr = (uintptr_t)info.dli_saddr;
         _pthread_setspecific_end_addr = (uintptr_t)((char*)info.dli_saddr + sym->st_size);
