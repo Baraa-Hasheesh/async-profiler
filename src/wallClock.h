@@ -40,7 +40,7 @@ class WallClock : public Engine {
 
     static void signalHandler(int signo, siginfo_t* siginfo, void* ucontext);
 
-    static void recordWallClock(const ThreadSleepState& tss, ThreadState state, int tid);
+    static void recordWallClock(const ThreadSleepState& tss, ThreadState state, int tid, u32 sample_count);
 
   public:
     const char* type() {

@@ -148,13 +148,13 @@ void WallClock::signalHandler(int signo, siginfo_t* siginfo, void* ucontext) {
     }
 }
 
-void WallClock::recordWallClock(const ThreadSleepState& tss, ThreadState state, int tid) {
+void WallClock::recordWallClock(const ThreadSleepState& tss, ThreadState state, int tid, u32 sample_count) {
     WallClockEvent event;
     event._start_time = tss.start_time;
     event._time_span = tss.last_time - tss.start_time;
     event._thread_state = state;
-    event._samples = tss.counter;
-    Profiler::instance()->recordExternalSamples(tss.counter, tss.counter * _interval, tid, tss.call_trace_id, WALL_CLOCK_SAMPLE, &event);
+    event._samples = sample_count;
+    Profiler::instance()->recordExternalSamples(sample_count, sample_count * _interval, tid, tss.call_trace_id, WALL_CLOCK_SAMPLE, &event);
 }
 
 Error WallClock::start(Arguments& args) {
@@ -184,7 +184,7 @@ Error WallClock::start(Arguments& args) {
 }
 
 void WallClock::stop() {
-    _running = false;
+    storeRelease(_running, false);
     pthread_kill(_thread, WAKEUP_SIGNAL);
     pthread_join(_thread, NULL);
 }
@@ -194,9 +194,9 @@ void WallClock::flush() {
 
     MutexLocker ml(_thread_sleep_state_lock);
     for (ThreadSleepMap::iterator it = _thread_sleep_state.begin(); it != _thread_sleep_state.end(); ++it) {
-        if (it->second.counter != 0) {
-            recordWallClock(it->second, THREAD_SLEEPING, it->first);
-            it->second.counter = 0;
+        u32 current_counter = __atomic_exchange_n(&it->second.counter, 0, __ATOMIC_SEQ_CST);
+        if (current_counter != 0) {
+            recordWallClock(it->second, THREAD_SLEEPING, it->first, current_counter);
         }
     }
 }
@@ -211,10 +211,10 @@ void WallClock::timerLoop() {
     _thread_cpu_time_buf.reset();
     u64 cycle_start_time = OS::nanotime();
 
-    while (_running) {
+    while (loadAcquire(_running)) {
         bool enabled = _enabled;
 
-        for (int signaled_threads = 0; signaled_threads < THREADS_PER_TICK && thread_list->hasNext(); ) {
+        for (int signaled_threads = 0; signaled_threads < THREADS_PER_TICK && thread_list->hasNext() && loadAcquire(_running); ) {
             int thread_id = thread_list->next();
             if (thread_id == self || thread_id <= 0) {
                 // On macOS, task_threads() may sporadically return 0 or -1 among thread IDs
@@ -234,16 +234,18 @@ void WallClock::timerLoop() {
                 u64 new_thread_cpu_time = enabled ? OS::threadCpuTime(thread_id) : 0;
                 if (new_thread_cpu_time != 0 && new_thread_cpu_time - tss.last_cpu_time <= RUNNABLE_THRESHOLD_NS) {
                     tss.last_time = TSC::ticks();
-                    if (++tss.counter < MAX_IDLE_BATCH) {
-                        if (tss.counter == 1) {
+                    u32 current_counter = atomicInc(tss.counter) + 1;
+                    if (current_counter < MAX_IDLE_BATCH) {
+                        if (current_counter == 1) {
                             tss.start_time = tss.last_time;
                         }
                         continue;
                     }
                 }
-                if (tss.counter != 0) {
-                    recordWallClock(tss, THREAD_SLEEPING, thread_id);
-                    tss.counter = 0;
+
+                u32 current_counter = __atomic_exchange_n(&tss.counter, 0, __ATOMIC_SEQ_CST);
+                if (current_counter != 0) {
+                    recordWallClock(tss, THREAD_SLEEPING, thread_id, current_counter);
                 }
             }
 
