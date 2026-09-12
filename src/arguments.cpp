@@ -265,6 +265,7 @@ Error Arguments::parse(const char* args) {
                     if (strstr(value, "vtable"))   _features.vtable_target = 1;
                     if (strstr(value, "comptask")) _features.comp_task = 1;
                     if (strstr(value, "pcaddr"))   _features.pc_addr = 1;
+                    if (strstr(value, "pcraw"))   _features.pc_raw = 1;
                 }
 
             CASE("file")

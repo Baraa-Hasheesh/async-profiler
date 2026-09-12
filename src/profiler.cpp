@@ -323,25 +323,31 @@ int Profiler::convertNativeTrace(int native_frames, const void** callchain, ASGC
     int depth = 0;
 
     for (int i = 0; i < native_frames; i++) {
-        const char* current_method_name = findNativeMethod(callchain[i]);
-        char mark;
-        if (current_method_name != NULL && (mark = NativeFunc::mark(current_method_name)) != 0) {
-            if (mark == MARK_VM_RUNTIME && event_type >= ALLOC_SAMPLE) {
-                // Skip all internal frames above VM runtime entry for allocation samples
-                depth = 0;
-                continue;
-            } else if (mark == MARK_ASYNC_PROFILER && (event_type == MALLOC_SAMPLE || event_type == NATIVE_LOCK_SAMPLE)) {
-                // Skip all internal frames above the *_hook functions. Include the hook function itself.
-                depth = 0;
-            } else if (mark == MARK_INTERPRETER) {
-                // This is C++ interpreter frame, this and later frames should be reported
-                // as Java frames returned by AGCT. Terminate the scan here.
-                return depth;
+        if (!_features.pc_raw) {
+            const char* current_method_name = findNativeMethod(callchain[i]);
+            char mark;
+            if (current_method_name != NULL && (mark = NativeFunc::mark(current_method_name)) != 0) {
+                if (mark == MARK_VM_RUNTIME && event_type >= ALLOC_SAMPLE) {
+                    // Skip all internal frames above VM runtime entry for allocation samples
+                    depth = 0;
+                    continue;
+                } else if (mark == MARK_ASYNC_PROFILER && (event_type == MALLOC_SAMPLE || event_type == NATIVE_LOCK_SAMPLE)) {
+                    // Skip all internal frames above the *_hook functions. Include the hook function itself.
+                    depth = 0;
+                } else if (mark == MARK_INTERPRETER) {
+                    // This is C++ interpreter frame, this and later frames should be reported
+                    // as Java frames returned by AGCT. Terminate the scan here.
+                    return depth;
+                }
             }
+
+            frames[depth].bci = BCI_NATIVE_FRAME;
+            frames[depth].method_id = (jmethodID)current_method_name;
+        } else {
+            frames[depth].bci = BCI_ADDRESS;
+            frames[depth].method_id = (jmethodID)callchain[i];
         }
 
-        frames[depth].bci = BCI_NATIVE_FRAME;
-        frames[depth].method_id = (jmethodID)current_method_name;
         depth++;
     }
 

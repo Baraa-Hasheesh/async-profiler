@@ -112,6 +112,7 @@ struct StackWalkFeatures {
     unsigned short vtable_target : 1;  // show receiver classes of vtable/itable stubs
     unsigned short comp_task     : 1;  // display current compilation task for JIT threads
     unsigned short pc_addr       : 1;  // record exact PC address for each sample
+    unsigned short pc_raw        : 1;  // record raw PCs for native samples
     unsigned short _padding      : 9;  // pad structure to 16 bits
 };
 

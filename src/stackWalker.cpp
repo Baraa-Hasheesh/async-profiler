@@ -52,6 +52,11 @@ static inline void fillFrame(ASGCT_CallFrame& frame, ASGCT_CallFrameType type, c
     frame.method_id = (jmethodID)name;
 }
 
+static inline void fillFrame(ASGCT_CallFrame& frame, ASGCT_CallFrameType type, const void* pc) {
+    frame.bci = type;
+    frame.method_id = (jmethodID)pc;
+}
+
 static inline void fillFrame(ASGCT_CallFrame& frame, ASGCT_CallFrameType type, u32 class_id) {
     frame.bci = type;
     frame.method_id = (jmethodID)(uintptr_t)class_id;
@@ -433,22 +438,26 @@ int StackWalker::walkVM(void* ucontext, ASGCT_CallFrame* frames, int max_depth, 
             }
         } else {
             native_lib = profiler->findLibraryByAddress(pc);
-            const char* method_name = native_lib != NULL ? native_lib->binarySearch(pc) : NULL;
-            char mark;
-            if (method_name != NULL && (mark = NativeFunc::mark(method_name)) != 0) {
-                if (mark == MARK_ASYNC_PROFILER && (event_type == MALLOC_SAMPLE || event_type == NATIVE_LOCK_SAMPLE)) {
-                    // Skip all internal frames above hook functions, leave the hook itself
-                    depth = 0;
-                } else if (mark == MARK_COMPILER_ENTRY && features.comp_task && vm_thread != NULL) {
-                    // Insert current compile task as a pseudo Java frame
-                    VMMethod* method = vm_thread->compiledMethod();
-                    jmethodID method_id = method != NULL ? method->id() : NULL;
-                    if (method_id != NULL) {
-                        fillFrame(frames[depth++], FRAME_JIT_COMPILED, 0, method_id);
+            if (!features.pc_raw) {
+                const char* method_name = native_lib != NULL ? native_lib->binarySearch(pc) : NULL;
+                char mark;
+                if (method_name != NULL && (mark = NativeFunc::mark(method_name)) != 0) {
+                    if (mark == MARK_ASYNC_PROFILER && (event_type == MALLOC_SAMPLE || event_type == NATIVE_LOCK_SAMPLE)) {
+                        // Skip all internal frames above hook functions, leave the hook itself
+                        depth = 0;
+                    } else if (mark == MARK_COMPILER_ENTRY && features.comp_task && vm_thread != NULL) {
+                        // Insert current compile task as a pseudo Java frame
+                        VMMethod* method = vm_thread->compiledMethod();
+                        jmethodID method_id = method != NULL ? method->id() : NULL;
+                        if (method_id != NULL) {
+                            fillFrame(frames[depth++], FRAME_JIT_COMPILED, 0, method_id);
+                        }
                     }
                 }
+                fillFrame(frames[depth++], BCI_NATIVE_FRAME, method_name);
+            } else {
+                fillFrame(frames[depth++], BCI_ADDRESS, pc);
             }
-            fillFrame(frames[depth++], BCI_NATIVE_FRAME, method_name);
         }
 
         FrameDesc* f = native_lib != NULL ? native_lib->findFrameDesc(pc) : &FrameDesc::default_frame;
